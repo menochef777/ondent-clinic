@@ -38,13 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
         book: "Agendar Cita"
       },
       hero: {
-        title: `Restaura <br>Tu Verdadera <br>Sonrisa <span class="hero-ref-avatar-pill"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Paciente Satisfecho"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Paciente Satisfecho"><span class="pill-count">+2k</span></span>`,
-        desc: `Usando <strong>tecnología avanzada</strong>, ofrecemos tratamientos integrales para una sonrisa saludable y <strong>llena de confianza</strong>.`,
-        bookBtn: "Agendar Cita Online",
-        waBtn: "Hablar por WhatsApp",
-        statNum: "98%",
-        statLabel: "pacientes leales<br>y satisfechos",
-        techBadge: "Tecnología 3D Digital OnDent"
+        title: `Cuidado profesional.<br><span class="daria-title-sub">Sonrisa precisa.</span>`,
+        desc: `Enfoque individualizado y odontología moderna de alta precisión en un ambiente cálido, seguro y confortable.`,
+        badgeTitle: `Estética<br>Dental 3D`,
+        badgeSub: `Enfoque individual & precisión`,
+        bookBtn: "Agendar Cita",
+        reviewsScore: "5.0 • San Luis Río Colorado"
       },
       about: {
         eyebrow: "Nuestra Promesa",
@@ -160,13 +159,12 @@ document.addEventListener('DOMContentLoaded', () => {
         book: "Book Online"
       },
       hero: {
-        title: `Restore <br>Your True <br>Smile <span class="hero-ref-avatar-pill"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Happy Patient"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Happy Patient"><span class="pill-count">+2k</span></span>`,
-        desc: `Using <strong>advanced technology</strong>, we offer comprehensive treatments for a healthy and <strong>confident smile</strong>.`,
-        bookBtn: "Book Appointment Online",
-        waBtn: "Chat on WhatsApp",
-        statNum: "98%",
-        statLabel: "loyal & highly<br>satisfied patients",
-        techBadge: "OnDent 3D Digital Technology"
+        title: `Gentle care.<br><span class="daria-title-sub">Precise smile.</span>`,
+        desc: `Individual approach and modern high-precision dentistry in a warm, comfortable and tranquil setting.`,
+        badgeTitle: `Aesthetic<br>Dentistry 3D`,
+        badgeSub: `Tailored care & precision`,
+        bookBtn: "Book Appointment",
+        reviewsScore: "5.0 • San Luis Río Colorado"
       },
       about: {
         eyebrow: "Our Promise",
@@ -277,37 +275,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const t = translations[lang] || translations.es;
     document.documentElement.lang = lang;
 
+    // Sync all language buttons across UI
+    document.querySelectorAll('.lang-btn, .daria-lang-btn').forEach(b => {
+      if (b.getAttribute('data-lang') === lang) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+
     // 1. Navigation links
-    const navLinks = document.querySelectorAll('.pill-nav .nav-link, .drawer-links .drawer-link');
-    if (navLinks.length >= 6) {
+    const dariaNavLinks = document.querySelectorAll('.daria-nav .daria-nav-item');
+    if (dariaNavLinks.length >= 5) {
+      dariaNavLinks[0].innerHTML = `<span class="daria-dot"></span> ${t.nav.about}`;
+      dariaNavLinks[1].innerHTML = `<span class="daria-dot"></span> ${t.nav.services}`;
+      dariaNavLinks[2].innerHTML = `<span class="daria-dot"></span> ${t.nav.cases}`;
+      dariaNavLinks[3].innerHTML = `<span class="daria-dot"></span> ${t.nav.dentists}`;
+      dariaNavLinks[4].innerHTML = `<span class="daria-dot"></span> ${t.nav.location}`;
+    }
+
+    const drawerLinks = document.querySelectorAll('.drawer-links .drawer-link');
+    if (drawerLinks.length >= 6) {
       const keys = ['home', 'about', 'services', 'cases', 'dentists', 'location'];
-      document.querySelectorAll('.pill-nav .nav-link').forEach((link, idx) => {
-        if (keys[idx] && t.nav[keys[idx]]) link.textContent = t.nav[keys[idx]];
-      });
-      document.querySelectorAll('.drawer-links .drawer-link').forEach((link, idx) => {
+      drawerLinks.forEach((link, idx) => {
         if (keys[idx] && t.nav[keys[idx]]) link.textContent = t.nav[keys[idx]];
       });
     }
 
-    // 2. Header CTA
-    const headerCta = document.querySelector('.header-actions .btn-primary span');
-    if (headerCta) headerCta.textContent = t.nav.book;
-
-    // 3. Hero
-    const heroTitle = document.querySelector('.hero-ref-title');
-    if (heroTitle) heroTitle.innerHTML = t.hero.title;
-    const heroDesc = document.querySelector('.hero-ref-description');
-    if (heroDesc) heroDesc.innerHTML = t.hero.desc;
-    const heroBookBtn = document.querySelector('#openHeroAgendaModal span');
-    if (heroBookBtn) heroBookBtn.textContent = t.hero.bookBtn;
-    const heroWaBtn = document.querySelector('.btn-hero-ref-wa span');
-    if (heroWaBtn) heroWaBtn.textContent = t.hero.waBtn;
-    const heroStatNum = document.querySelector('.stat-bubble-number');
-    if (heroStatNum) heroStatNum.textContent = t.hero.statNum;
-    const heroStatLabel = document.querySelector('.stat-bubble-label');
-    if (heroStatLabel) heroStatLabel.innerHTML = t.hero.statLabel;
-    const heroTechBadge = document.querySelector('.hero-3d-interactive-badge span');
-    if (heroTechBadge) heroTechBadge.textContent = t.hero.techBadge;
+    // 2. Daria Hero elements
+    const dariaTitle = document.querySelector('.daria-title');
+    if (dariaTitle) dariaTitle.innerHTML = t.hero.title;
+    const dariaDesc = document.querySelector('.daria-description');
+    if (dariaDesc) dariaDesc.textContent = t.hero.desc;
+    const dariaBadgeText = document.querySelector('.daria-badge-text');
+    if (dariaBadgeText) dariaBadgeText.innerHTML = t.hero.badgeTitle;
+    const dariaBadgeSub = document.querySelector('.daria-badge-sub');
+    if (dariaBadgeSub) dariaBadgeSub.textContent = t.hero.badgeSub;
+    const dariaHeaderBtn = document.querySelector('.daria-btn-primary');
+    if (dariaHeaderBtn) dariaHeaderBtn.textContent = t.hero.bookBtn;
+    const dariaCtaBtn = document.querySelector('.daria-cta-btn span');
+    if (dariaCtaBtn) dariaCtaBtn.textContent = t.hero.bookBtn;
+    const dariaScore = document.querySelector('.daria-score');
+    if (dariaScore) dariaScore.textContent = t.hero.reviewsScore;
 
     // 4. About
     const aboutEyebrow = document.querySelector('.promise-tag span:last-child');
@@ -455,11 +464,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // Wire Language Switch Buttons
-  const langBtns = document.querySelectorAll('.lang-btn');
+  const langBtns = document.querySelectorAll('.lang-btn, .daria-lang-btn');
   langBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      langBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
       const lang = btn.getAttribute('data-lang');
       setLanguage(lang);
     });
