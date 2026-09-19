@@ -897,16 +897,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 9. NAVBAR ACTIVE STATE & HEADER THEME ON SCROLL
   // ==========================================================================
-  const sections = document.querySelectorAll('section[id]');
-  const mainNavLinks = document.querySelectorAll('.pill-nav .nav-link');
   const siteHeader = document.getElementById('siteHeader');
-
   let isTicking = false;
+
   window.addEventListener('scroll', () => {
     if (!isTicking) {
       window.requestAnimationFrame(() => {
         const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-
         if (siteHeader) {
           if (scrollY > 60) {
             siteHeader.classList.add('scrolled');
@@ -914,22 +911,6 @@ document.addEventListener('DOMContentLoaded', () => {
             siteHeader.classList.remove('scrolled');
           }
         }
-
-        let current = '';
-        sections.forEach(section => {
-          const sectionTop = section.offsetTop - 140;
-          if (scrollY >= sectionTop) {
-            current = section.getAttribute('id');
-          }
-        });
-
-        mainNavLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-          }
-        });
-
         isTicking = false;
       });
       isTicking = true;
@@ -956,7 +937,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ==========================================================================
   // ==========================================================================
   // 11. SECTION 2 — CONSULTORIO 102-FRAME HIGH RESOLUTION DRONE SCROLL SCRUBBING
   // ==========================================================================
@@ -1065,8 +1045,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const onScroll = () => {
       const rect = consultorioSection.getBoundingClientRect();
       const winH = window.innerHeight;
-      const totalDist = winH + (rect.height || winH);
       
+      // If Section 2 is outside viewport, skip processing entirely
+      if (rect.bottom < -50 || rect.top > winH + 50) {
+        return;
+      }
+
+      const totalDist = winH + (rect.height || winH);
       const scrollPos = winH - rect.top;
       const progress = Math.min(Math.max(scrollPos / totalDist, 0), 1);
       targetProgress = progress;
