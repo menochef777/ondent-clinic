@@ -542,6 +542,9 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
   pointer-events: none;
 }
 
+/* ==========================================================================
+   LIQUID HERO SECTION
+   ========================================================================== */
 .liquid-hero-section {
   position: relative;
   height: 100vh;
@@ -553,15 +556,17 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
   justify-content: space-between;
   background-color: #050505;
   color: #ffffff;
+  z-index: 10;
 }
 
-/* Video Background with Fallback */
+/* Hero Video Background (Smiling Woman) */
 .liquid-hero-video-wrap {
   position: absolute;
   inset: 0;
   z-index: 0;
   overflow: hidden;
   background-color: #000000;
+  pointer-events: none;
 }
 
 .liquid-hero-video {
@@ -593,9 +598,8 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
 .liquid-video-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.42);
-  backdrop-filter: blur(0.5px);
-  -webkit-backdrop-filter: blur(0.5px);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.65) 100%),
+              linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.75) 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -971,6 +975,304 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
 }
 
 /* ==========================================================================
+   SEÇÃO 2 — CONSULTORIO 102-FRAME HIGH RESOLUTION DRONE SCROLL
+   ========================================================================== */
+.consultorio-motion-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 720px;
+  z-index: 15;
+  background-color: #0b0f0d;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 36px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.consultorio-canvas-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #0b0f0d;
+  pointer-events: none;
+}
+
+#consultorioCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.consultorio-canvas-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glass-editorial-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+  pointer-events: auto;
+}
+
+/* Glass Editorial: Top Row */
+.glass-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.glass-badge {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  padding: 8px 18px;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.glass-top-paragraph {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 400;
+  max-width: 420px;
+  text-align: right;
+  line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+/* Glass Editorial: Bottom Row */
+.glass-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.glass-content-left {
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.glass-main-title {
+  font-size: clamp(2.3rem, 4.6vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.glass-support-desc {
+  font-size: clamp(0.92rem, 1.2vw, 1.08rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  max-width: 520px;
+}
+
+.glass-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.glass-btn-solid {
+  background: #00B894;
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 13px 26px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 24px rgba(0, 184, 148, 0.35);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.glass-btn-solid:hover {
+  background: #00a383;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 184, 148, 0.5);
+  color: #ffffff;
+}
+
+.glass-btn-pill {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border-radius: 9999px;
+  padding: 13px 24px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.glass-btn-pill:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Glass Editorial: Right Capabilities Panel */
+.glass-capabilities-panel {
+  background: rgba(11, 17, 15, 0.65);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+  padding: 24px 28px;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+.glass-capability-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-capability-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.glass-cap-num {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #00B894;
+  background: rgba(0, 184, 148, 0.15);
+  border-radius: 8px;
+  padding: 4px 8px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.glass-cap-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.glass-cap-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glass-cap-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.glass-cap-chevron {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.glass-capability-row:hover .glass-cap-chevron {
+  color: #00B894;
+  transform: translateX(3px);
+}
+
+.glass-cap-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Responsiveness for Section 2 */
+@media (max-width: 991px) {
+  .consultorio-sticky-stage {
+    padding: 24px 20px;
+  }
+  .glass-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .glass-top-paragraph {
+    text-align: left;
+    max-width: 100%;
+    font-size: 0.88rem;
+  }
+  .glass-bottom-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  .glass-capabilities-panel {
+    max-width: 100%;
+    padding: 16px 20px;
+    gap: 14px;
+  }
+  .glass-capability-row {
+    padding-bottom: 12px;
+  }
+}
+
+/* ==========================================================================
    CUSTOM CREATIVE STUDIO CURSOR
    ========================================================================== */
 .custom-cursor-dot {
@@ -1069,232 +1371,6 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
 
 @media (prefers-reduced-motion: reduce) { 
   .hero-anim, .hero-zoom { animation: none; opacity: 1; } 
-}
-
-/* ==========================================================================
-   CLINICAL BLUE HERO SECTION (MATCHING REFERENCE IMAGE 3D IMPLANT EXACT)
-   ========================================================================== */
-.clinic-hero-reference {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  background-color: #5aa5e8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 0;
-}
-
-.hero-reference-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 100%;
-  min-height: calc(100vh - 65px);
-  padding: 0 0 0 clamp(20px, 5vw, 80px);
-}
-
-.hero-ref-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  z-index: 5;
-  max-width: 560px;
-  flex-shrink: 0;
-  padding: 40px 0;
-}
-
-.hero-ref-title {
-  font-size: clamp(3.4rem, 6.2vw, 5.8rem);
-  font-weight: 900;
-  color: #ffffff;
-  line-height: 1.04;
-  letter-spacing: -0.035em;
-  margin-bottom: 20px;
-  text-shadow: 0 4px 20px rgba(0, 40, 85, 0.12);
-}
-
-.hero-ref-avatar-pill {
-  display: inline-flex;
-  align-items: center;
-  background: #ffffff;
-  padding: 4px 14px 4px 6px;
-  border-radius: 9999px;
-  box-shadow: 0 10px 25px rgba(0, 40, 90, 0.16);
-  vertical-align: middle;
-  margin-left: 14px;
-}
-
-.hero-ref-avatar-pill img {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  margin-right: -10px;
-  object-fit: cover;
-}
-
-.hero-ref-avatar-pill .pill-count {
-  margin-left: 18px;
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #2563eb;
-}
-
-.hero-ref-description {
-  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
-  color: rgba(255, 255, 255, 0.95);
-  line-height: 1.55;
-  max-width: 480px;
-  margin-bottom: 30px;
-  font-weight: 400;
-  text-shadow: 0 2px 10px rgba(0, 30, 70, 0.08);
-}
-
-.hero-ref-description strong {
-  color: #ffffff;
-  font-weight: 800;
-}
-
-.hero-patient-celebrate-wrap {
-  display: block;
-  margin-top: 10px;
-  max-width: 320px;
-  filter: drop-shadow(0 15px 35px rgba(0, 30, 80, 0.22));
-}
-
-.hero-celebrating-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  border-radius: 20px;
-}
-
-/* Right Column: 3D Implant Interactive Video Frame */
-.hero-ref-right {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  width: 62%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  pointer-events: none;
-}
-
-.hero-video-frame {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  overflow: hidden;
-}
-
-.hero-implant-video {
-  width: 100%;
-  height: 100%;
-  max-height: 98vh;
-  object-fit: contain;
-  object-position: bottom right;
-  display: block;
-  background: transparent;
-  transform: scale(1.04);
-  transform-origin: bottom right;
-}
-
-.desktop-hero-video {
-  display: block;
-}
-
-.mobile-hero-video {
-  display: none;
-}
-
-/* Contacts button on header */
-.btn-hero-contacts {
-  background: #ffffff;
-  color: #111827;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 6px 8px 6px 18px;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  box-shadow: 0 4px 20px rgba(0, 30, 70, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn-hero-contacts:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 30, 70, 0.22);
-}
-
-.btn-arrow-yellow {
-  width: 32px;
-  height: 32px;
-  background: #E8F54B;
-  color: #111827;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 768px) {
-  .desktop-hero-video {
-    display: none;
-  }
-  .mobile-hero-video {
-    display: block;
-  }
-}
-
-@media (max-width: 992px) {
-  .hero-reference-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 30px;
-  }
-  .hero-ref-left {
-    align-items: center;
-  }
-  .hero-ref-actions {
-    justify-content: center;
-  }
-  .hero-ref-right {
-    height: 440px;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero-ref-title {
-    font-size: 2.8rem;
-  }
-  .hero-ref-right {
-    height: 360px;
-  }
-  .hero-ref-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-  .btn-hero-ref-primary,
-  .btn-hero-ref-wa {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 /* ==========================================================================
@@ -1805,6 +1881,13 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
    ========================================================================== */
 .about-section {
   padding: 80px 0;
+}
+
+.about-section {
+  padding: 70px 0;
+  background-color: var(--bg-page);
+  position: relative;
+  z-index: 20;
 }
 
 .section-header-left {
@@ -2915,10 +2998,10 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
    BOOKING & BENTO APPOINTMENT SECTION (ELEVATED LUXURY IDENTITY)
    ========================================================================== */
 .booking-section {
-  padding: 90px 0 100px;
+  padding: clamp(60px, 6vw, 85px) 0 90px;
   background: #ffffff;
   position: relative;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 20px;
 }
 
 .booking-header-area {
@@ -3340,6 +3423,8 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
     justify-content: center;
   }
 }
+
+.mascot-mini-features span {
   font-size: 0.86rem;
   font-weight: 700;
   color: #1e293b;
@@ -3534,11 +3619,11 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
    GOOGLE MAPS VERIFIED REVIEWS SECTION (100+ REAL REVIEWS)
    ========================================================================== */
 .reviews-section {
-  padding: 100px 0 80px;
+  padding: 80px 0 80px;
   background: #fafaf8;
   position: relative;
   overflow: hidden;
-  scroll-margin-top: 90px;
+  scroll-margin-top: 20px;
 }
 
 .reviews-header-flex {
@@ -3799,129 +3884,7 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
   }
 }
 
-/* ==========================================================================
-   FOOTER SECTION
-   ========================================================================== */
-.site-footer {
-  background: #0A0F0D;
-  color: var(--text-white);
-  padding: 80px 0 40px;
-  position: relative;
-  overflow: hidden;
-}
 
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-  gap: 40px;
-  margin-bottom: 60px;
-  position: relative;
-  z-index: 2;
-}
-
-.footer-logo {
-  height: 44px;
-  width: auto;
-  filter: brightness(0) invert(1);
-  margin-bottom: 20px;
-}
-
-.footer-tagline {
-  font-size: 0.92rem;
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 24px;
-  max-width: 320px;
-}
-
-.footer-social-links {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-social-links a {
-  width: 38px;
-  height: 38px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  color: white;
-  transition: var(--transition-fast);
-}
-
-.footer-social-links a:hover {
-  background: var(--accent);
-  transform: translateY(-3px);
-}
-
-.footer-heading {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--text-white);
-}
-
-.footer-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-list li {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.footer-list li a {
-  color: var(--text-light);
-}
-
-.footer-list li a:hover {
-  color: var(--accent);
-}
-
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.85rem;
-  color: var(--text-light);
-  position: relative;
-  z-index: 2;
-}
-
-.footer-legal-links {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.footer-legal-links a:hover {
-  color: var(--text-white);
-}
-
-.footer-big-brand {
-  font-size: clamp(3rem, 10vw, 9rem);
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.03);
-  text-align: center;
-  letter-spacing: 0.05em;
-  line-height: 1;
-  margin-top: 40px;
-  user-select: none;
-  pointer-events: none;
-  position: relative;
-  z-index: 1;
-}
 
 /* ==========================================================================
    SPECIALTY MODAL
@@ -4177,19 +4140,34 @@ button:active, .btn:active, .book-btn:active, .hero-btn-primary:active, .special
   transform: scale(1.04);
 }
 
-/* ==========================================================================
-   OFFSCREEN PERFORMANCE & CONTENT-VISIBILITY (PREVENT JANK & REFLOWS)
-   ========================================================================== */
-.about-section,
-.services-section,
-.cases-showcase-section,
-.dentists-section,
-.freedom-section,
-.booking-section,
-.reviews-section,
-.site-footer {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 600px;
+/* Floating Call Button Style */
+.daria-floating-call-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 990;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #00B894;
+  color: #ffffff;
+  padding: 12px 22px;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 30px rgba(0, 184, 148, 0.4);
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.daria-floating-call-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.daria-floating-call-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 14px 35px rgba(0, 184, 148, 0.55);
 }
 
 /* Fluid Typography across all resolutions */
@@ -4464,48 +4442,8 @@ html.lenis, html.lenis body {
 .delay-2 { transition-delay: 160ms !important; }
 
 /* ==========================================================================
-   FIXED FULL-VIEWPORT SCROLL MOTION CANVAS (300 FRAMES) — HIGH PERFORMANCE
+   Normal Solid Section Backgrounds for All Clinic Content
    ========================================================================== */
-.motion-canvas-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-  background-color: #0b0f0d;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  contain: strict;
-}
-
-#motionCanvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  opacity: 0.8;
-  transform: translate3d(0, 0, 0);
-}
-
-.motion-canvas-overlay {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(11, 15, 13, 0.1) 0%, rgba(11, 15, 13, 0.45) 100%);
-  pointer-events: none;
-}
-
-main {
-  position: relative;
-  z-index: 10;
-}
-
-/* Normal Solid Section Backgrounds for All Clinic Content Below Storytelling Stage */
 .about-section,
 .services-section,
 .dentists-section,
@@ -4514,7 +4452,13 @@ main {
 .reviews-section {
   position: relative;
   z-index: 35;
-  background-color: var(--bg-page) !important;
+  background-color: var(--bg-page);
+}
+
+.cases-section-standalone {
+  position: relative;
+  z-index: 35;
+  background-color: #080D0B;
 }
 
 .site-footer {
@@ -4541,72 +4485,65 @@ main {
 }
 
 /* ==========================================================================
-   MASTER STORYTELLING RUNWAY (HERO -> CONSULTORIO -> CASOS CLÍNICOS ONLY)
-   ========================================================================== */
-.storytelling-stage {
-  position: relative;
-  width: 100%;
-  height: 280vh; /* Dedicated smooth runway for Hero -> Consultorio -> Casos Clínicos */
-  z-index: 20;
-}
-
-.liquid-hero-section {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 20;
-  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
-  pointer-events: auto;
-}
-
-.liquid-hero-section.is-hidden {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  visibility: hidden !important;
-  transform: translate3d(0, -30px, 0) !important;
-}
-
-/* ==========================================================================
-   SEÇÃO 2 — EDITORIAL GLASS SECTION ("LEARN TO SEE BRILLIANTLY" AESTHETIC)
+   SEÇÃO 2 — EDITORIAL GLASS SECTION WITH FULL 3D VIDEO BACKGROUND
    ========================================================================== */
 .glass-editorial-section {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate3d(-50%, 25px, 0);
+  position: relative;
   width: 100%;
-  max-width: 1400px;
-  height: 100vh;
-  height: 100svh;
-  z-index: 25;
+  min-height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 100px 48px 60px;
-  margin: 0 auto;
-  font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+  padding: 120px 48px 70px;
+  background-color: #0b0f0d;
   color: #FFFFFF;
-  opacity: 0;
+  z-index: 15;
+  box-sizing: border-box;
+}
+
+.consultorio-video-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  background-color: #050505;
   pointer-events: none;
-  visibility: hidden;
-  will-change: opacity, transform;
-  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
 }
 
-.glass-editorial-section.is-active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  visibility: visible !important;
-  transform: translate3d(-50%, 0, 0) !important;
+.consultorio-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.glass-editorial-section.is-fading-out {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  visibility: hidden !important;
-  transform: translate3d(-50%, -30px, 0) !important;
+.consultorio-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(11, 15, 13, 0.45) 0%, rgba(11, 15, 13, 0.82) 100%),
+              linear-gradient(180deg, rgba(11, 15, 13, 0.65) 0%, rgba(11, 15, 13, 0.25) 50%, rgba(11, 15, 13, 0.9) 100%);
+  backdrop-filter: blur(0.5px);
+  -webkit-backdrop-filter: blur(0.5px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.glass-editorial-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 190px);
+  gap: 40px;
 }
 
 .glass-top-row {
@@ -4817,40 +4754,25 @@ main {
 }
 
 /* ==========================================================================
-   SEÇÃO 3 — CASOS CLÍNICOS REALES (FULL DESIGN MATCHING IMAGE 2 + HIGH FPS)
+   CASOS CLÍNICOS REALES (STANDALONE LUXURY SECTION IN DOCUMENT FLOW)
    ========================================================================== */
-.cases-trailer-stage {
-  position: fixed;
-  bottom: 30px;
-  left: 0;
-  width: 100vw;
-  z-index: 28;
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  transform: translate3d(0, 35px, 0);
-  will-change: opacity, transform;
-  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
+.cases-section-standalone {
+  position: relative;
+  width: 100%;
+  background-color: #080D0B;
+  background-image: radial-gradient(circle at 50% 0%, rgba(0, 184, 148, 0.08) 0%, transparent 60%);
+  padding: clamp(80px, 8vw, 120px) 0;
+  overflow: hidden;
+  z-index: 5;
+  color: #FFFFFF;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
-}
-
-.cases-trailer-stage.is-active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-  visibility: visible !important;
-  transform: translate3d(0, 0, 0) !important;
-}
-
-.cases-trailer-stage.is-fading-out {
-  opacity: 0 !important;
-  pointer-events: none !important;
-  visibility: hidden !important;
-  transform: translate3d(0, -30px, 0) !important;
 }
 
 .cases-stage-container {
   max-width: 1400px;
-  margin: 0 auto 18px;
+  margin: 0 auto 32px;
   padding: 0 48px;
   position: relative;
   z-index: 2;
@@ -4902,7 +4824,8 @@ main {
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
 }
 
-.cases-stage-main-title .text-italic-accent {
+.cases-stage-main-title .text-italic-accent,
+.cases-stage-main-title .text-italic-serif {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-weight: 400;
@@ -4952,7 +4875,7 @@ main {
 }
 
 .cases-stage-marquee {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   position: relative;
   cursor: grab;
@@ -5115,5 +5038,243 @@ main {
   }
 }
 
+/* ==========================================================================
+   OUR SERVICES SECTION (IMAGE 2 DESIGN CLONE - 5 PROCEDURAL CARDS & PILLS)
+   ========================================================================== */
+.services-section {
+  padding: 100px 0 80px;
+  background: #FAFCFE;
+  position: relative;
+  overflow: hidden;
+}
 
+.services-header-centered {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
 
+.services-eyebrow-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #2563EB;
+  margin-bottom: 12px;
+}
+
+.services-header-centered .section-title {
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  color: #0F172A;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  margin-bottom: 14px;
+}
+
+.services-header-centered .section-subtitle {
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+  color: #64748B;
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+/* 5 Procedural Cards Grid (Desktop 5-column layout) */
+.procedures-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.procedure-service-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.04), 0 2px 6px -1px rgba(15, 23, 42, 0.02);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+
+.procedure-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -6px rgba(15, 23, 42, 0.1), 0 8px 16px -2px rgba(15, 23, 42, 0.04);
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.procedure-card-media {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  background: #F1F5F9;
+}
+
+.procedure-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.procedure-service-card:hover .procedure-img {
+  transform: scale(1.06);
+}
+
+.procedure-card-body {
+  padding: 18px 16px 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-grow: 1;
+}
+
+.procedure-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.procedure-title {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #0F172A;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0;
+}
+
+.procedure-desc {
+  font-size: 0.78rem;
+  color: #64748B;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.procedure-arrow-btn {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #2563EB;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.88rem;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.28);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.procedure-service-card:hover .procedure-arrow-btn {
+  background: #1D4ED8;
+  transform: scale(1.08) translateX(2px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45);
+}
+
+/* 12 Specialty Pills Grid */
+.specialties-pill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.specialty-pill {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.specialty-pill:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.pill-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00B894;
+  flex-shrink: 0;
+}
+
+.pill-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1E293B;
+}
+
+.pill-arrow {
+  color: #94A3B8;
+  font-size: 0.85rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.specialty-pill:hover .pill-arrow {
+  color: #2563EB;
+  transform: translate(2px, -2px);
+}
+
+/* Responsiveness for Services Section */
+@media (max-width: 1200px) {
+  .procedures-card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .specialties-pill-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .procedures-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .specialties-pill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-section {
+    padding: 70px 0 50px;
+  }
+  .procedures-card-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .specialties-pill-grid {
+    grid-template-columns: 1fr;
+  }
+  .procedure-card-media {
+    height: 190px;
+  }
+}

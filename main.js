@@ -85,22 +85,19 @@ document.addEventListener('DOMContentLoaded', () => {
         pill3: "Atención Sin Dolor"
       },
       services: {
-        title: "Nuestros Servicios",
-        subtitle: "Soluciones odontológicas integrales diseñadas con precisión, durabilidad y alta estética.",
-        cat1: "Preventivo y Restaurador",
-        card1Title: "Cuidado Dental Básico",
-        c1f1: "Exámenes Diagnósticos Completos",
-        c1f2: "Resinas Estéticas del Color Dental",
-        c1f3: "Limpieza Ultrasónica Preventiva",
-        c1f4: "Odontopediatría con Cuidado Gentil",
-        c1Btn: "Agendar Cuidado Básico",
-        cat2: "Armonización de Sonrisa",
-        card2Title: "Estética Dental Avanzada",
-        c2f1: "Carillas Cerámicas de Alta Gama",
-        c2f2: "Blanqueamiento Clínico Láser / LED",
-        c2f3: "Coronas de Zirconia y Diseño de Sonrisa",
-        c2f4: "Armonía Facial y Naturalidad",
-        c2Btn: "Agendar Estética Dental"
+        badge: "NUESTROS SERVICIOS",
+        title: "Soluciones Odontológicas Integrales",
+        subtitle: "Atención médica, quirúrgica y cosmética de excelencia en un solo lugar.",
+        card1Title: "Implantes Dentales",
+        card1Desc: "Tecnología guiada 3D para restaurar la función completa.",
+        card2Title: "Carillas de Porcelana",
+        card2Desc: "Láminas cerámicas de alta gama que devuelven blancura y brillo.",
+        card3Title: "Blanqueamiento Clínico",
+        card3Desc: "Tecnología láser acelerada para aclarar hasta 8 tonos sin dolor.",
+        card4Title: "Ortodoncia & Alineadores",
+        card4Desc: "Alineación y corrección de mordida con tecnología invisible.",
+        card5Title: "Coronas de Zirconia",
+        card5Desc: "Biomateriales de máxima durabilidad y estética natural."
       },
       cases: {
         badge: "CASOS CLÍNICOS REALES",
@@ -222,22 +219,19 @@ document.addEventListener('DOMContentLoaded', () => {
         pill3: "Pain-Free Comfort"
       },
       services: {
-        title: "Our Services",
-        subtitle: "Comprehensive dental solutions designed with precision, durability, and high aesthetics.",
-        cat1: "Preventive & Restorative",
-        card1Title: "Basic Dental Care",
-        c1f1: "Comprehensive Diagnostic Exams",
-        c1f2: "Tooth-Colored Aesthetic Resins",
-        c1f3: "Preventive Ultrasonic Cleaning",
-        c1f4: "Gentle Pediatric Dentistry",
-        c1Btn: "Book Basic Care",
-        cat2: "Smile Harmonization",
-        card2Title: "Advanced Aesthetic Care",
-        c2f1: "High-End Ceramic Veneers",
-        c2f2: "In-Office Laser / LED Whitening",
-        c2f3: "Zirconia Crowns & Smile Makeovers",
-        c2f4: "Natural Facial Harmony",
-        c2Btn: "Book Aesthetic Care"
+        badge: "OUR SERVICES",
+        title: "Comprehensive Dental Solutions",
+        subtitle: "Medical, surgical & cosmetic dental excellence under one roof.",
+        card1Title: "Dental Implants",
+        card1Desc: "3D guided precision technology to restore full function.",
+        card2Title: "Porcelain Veneers",
+        card2Desc: "Premium ceramic veneers restoring natural brilliance.",
+        card3Title: "Clinical Whitening",
+        card3Desc: "Accelerated laser whitening up to 8 shades pain-free.",
+        card4Title: "Orthodontics & Aligners",
+        card4Desc: "Discreet alignment and bite correction technology.",
+        card5Title: "Zirconia Crowns",
+        card5Desc: "High-durability biomaterials with natural aesthetics."
       },
       cases: {
         badge: "REAL CLINICAL CASES",
@@ -408,38 +402,24 @@ document.addEventListener('DOMContentLoaded', () => {
       aboutPills[2].textContent = t.about.pill3;
     }
 
-    // 5. Services
+    // 5. Services (Cloned Procedure Cards)
+    const servicesBadge = document.querySelector('.services-eyebrow-badge');
+    if (servicesBadge && t.services) servicesBadge.textContent = t.services.badge;
     const servicesTitle = document.querySelector('#services .section-title');
-    if (servicesTitle) servicesTitle.textContent = t.services.title;
+    if (servicesTitle && t.services) servicesTitle.textContent = t.services.title;
     const servicesSubtitle = document.querySelector('#services .section-subtitle');
-    if (servicesSubtitle) servicesSubtitle.textContent = t.services.subtitle;
-    const basicCard = document.querySelector('.basic-care-card');
-    if (basicCard) {
-      basicCard.querySelector('.service-category').textContent = t.services.cat1;
-      basicCard.querySelector('.service-card-title').textContent = t.services.card1Title;
-      const feats = basicCard.querySelectorAll('.service-feature-list li');
-      if (feats.length >= 4) {
-        feats[0].childNodes[1].nodeValue = " " + t.services.c1f1;
-        feats[1].childNodes[1].nodeValue = " " + t.services.c1f2;
-        feats[2].childNodes[1].nodeValue = " " + t.services.c1f3;
-        feats[3].childNodes[1].nodeValue = " " + t.services.c1f4;
-      }
-      const c1Link = basicCard.querySelector('.service-explore-link span');
-      if (c1Link) c1Link.textContent = t.services.c1Btn;
-    }
-    const aestheticCard = document.querySelector('.aesthetic-care-card');
-    if (aestheticCard) {
-      aestheticCard.querySelector('.service-category').textContent = t.services.cat2;
-      aestheticCard.querySelector('.service-card-title').textContent = t.services.card2Title;
-      const feats = aestheticCard.querySelectorAll('.service-feature-list li');
-      if (feats.length >= 4) {
-        feats[0].childNodes[1].nodeValue = " " + t.services.c2f1;
-        feats[1].childNodes[1].nodeValue = " " + t.services.c2f2;
-        feats[2].childNodes[1].nodeValue = " " + t.services.c2f3;
-        feats[3].childNodes[1].nodeValue = " " + t.services.c2f4;
-      }
-      const c2Link = aestheticCard.querySelector('.service-explore-link span');
-      if (c2Link) c2Link.textContent = t.services.c2Btn;
+    if (servicesSubtitle && t.services) servicesSubtitle.textContent = t.services.subtitle;
+
+    const procCards = document.querySelectorAll('.procedure-service-card');
+    if (procCards.length >= 5 && t.services) {
+      const titles = [t.services.card1Title, t.services.card2Title, t.services.card3Title, t.services.card4Title, t.services.card5Title];
+      const descs = [t.services.card1Desc, t.services.card2Desc, t.services.card3Desc, t.services.card4Desc, t.services.card5Desc];
+      procCards.forEach((card, idx) => {
+        const titleEl = card.querySelector('.procedure-title');
+        const descEl = card.querySelector('.procedure-desc');
+        if (titleEl && titles[idx]) titleEl.textContent = titles[idx];
+        if (descEl && descs[idx]) descEl.textContent = descs[idx];
+      });
     }
 
     // 6. Clinical Cases
@@ -720,265 +700,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 6. 3D INTERACTIVE MASCOT EYE-TRACKING (ULTRA-FAST & ZERO LAG VIA INTERSECTIONOBSERVER)
-  // ==========================================================================
-  const initMiniMascotCanvas = () => {
-    const miniCanvas = document.getElementById('miniMascotCanvas');
-    const mascotSection = document.getElementById('mascote');
-    if (!miniCanvas || !mascotSection) return;
-
-    const ctx = miniCanvas.getContext('2d', { alpha: false });
-    const TAU = Math.PI * 2;
-
-    // 48 evenly distributed angular keyframes around 360°
-    const DECIMATED_FRAMES = [
-      1, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90,
-      96, 102, 108, 114, 120, 126, 132, 138, 144, 150, 156, 162, 168,
-      174, 180, 186, 192, 198, 204, 210, 216, 222, 228, 234, 240
-    ];
-
-    let mascotImages = {};
-    let isSectionVisible = false;
-    let isLoaded = false;
-    let currentRenderedFrame = 1;
-    let targetMascotFrame = 1;
-    let pointerX = window.innerWidth / 2;
-    let pointerY = window.innerHeight / 2;
-    let lastMoveTime = Date.now();
-    let idleOrbital = 0;
-    let animFrameId = null;
-
-    miniCanvas.width = 480;
-    miniCanvas.height = 480;
-
-    const getMascotPath = (idx) => {
-      const padNum = String(idx).padStart(3, '0');
-      return `herovideo/efeito169hero/ezgif-frame-${padNum}.jpg`;
-    };
-
-    const drawFrame = (frameNum) => {
-      let img = mascotImages[frameNum];
-      if (!img || !img.complete || img.naturalWidth === 0) {
-        img = mascotImages[1];
-      }
-      if (img && img.complete && img.naturalWidth > 0) {
-        ctx.drawImage(img, 0, 0, 480, 480);
-        currentRenderedFrame = frameNum;
-      }
-    };
-
-    // Load Frame 1 immediately
-    const f1 = new Image();
-    f1.src = getMascotPath(1);
-    f1.onload = () => {
-      mascotImages[1] = f1;
-      drawFrame(1);
-    };
-    if (f1.complete) {
-      mascotImages[1] = f1;
-      drawFrame(1);
-    }
-
-    // Lazy load remaining keyframes in background when section is near
-    const loadRemainingFrames = () => {
-      if (isLoaded) return;
-      isLoaded = true;
-      let idx = 0;
-      const loadBatch = () => {
-        for (let i = 0; i < 4 && idx < DECIMATED_FRAMES.length; i++, idx++) {
-          const frameNum = DECIMATED_FRAMES[idx];
-          if (!mascotImages[frameNum]) {
-            const img = new Image();
-            img.src = getMascotPath(frameNum);
-            mascotImages[frameNum] = img;
-          }
-        }
-        if (idx < DECIMATED_FRAMES.length) {
-          setTimeout(loadBatch, 60);
-        }
-      };
-      loadBatch();
-    };
-
-    const getNearestKeyframe = (angle) => {
-      const normalized = (angle % TAU + TAU) % TAU;
-      const step = TAU / DECIMATED_FRAMES.length;
-      const index = Math.floor(normalized / step) % DECIMATED_FRAMES.length;
-      return DECIMATED_FRAMES[index] || 1;
-    };
-
-    const updateGaze = (e) => {
-      if (!isSectionVisible) return;
-      pointerX = e.clientX;
-      pointerY = e.clientY;
-      lastMoveTime = Date.now();
-
-      const rect = miniCanvas.getBoundingClientRect();
-      const eyeCenterX = rect.left + rect.width * 0.49;
-      const eyeCenterY = rect.top + rect.height * 0.32;
-      const dx = pointerX - eyeCenterX;
-      const dy = pointerY - eyeCenterY;
-
-      if (Math.hypot(dx, dy) > 8) {
-        const angle = Math.atan2(dy, dx);
-        targetMascotFrame = getNearestKeyframe(angle);
-        if (targetMascotFrame !== currentRenderedFrame) {
-          drawFrame(targetMascotFrame);
-        }
-      }
-    };
-
-    window.addEventListener('pointermove', updateGaze, { passive: true });
-
-    const idleLoop = () => {
-      if (!isSectionVisible) return;
-      const now = Date.now();
-      if (now - lastMoveTime > 3000) {
-        idleOrbital += 0.025;
-        if (idleOrbital > TAU) idleOrbital -= TAU;
-        targetMascotFrame = getNearestKeyframe(idleOrbital);
-        if (targetMascotFrame !== currentRenderedFrame) {
-          drawFrame(targetMascotFrame);
-        }
-      }
-      animFrameId = requestAnimationFrame(idleLoop);
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        isSectionVisible = entry.isIntersecting;
-        if (entry.isIntersecting) {
-          loadRemainingFrames();
-          if (!animFrameId) animFrameId = requestAnimationFrame(idleLoop);
-        } else {
-          if (animFrameId) {
-            cancelAnimationFrame(animFrameId);
-            animFrameId = null;
-          }
-        }
-      });
-    }, { rootMargin: '200px' });
-
-    observer.observe(mascotSection);
-  };
-  initMiniMascotCanvas();
-
-  // ==========================================================================
-  // 7. CLINICAL CASES FULL-BLEED TRAILER LOOP / MARQUEE TICKER (PAUSE OFFSCREEN)
-  // ==========================================================================
-  const casesTrack = document.getElementById('casesTrack');
-  const casesMarqueeWrapper = document.getElementById('casesMarqueeWrapper');
-  const casesSection = document.getElementById('cases');
-  const casesPrev = document.getElementById('casesPrev');
-  const casesNext = document.getElementById('casesNext');
-
-  if (casesTrack && casesMarqueeWrapper) {
-    const originalCards = Array.from(casesTrack.children);
-    originalCards.forEach(card => {
-      const clone = card.cloneNode(true);
-      clone.setAttribute('aria-hidden', 'true');
-      casesTrack.appendChild(clone);
-    });
-
-    let currentX = 0;
-    let singleLoopWidth = 0;
-    let isHovered = false;
-    let isPointerDown = false;
-    let pointerStartX = 0;
-    let dragStartX = 0;
-    let resumeTimeout = null;
-    let isCasesVisible = true;
-    let casesAnimId = null;
-    const baseSpeed = 0.65;
-
-    const calculateLoopWidth = () => {
-      let width = 0;
-      originalCards.forEach(card => {
-        width += card.offsetWidth + 24;
-      });
-      singleLoopWidth = width;
-    };
-    calculateLoopWidth();
-    window.addEventListener('resize', calculateLoopWidth, { passive: true });
-
-    const animateMarquee = () => {
-      if (!isCasesVisible) return;
-      if (!isHovered && !isPointerDown) {
-        currentX += baseSpeed;
-      }
-      if (singleLoopWidth > 0) {
-        if (currentX >= singleLoopWidth) {
-          currentX -= singleLoopWidth;
-        } else if (currentX < 0) {
-          currentX += singleLoopWidth;
-        }
-      }
-      casesTrack.style.transform = `translate3d(${-currentX}px, 0, 0)`;
-      casesAnimId = requestAnimationFrame(animateMarquee);
-    };
-
-    if (casesSection) {
-      const casesObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          isCasesVisible = entry.isIntersecting;
-          if (entry.isIntersecting) {
-            if (!casesAnimId) casesAnimId = requestAnimationFrame(animateMarquee);
-          } else {
-            if (casesAnimId) {
-              cancelAnimationFrame(casesAnimId);
-              casesAnimId = null;
-            }
-          }
-        });
-      }, { rootMargin: '100px' });
-      casesObserver.observe(casesSection);
-    } else {
-      animateMarquee();
-    }
-
-    casesMarqueeWrapper.addEventListener('mouseenter', () => { isHovered = true; }, { passive: true });
-    casesMarqueeWrapper.addEventListener('mouseleave', () => { if (!isPointerDown) isHovered = false; }, { passive: true });
-
-    casesTrack.addEventListener('pointerdown', (e) => {
-      if (e.target.closest('button')) return;
-      isPointerDown = true;
-      isHovered = true;
-      pointerStartX = e.clientX;
-      dragStartX = currentX;
-      casesTrack.setPointerCapture(e.pointerId);
-    });
-
-    casesTrack.addEventListener('pointermove', (e) => {
-      if (!isPointerDown) return;
-      const deltaX = e.clientX - pointerStartX;
-      currentX = dragStartX - deltaX;
-    }, { passive: true });
-
-    const endPointerDrag = (e) => {
-      if (!isPointerDown) return;
-      isPointerDown = false;
-      try { casesTrack.releasePointerCapture(e.pointerId); } catch (err) {}
-      clearTimeout(resumeTimeout);
-      resumeTimeout = setTimeout(() => { isHovered = false; }, 1200);
-    };
-
-    casesTrack.addEventListener('pointerup', endPointerDrag);
-    casesTrack.addEventListener('pointercancel', endPointerDrag);
-
-    const scrollByAmount = (amount) => {
-      isHovered = true;
-      currentX += amount;
-      casesTrack.style.transform = `translate3d(${-currentX}px, 0, 0)`;
-      clearTimeout(resumeTimeout);
-      resumeTimeout = setTimeout(() => { isHovered = false; }, 1800);
-    };
-
-    if (casesPrev) casesPrev.addEventListener('click', () => scrollByAmount(-354));
-    if (casesNext) casesNext.addEventListener('click', () => scrollByAmount(354));
-  }
-
-  // ==========================================================================
-  // 8. GOOGLE MAPS REVIEWS CONTINUOUS MARQUEE LOOP (PAUSE OFFSCREEN)
+  // 7. GOOGLE MAPS REVIEWS CONTINUOUS MARQUEE LOOP (PAUSE OFFSCREEN)
   // ==========================================================================
   const reviewsTrack = document.getElementById('reviewsTrack');
   const reviewsMarquee = document.getElementById('reviewsMarquee');
@@ -1076,7 +798,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 9. DENTALINK VIP CONCIERGE MODAL & FORM SUBMISSION
+  // 8. DENTALINK VIP CONCIERGE MODAL & FORM SUBMISSION
   // ==========================================================================
   const dentalinkModal = document.getElementById('dentalinkModal');
   const openHeroAgendaModal = document.getElementById('openHeroAgendaModal');
@@ -1173,7 +895,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 10. NAVBAR ACTIVE STATE & HEADER THEME ON SCROLL
+  // 9. NAVBAR ACTIVE STATE & HEADER THEME ON SCROLL
   // ==========================================================================
   const sections = document.querySelectorAll('section[id]');
   const mainNavLinks = document.querySelectorAll('.pill-nav .nav-link');
@@ -1215,373 +937,193 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ==========================================================================
-  // 11. LENIS SMOOTH MOMENTUM SCROLL (60FPS FLUID PHYSICS)
+  // 10. SMOOTH ANCHOR NAVIGATION (ULTRA FAST NATIVE SCROLL)
   // ==========================================================================
-  let lenis = null;
-  if (typeof Lenis !== 'undefined') {
-    lenis = new Lenis({
-      duration: 1.25,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: 'vertical',
-      gestureOrientation: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1.1,
-      touchMultiplier: 1.5,
-      infinite: false,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Smooth Anchor Navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href && href !== '#' && href.length > 1) {
-          const target = document.querySelector(href);
-          if (target) {
-            e.preventDefault();
-            lenis.scrollTo(target, {
-              offset: -40,
-              duration: 1.25,
-              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-            });
-            const drawer = document.getElementById('mobileDrawer');
-            if (drawer && drawer.classList.contains('active')) {
-              drawer.classList.remove('active');
-            }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href && href !== '#' && href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          const drawer = document.getElementById('mobileDrawer');
+          if (drawer && drawer.classList.contains('active')) {
+            drawer.classList.remove('active');
           }
         }
-      });
-    });
-  }
-
-  // ==========================================================================
-  // 12. SMOOTH SCROLL REVEAL (HERO IS INTACT, SECTIONS 2+ ANIMATE FLUIDLY)
-  // ==========================================================================
-  const nonHeroSections = document.querySelectorAll(
-    'section:not(.liquid-hero-section):not(#home)'
-  );
-
-  nonHeroSections.forEach(sec => {
-    // Reveal section headers
-    const headers = sec.querySelectorAll('.section-header-left, .section-header-center, .cases-header-row, .reviews-header, .freedom-header-block');
-    headers.forEach(h => h.classList.add('reveal-on-scroll'));
-
-    // Reveal bento cards and main blocks
-    const cards = sec.querySelectorAll('.bento-card, .service-bento-card, .bento-case-card, .dentist-card, .freedom-side-card, .freedom-mascot-center, .booking-form-card, .booking-info-sidebar, .reviews-carousel-wrapper');
-    cards.forEach((c, idx) => {
-      c.classList.add('reveal-on-scroll');
-      if (idx % 3 === 1) c.classList.add('delay-1');
-      if (idx % 3 === 2) c.classList.add('delay-2');
-    });
-
-    // Reveal pills
-    const pills = sec.querySelectorAll('.specialty-pill');
-    pills.forEach((p, idx) => {
-      p.classList.add('reveal-on-scroll');
-      p.style.transitionDelay = `${(idx % 6) * 60}ms`;
+      }
     });
   });
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.08,
-      rootMargin: '0px 0px -40px 0px'
-    }
-  );
-
-  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
-    revealObserver.observe(el);
-  });
-
   // ==========================================================================
-  // 13. SECTION MOTION — 300-FRAME HIGH-PERFORMANCE SCROLL SCRUBBING (60–120 FPS)
   // ==========================================================================
-  const motionCanvas = document.getElementById('motionCanvas');
-  const heroVideoDesktop = document.getElementById('heroVideoDesktop');
-  const heroVideoMobile = document.getElementById('heroVideoMobile');
-  const isMobile = window.innerWidth <= 768;
+  // 11. SECTION 2 — CONSULTORIO 102-FRAME HIGH RESOLUTION DRONE SCROLL SCRUBBING
+  // ==========================================================================
+  const consultorioSection = document.getElementById('consultorio');
+  const consultorioCanvas = document.getElementById('consultorioCanvas');
+  const glassEditorial = document.querySelector('.glass-editorial-container');
 
-  if (motionCanvas && !isMobile) {
-    const ctx = motionCanvas.getContext('2d', { alpha: false, desynchronized: true });
-    const totalFrames = 300;
+  if (consultorioSection && consultorioCanvas) {
+    const ctx = consultorioCanvas.getContext('2d', { alpha: false });
+    const totalFrames = 102;
+    const pad = (n) => String(n).padStart(3, '0');
     const frames = new Array(totalFrames);
-    let targetFrame = 0;
-    let currentFrame = 0;
-    let lastRenderedIndex = -1;
+    let framesLoaded = 0;
+
+    let targetProgress = 0;
+    let currentProgress = 0;
+    let lastRenderedFrame = -1;
     let isLoopRunning = false;
 
-    let cachedCanvasW = window.innerWidth;
-    let cachedCanvasH = window.innerHeight;
-    let cachedDrawW = 0;
-    let cachedDrawH = 0;
-    let cachedOffsetX = 0;
-    let cachedOffsetY = 0;
+    let canvasW = 0;
+    let canvasH = 0;
+    let drawW = 0;
+    let drawH = 0;
+    let offsetX = 0;
+    let offsetY = 0;
 
-    const pad = (n) => String(n).padStart(3, '0');
+    const resizeCanvas = () => {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvasW = consultorioCanvas.clientWidth || window.innerWidth;
+      canvasH = consultorioCanvas.clientHeight || window.innerHeight;
+      
+      consultorioCanvas.width = canvasW * dpr;
+      consultorioCanvas.height = canvasH * dpr;
 
-    const updateCachedDimensions = () => {
-      cachedCanvasW = window.innerWidth;
-      cachedCanvasH = window.innerHeight;
-      motionCanvas.width = cachedCanvasW;
-      motionCanvas.height = cachedCanvasH;
+      if (ctx) {
+        ctx.scale(dpr, dpr);
+        ctx.imageSmoothingEnabled = true;
+        ctx.imageSmoothingQuality = 'medium';
+      }
 
       const imgAspect = 1920 / 1080;
-      const canvasAspect = cachedCanvasW / cachedCanvasH;
+      const cAspect = canvasW / canvasH;
 
-      if (canvasAspect > imgAspect) {
-        cachedDrawW = cachedCanvasW;
-        cachedDrawH = cachedCanvasW / imgAspect;
-        cachedOffsetX = 0;
-        cachedOffsetY = (cachedCanvasH - cachedDrawH) / 2;
+      if (cAspect > imgAspect) {
+        drawW = canvasW;
+        drawH = canvasW / imgAspect;
+        offsetX = 0;
+        offsetY = (canvasH - drawH) / 2;
       } else {
-        cachedDrawH = cachedCanvasH;
-        cachedDrawW = cachedCanvasH * imgAspect;
-        cachedOffsetX = (cachedCanvasW - cachedDrawW) / 2;
-        cachedOffsetY = 0;
+        drawH = canvasH;
+        drawW = canvasH * imgAspect;
+        offsetX = (canvasW - drawW) / 2;
+        offsetY = 0;
       }
 
-      lastRenderedIndex = -1;
-      const idx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
-      if (frames[idx] && frames[idx].complete) {
-        drawMotionFrame(frames[idx]);
-        lastRenderedIndex = idx;
+      if (lastRenderedFrame >= 0 && frames[lastRenderedFrame]) {
+        drawFrame(frames[lastRenderedFrame]);
       }
     };
 
-    window.addEventListener('resize', updateCachedDimensions, { passive: true });
-    updateCachedDimensions();
-
-    const drawMotionFrame = (img) => {
+    const drawFrame = (img) => {
       if (!ctx || !img || !img.complete || img.naturalWidth === 0) return;
-      ctx.drawImage(img, cachedOffsetX, cachedOffsetY, cachedDrawW, cachedDrawH);
+      ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
     };
 
-    const loadFrame = (i) => {
-      if (frames[i - 1]) return;
+    // Preload all 102 frames
+    for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
       img.src = `sectionmotion/motion1/ezgif-frame-${pad(i)}.jpg`;
       img.onload = () => {
-        if (i === 1 && lastRenderedIndex === -1) {
-          drawMotionFrame(img);
-          lastRenderedIndex = 0;
+        framesLoaded++;
+        if (i === 1) {
+          lastRenderedFrame = 0;
+          drawFrame(img);
         }
       };
       frames[i - 1] = img;
-    };
+    }
 
-    // 1. Initial keyframes for instantaneous response
-    for (let i = 1; i <= 20; i++) loadFrame(i);
-    for (let i = 25; i <= totalFrames; i += 5) loadFrame(i);
-
-    // 2. Background preloading in idle chunks
-    let currentFill = 1;
-    const fillRemaining = () => {
-      let count = 0;
-      while (currentFill <= totalFrames && count < 20) {
-        loadFrame(currentFill);
-        currentFill++;
-        count++;
-      }
-      if (currentFill <= totalFrames) {
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(fillRemaining, { timeout: 150 });
-        } else {
-          setTimeout(fillRemaining, 30);
-        }
-      }
-    };
-    setTimeout(fillRemaining, 80);
-
-    // High-performance RAF loop (stops completely when idle)
-    const renderMotionLoop = () => {
-      const diff = Math.abs(targetFrame - currentFrame);
-
-      if (diff > 0.002) {
-        currentFrame += (targetFrame - currentFrame) * 0.22;
-        const frameIdx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
-
-        if (frameIdx !== lastRenderedIndex) {
-          let imgToDraw = frames[frameIdx];
-          if (!imgToDraw || !imgToDraw.complete) {
-            for (let offset = 1; offset < 15; offset++) {
-              if (frames[frameIdx - offset] && frames[frameIdx - offset].complete) {
-                imgToDraw = frames[frameIdx - offset];
-                break;
-              }
-              if (frames[frameIdx + offset] && frames[frameIdx + offset].complete) {
-                imgToDraw = frames[frameIdx + offset];
-                break;
-              }
-            }
-          }
-
-          if (imgToDraw && imgToDraw.complete) {
-            drawMotionFrame(imgToDraw);
-            lastRenderedIndex = frameIdx;
-          }
-        }
-
-        requestAnimationFrame(renderMotionLoop);
+    const renderLoop = () => {
+      const diff = targetProgress - currentProgress;
+      if (Math.abs(diff) > 0.0005) {
+        currentProgress += diff * 0.4;
       } else {
-        currentFrame = targetFrame;
-        const frameIdx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
-        if (frameIdx !== lastRenderedIndex && frames[frameIdx] && frames[frameIdx].complete) {
-          drawMotionFrame(frames[frameIdx]);
-          lastRenderedIndex = frameIdx;
-        }
+        currentProgress = targetProgress;
+      }
+
+      const frameIdx = Math.min(Math.max(Math.floor(currentProgress * (totalFrames - 1)), 0), totalFrames - 1);
+      
+      if (frameIdx !== lastRenderedFrame && frames[frameIdx] && frames[frameIdx].complete) {
+        drawFrame(frames[frameIdx]);
+        lastRenderedFrame = frameIdx;
+      }
+
+      // Smooth zoom scale
+      const zoomScale = 1 + (currentProgress * 0.1);
+      consultorioCanvas.style.transform = `scale(${zoomScale.toFixed(4)})`;
+
+      if (Math.abs(targetProgress - currentProgress) > 0.0005) {
+        requestAnimationFrame(renderLoop);
+      } else {
         isLoopRunning = false;
       }
     };
 
-    const requestRender = () => {
+    const onScroll = () => {
+      const rect = consultorioSection.getBoundingClientRect();
+      const winH = window.innerHeight;
+      const totalDist = winH + (rect.height || winH);
+      
+      const scrollPos = winH - rect.top;
+      const progress = Math.min(Math.max(scrollPos / totalDist, 0), 1);
+      targetProgress = progress;
+
       if (!isLoopRunning) {
         isLoopRunning = true;
-        requestAnimationFrame(renderMotionLoop);
+        requestAnimationFrame(renderLoop);
       }
     };
 
-    const storytellingStage = document.querySelector('.storytelling-stage');
-    const heroSection = document.querySelector('.liquid-hero-section');
-    const section2 = document.querySelector('.glass-editorial-section');
-    const casesTrailer = document.querySelector('.cases-trailer-stage');
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
 
-    const updateStorytellingFromScroll = () => {
-      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-      const stageHeight = storytellingStage ? (storytellingStage.offsetHeight - window.innerHeight) : (window.innerHeight * 1.8);
-
-      if (scrollY <= stageHeight) {
-        const progress = Math.min(Math.max(scrollY / stageHeight, 0), 1);
-        targetFrame = progress * (totalFrames - 1);
-        requestRender();
-
-        if (motionCanvas) {
-          motionCanvas.style.opacity = '1';
-          motionCanvas.style.visibility = 'visible';
-        }
-
-        // Pause hero background video during scroll to free 100% GPU video decoding pipeline
-        if (progress > 0.02) {
-          if (heroVideoDesktop && !heroVideoDesktop.paused) heroVideoDesktop.pause();
-          if (heroVideoMobile && !heroVideoMobile.paused) heroVideoMobile.pause();
-        } else {
-          if (heroVideoDesktop && heroVideoDesktop.paused) heroVideoDesktop.play().catch(() => {});
-          if (heroVideoMobile && heroVideoMobile.paused) heroVideoMobile.play().catch(() => {});
-        }
-
-        // 3-Stage Storytelling Transitions
-        if (progress < 0.15) {
-          // Stage 1: Hero view
-          if (heroSection) heroSection.classList.remove('is-hidden');
-          if (section2) section2.classList.remove('is-active', 'is-fading-out');
-          if (casesTrailer) casesTrailer.classList.remove('is-active', 'is-fading-out');
-        } else if (progress >= 0.15 && progress < 0.50) {
-          // Stage 2: Consultorio (Drone exterior & operatory arrival)
-          if (heroSection) heroSection.classList.add('is-hidden');
-          if (section2) {
-            section2.classList.add('is-active');
-            section2.classList.remove('is-fading-out');
-          }
-          if (casesTrailer) casesTrailer.classList.remove('is-active', 'is-fading-out');
-        } else {
-          // Stage 3: Casos Clínicos Reais (Photo Studio & Smiling Patient Celebrating)
-          if (heroSection) heroSection.classList.add('is-hidden');
-          if (section2) {
-            section2.classList.remove('is-active');
-            section2.classList.add('is-fading-out');
-          }
-          if (casesTrailer) {
-            casesTrailer.classList.add('is-active');
-            casesTrailer.classList.remove('is-fading-out');
-          }
-        }
-      } else {
-        // Scrolled past the storytelling stage -> completely hide canvas and fixed storytelling overlays
-        if (heroSection) heroSection.classList.add('is-hidden');
-        if (section2) section2.classList.remove('is-active', 'is-fading-out');
-        if (casesTrailer) casesTrailer.classList.remove('is-active', 'is-fading-out');
-        if (motionCanvas) {
-          motionCanvas.style.opacity = '0';
-          motionCanvas.style.visibility = 'hidden';
-        }
-        if (heroVideoDesktop && !heroVideoDesktop.paused) heroVideoDesktop.pause();
-        if (heroVideoMobile && !heroVideoMobile.paused) heroVideoMobile.pause();
+    resizeCanvas();
+    setTimeout(() => {
+      resizeCanvas();
+      if (frames[0] && frames[0].complete) {
+        drawFrame(frames[0]);
       }
-    };
-
-    if (lenis) {
-      lenis.on('scroll', updateStorytellingFromScroll);
-    } else {
-      window.addEventListener('scroll', updateStorytellingFromScroll, { passive: true });
-    }
-
-    updateStorytellingFromScroll();
+    }, 100);
   }
 
   // ==========================================================================
-  // 14. STAGE 3 — CASES TRAILER HORIZONTAL MARQUEE & DRAG CONTROLS
+  // 12. CASOS CLÍNICOS REALES — CAROUSEL CONTROLLER
   // ==========================================================================
-  const stageMarquee = document.getElementById('stageMarquee');
   const stageTrack = document.getElementById('stageTrack');
   const stagePrev = document.getElementById('stagePrev');
   const stageNext = document.getElementById('stageNext');
 
-  if (stageMarquee && stageTrack) {
-    let currentStageX = 0;
-    let isDragging = false;
-    let startPointerX = 0;
-    let initialTrackX = 0;
-
-    const scrollStageBy = (amount) => {
-      const maxScroll = Math.max(0, stageTrack.scrollWidth - window.innerWidth + 96);
-      currentStageX = Math.min(Math.max(currentStageX + amount, 0), maxScroll);
-      stageTrack.style.transform = `translate3d(${-currentStageX}px, 0, 0)`;
-      stageTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
-    };
-
-    if (stagePrev) stagePrev.addEventListener('click', () => scrollStageBy(-330));
-    if (stageNext) stageNext.addEventListener('click', () => scrollStageBy(330));
-
-    stageTrack.addEventListener('pointerdown', (e) => {
-      if (e.target.closest('a') || e.target.closest('button')) return;
-      isDragging = true;
-      startPointerX = e.clientX;
-      initialTrackX = currentStageX;
-      stageTrack.style.transition = 'none';
-      try { stageTrack.setPointerCapture(e.pointerId); } catch (err) {}
-    });
-
-    stageTrack.addEventListener('pointermove', (e) => {
-      if (!isDragging) return;
-      const delta = e.clientX - startPointerX;
-      const maxScroll = Math.max(0, stageTrack.scrollWidth - window.innerWidth + 96);
-      currentStageX = Math.min(Math.max(initialTrackX - delta, 0), maxScroll);
-      stageTrack.style.transform = `translate3d(${-currentStageX}px, 0, 0)`;
-    }, { passive: true });
-
-    const endStageDrag = (e) => {
-      if (!isDragging) return;
-      isDragging = false;
-      try { stageTrack.releasePointerCapture(e.pointerId); } catch (err) {}
-    };
-
-    stageTrack.addEventListener('pointerup', endStageDrag);
-    stageTrack.addEventListener('pointercancel', endStageDrag);
+  if (stageTrack) {
+    const cardStep = 340;
+    if (stagePrev) {
+      stagePrev.addEventListener('click', () => {
+        stageTrack.scrollBy({ left: -cardStep, behavior: 'smooth' });
+      });
+    }
+    if (stageNext) {
+      stageNext.addEventListener('click', () => {
+        stageTrack.scrollBy({ left: cardStep, behavior: 'smooth' });
+      });
+    }
   }
 
+  // Procedure Cards & Specialty Pills Interaction
+  const procedureCards = document.querySelectorAll('.procedure-service-card, .specialty-pill');
+  procedureCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const bookingSection = document.getElementById('booking');
+      if (bookingSection) {
+        bookingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
 });
+
 
 
 

@@ -38,6 +38,12 @@
     </div>
     <ul class="drawer-links">
       <li><a href="#home" class="drawer-link">Inicio</a></li>
+      <li><a href="#consultorio" class="drawer-link">Consultorio</a></li>
+      <li><a href="#about" class="drawer-link">Nosotros</a></li>
+      <li><a href="#services" class="drawer-link">Servicios</a></li>
+      <li><a href="#cases" class="drawer-link">Casos</a></li>
+      <li><a href="#dentists" class="drawer-link">Especialistas</a></li>
+      <li><a href="#booking" class="drawer-link">Citas</a></li>
     </ul>
     <div class="drawer-footer">
       <div class="lang-switch" style="margin-bottom: 12px; justify-content: center;">
@@ -50,20 +56,10 @@
     </div>
   </div>
 
-  <!-- Fixed Full-Viewport Scroll Motion Canvas Background (sectionmotion/motion1) -->
-  <div class="motion-canvas-wrapper" aria-hidden="true">
-    <canvas id="motionCanvas"></canvas>
-    <div class="motion-canvas-overlay"></div>
-  </div>
-
   <main>
-    <!-- Master Storytelling Stage (Long Scroll Runway for Smooth Storytelling) -->
-    <div class="storytelling-stage">
-
-      <!-- SECTION 1 — LIQUID GLASS HERO WITH 3D LOOPING VIDEO BACKGROUND -->
-      <section class="liquid-hero-section" id="home" aria-label="Hero">
-
-      <!-- Full-viewport Autoplaying Looping Muted PlaysInline Video Background -->
+    <!-- SECTION 1 — HERO WITH SMILING WOMAN 3D VIDEO BACKGROUND -->
+    <section class="liquid-hero-section" id="home" aria-label="Hero">
+      <!-- Full-viewport Autoplaying Looping Muted PlaysInline Video Background (Smiling Woman) -->
       <div class="liquid-hero-video-wrap">
         <!-- Desktop Video (16:9) -->
         <video
@@ -108,7 +104,12 @@
 
         <!-- Center: Liquid-Glass Rounded-Full Nav Pill (Desktop Only) -->
         <div class="liquid-glass liquid-pill-menu">
-          <a href="#home" class="liquid-nav-link active">Inicio</a>
+          <a href="#consultorio" class="liquid-nav-link">Consultorio</a>
+          <a href="#about" class="liquid-nav-link">Nosotros</a>
+          <a href="#services" class="liquid-nav-link">Servicios</a>
+          <a href="#cases" class="liquid-nav-link">Casos</a>
+          <a href="#dentists" class="liquid-nav-link">Especialistas</a>
+          <a href="#booking" class="liquid-nav-link">Citas</a>
         </div>
 
         <!-- Right: Language Selector & User Actions -->
@@ -204,99 +205,376 @@
       </div>
     </section>
 
-    <!-- SECTION 2 — "CONOCE NUESTRO CONSULTORIO" (LEARN TO SEE BRILLIANTLY GLASS AESTHETIC) -->
-    <section class="glass-editorial-section" id="consultorio" aria-label="Instalaciones y Consultorio">
-      
-      <!-- Top Row: Glass Badge + Top Right Paragraph -->
-      <div class="glass-top-row">
-        <div class="glass-badge reveal-on-scroll">
-          <span>INSTALACIONES & ACCESO</span>
-        </div>
-        <p class="glass-top-paragraph reveal-on-scroll delay-1">
-          Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.
-        </p>
+    <!-- SECTION 2 — CONSULTORIO WITH HIGH-RESOLUTION CLINIC TOUR SCROLL -->
+    <section class="consultorio-motion-section" id="consultorio" aria-label="Instalaciones y Consultorio">
+      <!-- 102-Frame High Quality Clinic Scroll Canvas -->
+      <div class="consultorio-canvas-wrap">
+        <canvas id="consultorioCanvas"></canvas>
+        <div class="consultorio-canvas-overlay"></div>
       </div>
 
-      <!-- Bottom Row: Headline & CTA Left + Capabilities Glass Panel Right -->
-      <div class="glass-bottom-row">
-        
-        <!-- Left Content -->
-        <div class="glass-content-left">
-          <h2 class="glass-main-title reveal-on-scroll">
-            Conoce nuestro<br/>
-            consultorio.
-          </h2>
-          <p class="glass-support-desc reveal-on-scroll delay-1">
-            Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.
+      <!-- Glass Editorial Content -->
+      <div class="glass-editorial-container">
+        <!-- Top Row: Glass Badge + Top Right Paragraph -->
+        <div class="glass-top-row">
+          <div class="glass-badge">
+            <span>INSTALACIONES & ACCESO</span>
+          </div>
+          <p class="glass-top-paragraph">
+            Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.
           </p>
-          <div class="glass-btn-row reveal-on-scroll delay-2">
-            <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20conocer%20las%20instalaciones%20de%20OnDent%20Clinic" target="_blank" rel="noopener" class="glass-btn-solid">
-              <span>Agendar Cita</span>
-              <i class="ph-bold ph-caret-right"></i>
-            </a>
-            <a href="https://www.google.com/maps/place/OnDent+Clinic/@33.0900331,-114.7971751,5.79z/data=!4m10!1m2!2m1!1sondent+clinic!3m6!1s0x80d65b7dd4e1f7bd:0x41f80ec6ef4e054!8m2!3d32.464673!4d-114.774431!15sCg1vbmRlbnQgY2xpbmljIgOIAQGSAQ1kZW50YWxfY2xpbmlj4AEA!16s%2Fg%2F11r7f0x9_9?entry=ttu" target="_blank" rel="noopener" class="glass-btn-pill">
-              <span>Cómo Llegar</span>
-              <i class="ph-bold ph-map-pin"></i>
-            </a>
-          </div>
         </div>
 
-        <!-- Right Capabilities Glass Panel -->
-        <div class="glass-capabilities-panel reveal-on-scroll delay-2">
-          
-          <!-- Row 01 -->
-          <div class="glass-capability-row">
-            <span class="glass-cap-num">01</span>
-            <div class="glass-cap-content">
-              <div class="glass-cap-title-wrap">
-                <h3 class="glass-cap-title">Ubicación Privilegiada</h3>
-                <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-              </div>
-              <p class="glass-cap-desc">
-                Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.
-              </p>
+        <!-- Bottom Row: Headline & CTA Left + Capabilities Glass Panel Right -->
+        <div class="glass-bottom-row">
+          <!-- Left Content -->
+          <div class="glass-content-left">
+            <h2 class="glass-main-title">
+              Conoce nuestro<br/>
+              consultorio.
+            </h2>
+            <p class="glass-support-desc">
+              Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.
+            </p>
+            <div class="glass-btn-row">
+              <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20conocer%20las%20instalaciones%20de%20OnDent%20Clinic" target="_blank" rel="noopener" class="glass-btn-solid">
+                <span>Agendar Cita</span>
+                <i class="ph-bold ph-caret-right"></i>
+              </a>
+              <a href="https://www.google.com/maps/place/OnDent+Clinic/@33.0900331,-114.7971751,5.79z/data=!4m10!1m2!2m1!1sondent+clinic!3m6!1s0x80d65b7dd4e1f7bd:0x41f80ec6ef4e054!8m2!3d32.464673!4d-114.774431!15sCg1vbmRlbnQgY2xpbmljIgOIAQGSAQ1kZW50YWxfY2xpbmlj4AEA!16s%2Fg%2F11r7f0x9_9?entry=ttu" target="_blank" rel="noopener" class="glass-btn-pill">
+                <span>Cómo Llegar</span>
+                <i class="ph-bold ph-map-pin"></i>
+              </a>
             </div>
           </div>
 
-          <!-- Row 02 -->
-          <div class="glass-capability-row">
-            <span class="glass-cap-num">02</span>
-            <div class="glass-cap-content">
-              <div class="glass-cap-title-wrap">
-                <h3 class="glass-cap-title">Tecnología Digital 3D</h3>
-                <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
+          <!-- Right Capabilities Glass Panel -->
+          <div class="glass-capabilities-panel">
+            <!-- Row 01 -->
+            <div class="glass-capability-row">
+              <span class="glass-cap-num">01</span>
+              <div class="glass-cap-content">
+                <div class="glass-cap-title-wrap">
+                  <h3 class="glass-cap-title">Ubicación Privilegiada</h3>
+                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
+                </div>
+                <p class="glass-cap-desc">
+                  Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.
+                </p>
               </div>
-              <p class="glass-cap-desc">
-                Quirófano esterilizado de alta tecnología, escáneres intraorales y unidades odontológicas ergonómicas de última generación.
-              </p>
+            </div>
+
+            <!-- Row 02 -->
+            <div class="glass-capability-row">
+              <span class="glass-cap-num">02</span>
+              <div class="glass-cap-content">
+                <div class="glass-cap-title-wrap">
+                  <h3 class="glass-cap-title">Tecnología Digital 3D</h3>
+                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
+                </div>
+                <p class="glass-cap-desc">
+                  Quirófano esterilizado de alta tecnología, escáneres intraorales y unidades odontológicas ergonómicas de última generación.
+                </p>
+              </div>
+            </div>
+
+            <!-- Row 03 -->
+            <div class="glass-capability-row">
+              <span class="glass-cap-num">03</span>
+              <div class="glass-cap-content">
+                <div class="glass-cap-title-wrap">
+                  <h3 class="glass-cap-title">Atención Bilingüe & Calidez</h3>
+                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
+                </div>
+                <p class="glass-cap-desc">
+                  Equipo médico certificado y personal de atención fluida en inglés y español para guiarte en cada paso de tu sonrisa.
+                </p>
+              </div>
             </div>
           </div>
-
-          <!-- Row 03 -->
-          <div class="glass-capability-row">
-            <span class="glass-cap-num">03</span>
-            <div class="glass-cap-content">
-              <div class="glass-cap-title-wrap">
-                <h3 class="glass-cap-title">Atención Bilingüe & Calidez</h3>
-                <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-              </div>
-              <p class="glass-cap-desc">
-                Equipo médico certificado y personal de atención fluida en inglés y español para guiarte en cada paso de tu sonrisa.
-              </p>
-            </div>
-          </div>
-
         </div>
-
       </div>
-
     </section>
 
-    <!-- SECTION 3 — CASOS CLÍNICOS REALES (FULL DESIGN MATCHING IMAGE 2 + SYNCHRONIZED TO STUDIO FRAME) -->
-    <section class="cases-trailer-stage" id="casesTrailer" aria-label="Casos Clínicos Reais">
+    <!-- ABOUT SECTION (BENTO GRID) -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header-left">
+          <h2 class="section-title">Sobre Nosotros</h2>
+        </div>
+
+        <div class="about-bento-grid">
+          
+          <!-- Left Bento Card (Mission, Promise & Action Subcards) -->
+          <div class="bento-card bento-about-left">
+            <div class="promise-tag">
+              <span class="promise-dot"></span>
+              <span>Nuestra Promesa</span>
+            </div>
+
+            <h3 class="about-headline">
+              Te ayudamos a lograr una <span class="text-accent">sonrisa sana y segura</span> para toda la vida
+            </h3>
+
+            <p class="about-subtext">
+              OnDent es una clínica moderna fundada bajo una filosofía centrada en el paciente. Combinamos función precisa, biomateriales de última generación y estética de alto nivel para diseñar armonía facial personalizada a cada paciente.
+            </p>
+
+            <!-- Subcard Action Buttons -->
+            <div class="about-action-cards">
+              <a href="#dentists" class="subcard-link">
+                <div class="subcard-header">
+                  <span class="subcard-icon"><i class="ph-bold ph-arrow-up-right"></i></span>
+                </div>
+                <div class="subcard-body">
+                  <h4>Especialistas Certificados</h4>
+                  <p>Dra. Ana Castro, Dr. Roy Dávila y especialistas</p>
+                </div>
+              </a>
+
+              <a href="#services" class="subcard-link">
+                <div class="subcard-header">
+                  <span class="subcard-icon"><i class="ph-bold ph-arrow-up-right"></i></span>
+                </div>
+                <div class="subcard-body">
+                  <h4>Instalaciones Modernas</h4>
+                  <p>Equipos de última generación y atención sin dolor</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Bento Card (Both Doctors Together Photo) -->
+          <div class="bento-card bento-about-right">
+            <div class="about-photo-wrapper">
+              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg" alt="Dra. Ana Castro y Dr. Roy Dávila - OnDent Clinic" class="about-main-photo">
+              <div class="photo-gradient-overlay"></div>
+              
+              <!-- Floating Clinic Pill Badges on Photo -->
+              <div class="floating-photo-pill">
+                <div class="photo-pill-item">
+                  <div class="photo-pill-icon"><i class="ph-fill ph-check-circle"></i></div>
+                  <span>Quirófano de Alta Tecnología</span>
+                </div>
+                <div class="photo-pill-item">
+                  <div class="photo-pill-icon"><i class="ph-fill ph-crosshair"></i></div>
+                  <span>Diagnóstico Digital 3D</span>
+                </div>
+                <div class="photo-pill-item">
+                  <div class="photo-pill-icon"><i class="ph-fill ph-heart"></i></div>
+                  <span>Atención Sin Dolor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICE SECTION (BENTO & SPECIALTIES PILLS) -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="services-header-centered">
+          <span class="services-eyebrow-badge">NUESTROS SERVICIOS</span>
+          <h2 class="section-title">Soluciones Odontológicas Integrales</h2>
+          <p class="section-subtitle">Atención médica, quirúrgica y cosmética de excelencia en un solo lugar.</p>
+        </div>
+
+        <!-- Top Procedural Cards Grid (Exact Clone of Reference Design) -->
+        <div class="procedures-card-grid">
+          
+          <!-- Card 1: Dental Implants -->
+          <div class="procedure-service-card" data-service="implants">
+            <div class="procedure-card-media">
+              <img src="imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg" alt="Implantes Dentales" class="procedure-img">
+            </div>
+            <div class="procedure-card-body">
+              <div class="procedure-info">
+                <h3 class="procedure-title">Implantes Dentales</h3>
+                <p class="procedure-desc">Tecnología guiada 3D para restaurar la función completa.</p>
+              </div>
+              <div class="procedure-arrow-btn" aria-hidden="true">
+                <i class="ph-bold ph-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Porcelain Veneers -->
+          <div class="procedure-service-card" data-service="veneers">
+            <div class="procedure-card-media">
+              <img src="imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg" alt="Carillas de Porcelana" class="procedure-img">
+            </div>
+            <div class="procedure-card-body">
+              <div class="procedure-info">
+                <h3 class="procedure-title">Carillas de Porcelana</h3>
+                <p class="procedure-desc">Láminas cerámicas de alta gama que devuelven blancura y brillo.</p>
+              </div>
+              <div class="procedure-arrow-btn" aria-hidden="true">
+                <i class="ph-bold ph-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Clinical Whitening -->
+          <div class="procedure-service-card" data-service="whitening">
+            <div class="procedure-card-media">
+              <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg" alt="Blanqueamiento Dental" class="procedure-img">
+            </div>
+            <div class="procedure-card-body">
+              <div class="procedure-info">
+                <h3 class="procedure-title">Blanqueamiento Clínico</h3>
+                <p class="procedure-desc">Tecnología láser acelerada para aclarar hasta 8 tonos sin dolor.</p>
+              </div>
+              <div class="procedure-arrow-btn" aria-hidden="true">
+                <i class="ph-bold ph-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Orthodontics & Aligners -->
+          <div class="procedure-service-card" data-service="orthodontics">
+            <div class="procedure-card-media">
+              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg" alt="Ortodoncia y Alineadores" class="procedure-img">
+            </div>
+            <div class="procedure-card-body">
+              <div class="procedure-info">
+                <h3 class="procedure-title">Ortodoncia & Alineadores</h3>
+                <p class="procedure-desc">Alineación y corrección de mordida con tecnología invisible.</p>
+              </div>
+              <div class="procedure-arrow-btn" aria-hidden="true">
+                <i class="ph-bold ph-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Zirconia Crowns & Reconstruction -->
+          <div class="procedure-service-card" data-service="dentures">
+            <div class="procedure-card-media">
+              <img src="imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg" alt="Coronas de Zirconia" class="procedure-img">
+            </div>
+            <div class="procedure-card-body">
+              <div class="procedure-info">
+                <h3 class="procedure-title">Coronas de Zirconia</h3>
+                <p class="procedure-desc">Biomateriales de máxima durabilidad y estética natural.</p>
+              </div>
+              <div class="procedure-arrow-btn" aria-hidden="true">
+                <i class="ph-bold ph-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 12 Specialty Pills Grid -->
+        <div class="specialties-pill-grid">
+          
+          <div class="specialty-pill" data-service="implants">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Implantes Dentales</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="veneers">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Carillas de Porcelana</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="endodontics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Endodoncia</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="orthodontics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Ortodoncia y Alineadores</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="periodontics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Periodoncia y Encías</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="exams">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Exámenes y Consultas</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="general">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Odontología General</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="dentures">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Prótesis y Placas Dentales</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="surgery">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Cirugía Dental y Muelas</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="fillings">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Resinas Estéticas</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="whitening">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Blanqueamiento Dental</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="pediatrics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Odontopediatría</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CASOS CLÍNICOS REALES (STANDALONE SECTION IN STANDARD PAGE FLOW) -->
+    <section class="cases-section-standalone" id="cases" aria-label="Casos Clínicos Reais">
       <div class="cases-stage-container">
         
-        <!-- Header with green dot badge, editorial title and slider arrow buttons (Matching Image 2) -->
+        <!-- Header with green dot badge, editorial title and slider arrow buttons -->
         <div class="cases-stage-header-row">
           <div class="cases-stage-header-left">
             <div class="cases-stage-badge">
@@ -435,247 +713,6 @@
       </div>
     </section>
 
-    </div><!-- /.storytelling-stage -->
-
-    <!-- ABOUT SECTION (BENTO GRID) -->
-    <section class="about-section" id="about">
-      <div class="container">
-        <div class="section-header-left">
-          <h2 class="section-title">Sobre Nosotros</h2>
-        </div>
-
-        <div class="about-bento-grid">
-          
-          <!-- Left Bento Card (Mission, Promise & Action Subcards) -->
-          <div class="bento-card bento-about-left">
-            <div class="promise-tag">
-              <span class="promise-dot"></span>
-              <span>Nuestra Promesa</span>
-            </div>
-
-            <h3 class="about-headline">
-              Te ayudamos a lograr una <span class="text-accent">sonrisa sana y segura</span> para toda la vida
-            </h3>
-
-            <p class="about-subtext">
-              OnDent es una clínica moderna fundada bajo una filosofía centrada en el paciente. Combinamos función precisa, biomateriales de última generación y estética de alto nivel para diseñar armonía facial personalizada a cada paciente.
-            </p>
-
-            <!-- Subcard Action Buttons -->
-            <div class="about-action-cards">
-              <a href="#dentists" class="subcard-link">
-                <div class="subcard-header">
-                  <span class="subcard-icon"><i class="ph-bold ph-arrow-up-right"></i></span>
-                </div>
-                <div class="subcard-body">
-                  <h4>Especialistas Certificados</h4>
-                  <p>Dra. Ana Castro, Dr. Roy Dávila y especialistas</p>
-                </div>
-              </a>
-
-              <a href="#services" class="subcard-link">
-                <div class="subcard-header">
-                  <span class="subcard-icon"><i class="ph-bold ph-arrow-up-right"></i></span>
-                </div>
-                <div class="subcard-body">
-                  <h4>Instalaciones Modernas</h4>
-                  <p>Equipos de última generación y atención sin dolor</p>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Right Bento Card (Both Doctors Together Photo) -->
-          <div class="bento-card bento-about-right">
-            <div class="about-photo-wrapper">
-              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg" alt="Dra. Ana Castro y Dr. Roy Dávila - OnDent Clinic" class="about-main-photo">
-              <div class="photo-gradient-overlay"></div>
-              
-              <!-- Floating Clinic Pill Badges on Photo -->
-              <div class="floating-photo-pill">
-                <div class="photo-pill-item">
-                  <div class="photo-pill-icon"><i class="ph-fill ph-check-circle"></i></div>
-                  <span>Quirófano de Alta Tecnología</span>
-                </div>
-                <div class="photo-pill-item">
-                  <div class="photo-pill-icon"><i class="ph-fill ph-crosshair"></i></div>
-                  <span>Diagnóstico Digital 3D</span>
-                </div>
-                <div class="photo-pill-item">
-                  <div class="photo-pill-icon"><i class="ph-fill ph-heart"></i></div>
-                  <span>Atención Sin Dolor</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- OUR SERVICE SECTION (BENTO & SPECIALTIES PILLS) -->
-    <section class="services-section" id="services">
-      <div class="container">
-        <div class="section-header-left">
-          <h2 class="section-title">Nuestros Servicios</h2>
-          <p class="section-subtitle">Soluciones odontológicas integrales diseñadas con precisión, durabilidad y alta estética.</p>
-        </div>
-
-        <!-- Bento Featured Services (2 Main Cards) -->
-        <div class="services-featured-grid">
-          
-          <!-- Card 1: Basic Dental Care -->
-          <div class="service-bento-card basic-care-card">
-            <div class="service-card-info">
-              <span class="service-category">Preventivo y Restaurador</span>
-              <h3 class="service-card-title">Cuidado Dental Básico</h3>
-              <ul class="service-feature-list">
-                <li><i class="ph-bold ph-check"></i> Exámenes Diagnósticos Completos</li>
-                <li><i class="ph-bold ph-check"></i> Resinas Estéticas del Color Dental</li>
-                <li><i class="ph-bold ph-check"></i> Limpieza Ultrasónica Preventiva</li>
-                <li><i class="ph-bold ph-check"></i> Odontopediatría con Cuidado Gentil</li>
-              </ul>
-              <a href="#booking" class="service-explore-link">
-                <span>Agendar Cuidado Básico</span>
-                <i class="ph-bold ph-arrow-right"></i>
-              </a>
-            </div>
-            <div class="service-visual-area">
-              <div class="visual-icon-glow">
-                <img src="imgs/a2bfb3_3ba92ca093c948aabe219d6a3d180b03_mv2.jpg" alt="Instrumental Dental Moderno" class="service-preview-img">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Aesthetic Care -->
-          <div class="service-bento-card aesthetic-care-card">
-            <div class="service-card-info">
-              <span class="service-category">Armonización de Sonrisa</span>
-              <h3 class="service-card-title">Estética Dental Avanzada</h3>
-              <ul class="service-feature-list">
-                <li><i class="ph-bold ph-check"></i> Carillas Cerámicas de Alta Gama</li>
-                <li><i class="ph-bold ph-check"></i> Blanqueamiento Clínico Láser / LED</li>
-                <li><i class="ph-bold ph-check"></i> Coronas de Zirconia y Diseño de Sonrisa</li>
-                <li><i class="ph-bold ph-check"></i> Armonía Facial y Naturalidad</li>
-              </ul>
-              <a href="#booking" class="service-explore-link">
-                <span>Agendar Estética Dental</span>
-                <i class="ph-bold ph-arrow-right"></i>
-              </a>
-            </div>
-            <div class="service-visual-area">
-              <div class="visual-icon-glow">
-                <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg" alt="Sonrisa Estética Cerámica" class="service-preview-img">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- 12 Specialty Pills Grid -->
-        <div class="specialties-pill-grid">
-          
-          <div class="specialty-pill" data-service="implants">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Implantes Dentales</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="veneers">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Carillas de Porcelana</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="endodontics">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Endodoncia</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="orthodontics">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Ortodoncia y Alineadores</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="periodontics">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Periodoncia y Encías</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="exams">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Exámenes y Consultas</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="general">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Odontología General</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="dentures">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Prótesis y Placas Dentales</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="surgery">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Cirugía Dental y Muelas</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="fillings">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Resinas Estéticas</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="whitening">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Blanqueamiento Dental</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-          <div class="specialty-pill" data-service="pediatrics">
-            <div class="pill-left">
-              <span class="pill-dot"></span>
-              <span class="pill-name">Odontopediatría</span>
-            </div>
-            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
     <!-- MEET THE DENTISTS & CLINICAL EXPERTS SECTION -->
     <section class="dentists-section" id="dentists">
       <div class="container">
@@ -724,96 +761,6 @@
             </div>
           </div>
 
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FREEDOM & CONTROL SECTION (BENEFITS & OPPORTUNITIES WITH 3D MASCOT CIRCLE) -->
-    <section class="freedom-section" id="mascote" aria-label="Control y Libertad Odontológica">
-      
-      <!-- Block 1: Header -->
-      <div class="freedom-header">
-        <div class="freedom-badge-pill">
-          <svg width="19" height="18" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50037 3.66955C7.53221 2.82462 6.41758 2.275 5.333 2.07887C4.11096 1.85888 2.84987 2.0826 1.96658 2.95885C1.10056 3.81944 0.866218 5.04172 1.06751 6.23193C1.24778 7.29835 1.7803 8.39907 2.60501 9.35959C2.41536 10.1071 2.46371 10.8946 2.7434 11.6137C3.02308 12.3327 3.52035 12.9481 4.16678 13.375C4.81321 13.802 5.57702 14.0195 6.35308 13.9976C7.12915 13.9758 7.87933 13.7157 8.50037 13.2531C9.12146 13.7161 9.87183 13.9765 10.6482 13.9985C11.4245 14.0205 12.1886 13.8029 12.8352 13.3758C13.4819 12.9487 13.9792 12.3331 14.2588 11.6137C14.5384 10.8943 14.5865 10.1065 14.3965 9.35884C15.2204 8.39832 15.753 7.29835 15.9325 6.23119C16.1338 5.04098 15.8994 3.81944 15.0334 2.9596C14.1501 2.0826 12.889 1.85888 11.667 2.07962C10.5824 2.275 9.46854 2.82537 8.50037 3.66955Z" fill="#C86FFF"/>
-          </svg>
-          <span>Control</span>
-        </div>
-        <h2 class="freedom-title">
-          Deja de absorber el caos.<br>
-          <span class="freedom-gradient">Sonríe con total confianza.</span>
-        </h2>
-      </div>
-
-      <!-- Block 2: 3-Column Grid -->
-      <div class="freedom-grid">
-        
-        <!-- Left Column: Negatives (Lo que evitas) -->
-        <div class="freedom-col-negatives">
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Tratamientos reactivos cuando problemas de fondo surgen demasiado tarde</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Citas desgastantes y presupuestos inflados que drenan tu tiempo y energía</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Constante desconfianza porque no hay visualización digital de los resultados</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Materiales de baja calidad que pierden brillo, se manchan o se fracturan</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Atención despersonalizada y expedientes dispersos sin seguimiento real</div>
-          </div>
-        </div>
-
-        <!-- Center Column: 3D Mascot Circle Portal -->
-        <div class="freedom-col-center">
-          <div class="freedom-mascot-circle-wrapper">
-            <div class="freedom-circle-glow"></div>
-            <div class="freedom-mascot-circle">
-              <canvas id="miniMascotCanvas" class="mini-mascot-canvas"></canvas>
-            </div>
-            <span class="freedom-live-badge"><i class="ph-fill ph-eye"></i> Mirada Interactiva 360°</span>
-          </div>
-        </div>
-
-        <!-- Right Column: Positives (Lo que obtienes con OnDent) -->
-        <div class="freedom-col-positives">
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Diagnóstico digital 3D estratificado que elimina sorpresas en cada fase</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Equipo multidisciplinario que entrega resultados estéticos de alta precisión</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Visualización previa y validación digital de tu sonrisa antes de iniciar</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Biomateriales de zirconia y porcelana con garantía clínica de por vida</div>
-          </div>
-
-          <div class="freedom-card">
-            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
-            <div class="freedom-card-text">Concierge personalizado y expedientes claros que aceleran cada decisión</div>
-          </div>
         </div>
 
       </div>
@@ -1215,9 +1162,10 @@
           <h4 class="footer-heading">Enlaces Rápidos</h4>
           <ul class="footer-list">
             <li><a href="#home">Inicio</a></li>
+            <li><a href="#consultorio">Consultorio</a></li>
             <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#services">Nuestros Servicios</a></li>
-            <li><a href="#casesTrailer">Casos Clínicos</a></li>
+            <li><a href="#cases">Casos Clínicos</a></li>
             <li><a href="#dentists">Especialistas</a></li>
             <li><a href="#booking">Agendar Cita</a></li>
           </ul>
