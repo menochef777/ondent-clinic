@@ -57,6 +57,20 @@ document.addEventListener('DOMContentLoaded', () => {
         stat2Val: "+52 (653) 515-8276",
         stat2Lbl: "Consulta & Valoración"
       },
+      consultorio: {
+        badge: "INSTALACIONES & ACCESO",
+        topParagraph: "Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.",
+        title: "Conoce nuestro<br/>consultorio.",
+        desc: "Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.",
+        bookBtn: "Agendar Cita",
+        mapBtn: "Cómo Llegar",
+        cap1Title: "Ubicación Privilegiada",
+        cap1Desc: "Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.",
+        cap2Title: "Tecnología Digital 3D",
+        cap2Desc: "Quirófano esterilizado de alta tecnología, escáneres intraorales y unidades odontológicas ergonómicas de última generación.",
+        cap3Title: "Atención Bilingüe & Calidez",
+        cap3Desc: "Equipo médico certificado y personal de atención fluida en inglés y español para guiarte en cada paso de tu sonrisa."
+      },
       about: {
         eyebrow: "Nuestra Promesa",
         title: "Sobre Nosotros",
@@ -179,6 +193,20 @@ document.addEventListener('DOMContentLoaded', () => {
         stat1Lbl: "Individualized Approach",
         stat2Val: "+52 (653) 515-8276",
         stat2Lbl: "Consultation & Treatment"
+      },
+      consultorio: {
+        badge: "FACILITIES & ACCESS",
+        topParagraph: "A modern dental clinic designed for your utmost comfort and medical precision from the very first moment.",
+        title: "Discover our<br/>dental office.",
+        desc: "Strategically located in San Luis Río Colorado, minutes from the border with Yuma and San Luis, AZ. Combining 3D technology, specialized surgical suites, and personalized care.",
+        bookBtn: "Book Appointment",
+        mapBtn: "Get Directions",
+        cap1Title: "Prime Border Location",
+        cap1Desc: "Direct, secure access in the city's medical district, with convenient parking for local and U.S. patients.",
+        cap2Title: "Digital 3D Technology",
+        cap2Desc: "Sterilized high-tech operatory, intraoral 3D scanners, and latest-generation ergonomic dental chairs.",
+        cap3Title: "Bilingual Care & Warmth",
+        cap3Desc: "Certified medical staff and team fluent in English and Spanish to guide you every step of your smile journey."
       },
       about: {
         eyebrow: "Our Promise",
@@ -333,6 +361,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (stat2Val) stat2Val.textContent = t.hero.stat2Val;
     const stat2Lbl = document.querySelector('.stat2-lbl');
     if (stat2Lbl) stat2Lbl.textContent = t.hero.stat2Lbl;
+
+    // 3. Section 2 — Consultorio
+    const consultorioBadge = document.querySelector('#consultorio .glass-badge span');
+    if (consultorioBadge && t.consultorio) consultorioBadge.textContent = t.consultorio.badge;
+    const consultorioTopP = document.querySelector('#consultorio .glass-top-paragraph');
+    if (consultorioTopP && t.consultorio) consultorioTopP.textContent = t.consultorio.topParagraph;
+    const consultorioTitle = document.querySelector('#consultorio .glass-main-title');
+    if (consultorioTitle && t.consultorio) consultorioTitle.innerHTML = t.consultorio.title;
+    const consultorioDesc = document.querySelector('#consultorio .glass-support-desc');
+    if (consultorioDesc && t.consultorio) consultorioDesc.textContent = t.consultorio.desc;
+    const consultorioSolidBtn = document.querySelector('#consultorio .glass-btn-solid span');
+    if (consultorioSolidBtn && t.consultorio) consultorioSolidBtn.textContent = t.consultorio.bookBtn;
+    const consultorioPillBtn = document.querySelector('#consultorio .glass-btn-pill span');
+    if (consultorioPillBtn && t.consultorio) consultorioPillBtn.textContent = t.consultorio.mapBtn;
+    const capRows = document.querySelectorAll('#consultorio .glass-capability-row');
+    if (capRows.length >= 3 && t.consultorio) {
+      capRows[0].querySelector('.glass-cap-title').textContent = t.consultorio.cap1Title;
+      capRows[0].querySelector('.glass-cap-desc').textContent = t.consultorio.cap1Desc;
+      capRows[1].querySelector('.glass-cap-title').textContent = t.consultorio.cap2Title;
+      capRows[1].querySelector('.glass-cap-desc').textContent = t.consultorio.cap2Desc;
+      capRows[2].querySelector('.glass-cap-title').textContent = t.consultorio.cap3Title;
+      capRows[2].querySelector('.glass-cap-desc').textContent = t.consultorio.cap3Desc;
+    }
 
     // 4. About
     const aboutEyebrow = document.querySelector('.promise-tag span:last-child');
@@ -1155,4 +1206,260 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, { passive: true });
 
+  // ==========================================================================
+  // 11. REVEAL ON SCROLL OBSERVER
+  // ==========================================================================
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    }
+  );
+
+  document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // ==========================================================================
+  // 12. SECTION MOTION — 300-FRAME SCROLL SCRUBBING OVER CANVAS & STORYTELLING
+  // ==========================================================================
+  const motionCanvas = document.getElementById('motionCanvas');
+  const isMobile = window.innerWidth <= 768;
+
+  if (motionCanvas && !isMobile) {
+    const ctx = motionCanvas.getContext('2d', { alpha: false, desynchronized: true });
+    const totalFrames = 300;
+    const frames = new Array(totalFrames);
+    let targetFrame = 0;
+    let currentFrame = 0;
+    let lastRenderedIndex = -1;
+    let isLoopRunning = false;
+
+    const pad = (n) => String(n).padStart(3, '0');
+
+    // Keyframe fast loader
+    const loadFrame = (i) => {
+      if (frames[i - 1]) return;
+      const img = new Image();
+      img.src = `sectionmotion/motion1/ezgif-frame-${pad(i)}.jpg`;
+      img.onload = () => {
+        if (i === 1 && lastRenderedIndex === -1) {
+          drawMotionFrame(img);
+          lastRenderedIndex = 0;
+        }
+      };
+      frames[i - 1] = img;
+    };
+
+    // 1. Initial priority: First 25 frames
+    for (let i = 1; i <= Math.min(25, totalFrames); i++) {
+      loadFrame(i);
+    }
+
+    // 2. Second priority: Every 5th frame for responsive scrub
+    for (let i = 30; i <= totalFrames; i += 5) {
+      loadFrame(i);
+    }
+
+    // 3. Background idle fill
+    let currentFill = 1;
+    const fillRemaining = () => {
+      let count = 0;
+      while (currentFill <= totalFrames && count < 15) {
+        loadFrame(currentFill);
+        currentFill++;
+        count++;
+      }
+      if (currentFill <= totalFrames) {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(fillRemaining, { timeout: 200 });
+        } else {
+          setTimeout(fillRemaining, 30);
+        }
+      }
+    };
+    setTimeout(fillRemaining, 100);
+
+    const resizeMotionCanvas = () => {
+      if (window.innerWidth <= 768) return;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      motionCanvas.width = width;
+      motionCanvas.height = height;
+      motionCanvas.style.width = `${width}px`;
+      motionCanvas.style.height = `${height}px`;
+
+      lastRenderedIndex = -1;
+      const idx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
+      if (frames[idx] && frames[idx].complete) {
+        drawMotionFrame(frames[idx]);
+        lastRenderedIndex = idx;
+      }
+    };
+
+    window.addEventListener('resize', resizeMotionCanvas, { passive: true });
+    resizeMotionCanvas();
+
+    function drawMotionFrame(img) {
+      if (!ctx || !img || !img.complete || img.naturalWidth === 0) return;
+
+      const canvasWidth = motionCanvas.width;
+      const canvasHeight = motionCanvas.height;
+      const imgWidth = img.naturalWidth || 1920;
+      const imgHeight = img.naturalHeight || 1080;
+
+      const imgAspect = imgWidth / imgHeight;
+      const canvasAspect = canvasWidth / canvasHeight;
+
+      let drawWidth, drawHeight, offsetX, offsetY;
+
+      if (canvasAspect > imgAspect) {
+        drawWidth = canvasWidth;
+        drawHeight = canvasWidth / imgAspect;
+        offsetX = 0;
+        offsetY = (canvasHeight - drawHeight) / 2;
+      } else {
+        drawHeight = canvasHeight;
+        drawWidth = canvasHeight * imgAspect;
+        offsetX = (canvasWidth - drawWidth) / 2;
+        offsetY = 0;
+      }
+
+      ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight);
+    }
+
+    const renderMotionLoop = () => {
+      const diff = Math.abs(targetFrame - currentFrame);
+
+      if (diff > 0.005) {
+        currentFrame += (targetFrame - currentFrame) * 0.18;
+        const frameIdx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
+
+        if (frameIdx !== lastRenderedIndex) {
+          let imgToDraw = frames[frameIdx];
+          if (!imgToDraw || !imgToDraw.complete) {
+            for (let offset = 1; offset < 10; offset++) {
+              if (frames[frameIdx - offset] && frames[frameIdx - offset].complete) {
+                imgToDraw = frames[frameIdx - offset];
+                break;
+              }
+              if (frames[frameIdx + offset] && frames[frameIdx + offset].complete) {
+                imgToDraw = frames[frameIdx + offset];
+                break;
+              }
+            }
+          }
+
+          if (imgToDraw && imgToDraw.complete) {
+            drawMotionFrame(imgToDraw);
+            lastRenderedIndex = frameIdx;
+          }
+        }
+
+        requestAnimationFrame(renderMotionLoop);
+      } else {
+        currentFrame = targetFrame;
+        const frameIdx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
+        if (frameIdx !== lastRenderedIndex && frames[frameIdx] && frames[frameIdx].complete) {
+          drawMotionFrame(frames[frameIdx]);
+          lastRenderedIndex = frameIdx;
+        }
+        isLoopRunning = false;
+      }
+    };
+
+    const requestRender = () => {
+      if (!isLoopRunning) {
+        isLoopRunning = true;
+        requestAnimationFrame(renderMotionLoop);
+      }
+    };
+
+    const onScrollMotion = () => {
+      const stage = document.querySelector('.storytelling-stage');
+      const heroSection = document.querySelector('.liquid-hero-section');
+      const section2 = document.querySelector('.glass-editorial-section');
+
+      if (stage) {
+        const rect = stage.getBoundingClientRect();
+        const stageTop = -rect.top;
+        const scrollable = rect.height - window.innerHeight;
+        const progress = scrollable > 0 ? Math.min(Math.max(stageTop / scrollable, 0), 1) : 0;
+
+        targetFrame = progress * (totalFrames - 1);
+        requestRender();
+
+        if (progress < 0.12) {
+          // Stage 1: Hero Active
+          if (heroSection) heroSection.classList.remove('is-hidden');
+          if (section2) {
+            section2.classList.remove('is-active');
+            section2.classList.remove('is-fading-out');
+          }
+        } else if (progress >= 0.12 && progress < 0.70) {
+          // Stage 2: Consultorio Active
+          if (heroSection) heroSection.classList.add('is-hidden');
+          if (section2) {
+            section2.classList.add('is-active');
+            section2.classList.remove('is-fading-out');
+          }
+        } else {
+          // Stage 3: Smooth transition to downstream sections
+          if (heroSection) heroSection.classList.add('is-hidden');
+          if (section2) {
+            section2.classList.remove('is-active');
+            section2.classList.add('is-fading-out');
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', onScrollMotion, { passive: true });
+    onScrollMotion();
+  } else {
+    // Mobile scroll fallback
+    const onMobileScroll = () => {
+      const stage = document.querySelector('.storytelling-stage');
+      const heroSection = document.querySelector('.liquid-hero-section');
+      const section2 = document.querySelector('.glass-editorial-section');
+
+      if (stage) {
+        const rect = stage.getBoundingClientRect();
+        const stageTop = -rect.top;
+        const scrollable = rect.height - window.innerHeight;
+        const progress = scrollable > 0 ? Math.min(Math.max(stageTop / scrollable, 0), 1) : 0;
+
+        if (progress < 0.12) {
+          if (heroSection) heroSection.classList.remove('is-hidden');
+          if (section2) section2.classList.remove('is-active', 'is-fading-out');
+        } else if (progress >= 0.12 && progress < 0.70) {
+          if (heroSection) heroSection.classList.add('is-hidden');
+          if (section2) {
+            section2.classList.add('is-active');
+            section2.classList.remove('is-fading-out');
+          }
+        } else {
+          if (heroSection) heroSection.classList.add('is-hidden');
+          if (section2) {
+            section2.classList.remove('is-active');
+            section2.classList.add('is-fading-out');
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', onMobileScroll, { passive: true });
+    onMobileScroll();
+  }
+
 });
+
