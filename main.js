@@ -18,14 +18,24 @@ window.addEventListener('beforeunload', () => {
 document.addEventListener('DOMContentLoaded', () => {
   window.scrollTo(0, 0);
 
-  // Ensure Hero 3D Videos play automatically and smoothly
-  const heroVideos = document.querySelectorAll('.hero-implant-video');
-  heroVideos.forEach(v => {
-    if (v.tagName === 'VIDEO') {
+  // Ensure Video Background plays automatically, loop and unmute seamlessly
+  const playAllVideos = () => {
+    const vids = document.querySelectorAll('video');
+    vids.forEach(v => {
+      v.defaultMuted = true;
       v.muted = true;
+      v.playsInline = true;
+      v.setAttribute('playsinline', 'true');
+      v.setAttribute('webkit-playsinline', 'true');
       v.play().catch(() => {});
-    }
+    });
+  };
+
+  playAllVideos();
+  ['touchstart', 'click', 'scroll'].forEach(evt => {
+    window.addEventListener(evt, playAllVideos, { passive: true, once: true });
   });
+
   const translations = {
     es: {
       nav: {
@@ -34,16 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
         services: "Servicios",
         cases: "Casos Clínicos",
         dentists: "Especialistas",
-        location: "Ubicación",
+        location: "Contacto",
         book: "Agendar Cita"
       },
       hero: {
-        title: `Cuidado profesional.<br><span class="daria-title-sub">Sonrisa precisa.</span>`,
-        desc: `Enfoque individualizado y odontología moderna de alta precisión en un ambiente cálido, seguro y confortable.`,
-        badgeTitle: `Estética<br>Dental 3D`,
-        badgeSub: `Enfoque individual & precisión`,
-        bookBtn: "Agendar Cita",
-        reviewsScore: "5.0 • San Luis Río Colorado"
+        badge: "enfoque individual y ambiente confortable",
+        title: `Cuidado atento.<br>Tratamiento preciso.`,
+        desc: `¿Buscas una atención odontológica atenta y de alta precisión en San Luis Río Colorado? Ofrecemos tratamientos modernos e individualizados en un ambiente cálido y confortable.`,
+        cta: "Agendar Cita",
+        stat1Val: "San Luis RC, Sonora",
+        stat1Lbl: "Enfoque Individualizado",
+        stat2Val: "+52 (653) 515-8276",
+        stat2Lbl: "Consulta & Valoración"
       },
       about: {
         eyebrow: "Nuestra Promesa",
@@ -155,16 +167,18 @@ document.addEventListener('DOMContentLoaded', () => {
         services: "Our Services",
         cases: "Clinical Cases",
         dentists: "Dentists",
-        location: "Location",
+        location: "Contact",
         book: "Book Online"
       },
       hero: {
-        title: `Gentle care.<br><span class="daria-title-sub">Precise smile.</span>`,
-        desc: `Individual approach and modern high-precision dentistry in a warm, comfortable and tranquil setting.`,
-        badgeTitle: `Aesthetic<br>Dentistry 3D`,
-        badgeSub: `Tailored care & precision`,
-        bookBtn: "Book Appointment",
-        reviewsScore: "5.0 • San Luis Río Colorado"
+        badge: "individual approach & calm environment",
+        title: `Attentive Care.<br>Precise Treatment.`,
+        desc: `Looking for attentive and precise dental care in San Luis Río Colorado? We offer modern treatments tailored to your individual needs in a warm and comfortable environment.`,
+        cta: "Book Appointment",
+        stat1Val: "San Luis RC, Sonora",
+        stat1Lbl: "Individualized Approach",
+        stat2Val: "+52 (653) 515-8276",
+        stat2Lbl: "Consultation & Treatment"
       },
       about: {
         eyebrow: "Our Promise",
@@ -285,13 +299,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 1. Navigation links
-    const dariaNavLinks = document.querySelectorAll('.daria-nav .daria-nav-item');
-    if (dariaNavLinks.length >= 5) {
-      dariaNavLinks[0].innerHTML = `<span class="daria-dot"></span> ${t.nav.about}`;
-      dariaNavLinks[1].innerHTML = `<span class="daria-dot"></span> ${t.nav.services}`;
-      dariaNavLinks[2].innerHTML = `<span class="daria-dot"></span> ${t.nav.cases}`;
-      dariaNavLinks[3].innerHTML = `<span class="daria-dot"></span> ${t.nav.dentists}`;
-      dariaNavLinks[4].innerHTML = `<span class="daria-dot"></span> ${t.nav.location}`;
+    const liquidNavLinks = document.querySelectorAll('.liquid-pill-menu .liquid-nav-link');
+    if (liquidNavLinks.length >= 5) {
+      liquidNavLinks[0].textContent = t.nav.about;
+      liquidNavLinks[1].textContent = t.nav.services;
+      liquidNavLinks[2].textContent = t.nav.cases;
+      liquidNavLinks[3].textContent = t.nav.dentists;
+      liquidNavLinks[4].textContent = t.nav.location;
     }
 
     const drawerLinks = document.querySelectorAll('.drawer-links .drawer-link');
@@ -302,21 +316,23 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // 2. Daria Hero elements
-    const dariaTitle = document.querySelector('.daria-title');
-    if (dariaTitle) dariaTitle.innerHTML = t.hero.title;
-    const dariaDesc = document.querySelector('.daria-description');
-    if (dariaDesc) dariaDesc.textContent = t.hero.desc;
-    const dariaBadgeText = document.querySelector('.daria-badge-text');
-    if (dariaBadgeText) dariaBadgeText.innerHTML = t.hero.badgeTitle;
-    const dariaBadgeSub = document.querySelector('.daria-badge-sub');
-    if (dariaBadgeSub) dariaBadgeSub.textContent = t.hero.badgeSub;
-    const dariaHeaderBtn = document.querySelector('.daria-btn-primary');
-    if (dariaHeaderBtn) dariaHeaderBtn.textContent = t.hero.bookBtn;
-    const dariaCtaBtn = document.querySelector('.daria-cta-btn span');
-    if (dariaCtaBtn) dariaCtaBtn.textContent = t.hero.bookBtn;
-    const dariaScore = document.querySelector('.daria-score');
-    if (dariaScore) dariaScore.textContent = t.hero.reviewsScore;
+    // 2. Liquid Hero elements
+    const heroBadge = document.querySelector('.liquid-badge-text');
+    if (heroBadge) heroBadge.textContent = t.hero.badge;
+    const heroTitle = document.querySelector('.liquid-hero-title');
+    if (heroTitle) heroTitle.innerHTML = t.hero.title;
+    const heroDesc = document.querySelector('.liquid-hero-desc');
+    if (heroDesc) heroDesc.textContent = t.hero.desc;
+    const heroCta = document.querySelector('.liquid-hero-cta-label');
+    if (heroCta) heroCta.textContent = t.hero.cta;
+    const stat1Val = document.querySelector('.stat1-val');
+    if (stat1Val) stat1Val.textContent = t.hero.stat1Val;
+    const stat1Lbl = document.querySelector('.stat1-lbl');
+    if (stat1Lbl) stat1Lbl.textContent = t.hero.stat1Lbl;
+    const stat2Val = document.querySelector('.stat2-val');
+    if (stat2Val) stat2Val.textContent = t.hero.stat2Val;
+    const stat2Lbl = document.querySelector('.stat2-lbl');
+    if (stat2Lbl) stat2Lbl.textContent = t.hero.stat2Lbl;
 
     // 4. About
     const aboutEyebrow = document.querySelector('.promise-tag span:last-child');
