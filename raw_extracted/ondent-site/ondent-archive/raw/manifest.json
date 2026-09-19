@@ -1,0 +1,269 @@
+{
+  "source": "https://www.ondentclinic.com/",
+  "collected_at": "2026-09-18T16:44:23-03:00",
+  "links": [
+    "https://092fd7ff41d23c51905c3ee60c05692901579bdc.agenda.softwaredentalink.com/agendas/agendamiento",
+    "https://browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js",
+    "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.a11yContrast%2C.addIdAsClassName%2C.allowWebpAvifTransforms%2C.builderBoxSizingBorderBox%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dontApplyDacOverridesOnBoBApps%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixDocumentLinkInPremiumPreview%2C.fixFirefoxLinkBarIntrinsicSizing%2C.fixRemappedFullNameCompType%2C.imageEncodingAVIF%2C.interactionsUseReactionEffectId%2C.isClassNameToRootEnabled%2C.logVsmFeaturesModuleDiff%2C.motionTimeAnimationsCSS%2C.resolveManifestInTB%2C.responsiveContainerRoleGroup%2C.sectionA11yProps%2C.shouldUseResponsiveImages%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useFragmentHrefForTopBottomAnchor%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery%2C.vsmFeaturesModule%2C.vsm_interactions_v1&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5593.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.ondentclinic.com&fileId=973ee3de.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=true&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=en&languageResolutionMethod=QueryParam&metaSiteId=12b3c957-d9f3-4c7f-9d82-e6f3768187c0&module=thunderbolt-features&originalLanguage=en&pageId=a2bfb3_77cb71bb2146bb425d3f93e980e483f6_104.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false®istryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=2b9d0586-bd32-4bef-aeb9-2f03a5eaa75e&siteRevision=104&staticHTMLComponentUrl=https%3A%2F%2Fwww-ondentclinic-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop",
+    "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.a11yContrast%2C.addIdAsClassName%2C.allowWebpAvifTransforms%2C.builderBoxSizingBorderBox%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dom_store%2C.dontApplyDacOverridesOnBoBApps%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixDocumentLinkInPremiumPreview%2C.fixFirefoxLinkBarIntrinsicSizing%2C.fixRemappedFullNameCompType%2C.imageEncodingAVIF%2C.interactionsUseReactionEffectId%2C.isClassNameToRootEnabled%2C.logVsmFeaturesModuleDiff%2C.motionTimeAnimationsCSS%2C.resolveManifestInTB%2C.responsiveContainerRoleGroup%2C.sectionA11yProps%2C.shouldUseResponsiveImages%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useFragmentHrefForTopBottomAnchor%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps%2C.useWowImageInFastGallery%2C.vsmFeaturesModule%2C.vsm_interactions_v1&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5593.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.ondentclinic.com&fileId=973ee3de.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=true&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=en&languageResolutionMethod=QueryParam&metaSiteId=12b3c957-d9f3-4c7f-9d82-e6f3768187c0&module=thunderbolt-features&originalLanguage=en&pageId=a2bfb3_d5946c637651a08cd2ff7001be7fb337_104.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false®istryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=2b9d0586-bd32-4bef-aeb9-2f03a5eaa75e&siteRevision=104&staticHTMLComponentUrl=https%3A%2F%2Fwww-ondentclinic-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop",
+    "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixFirefoxLinkBarIntrinsicSizing%2C.isClassNameToRootEnabled%2C.logVsmPlatformDiff%2C.migrateSdkDataMappers%2C.resolveManifestInTB%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery%2C.vsmPlatform&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5593.0&editorName=Unknown&experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.ondentclinic.com&fileId=13cc0853.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=en&metaSiteId=12b3c957-d9f3-4c7f-9d82-e6f3768187c0&module=thunderbolt-platform&originalLanguage=en&pageId=a2bfb3_77cb71bb2146bb425d3f93e980e483f6_104.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false®istryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=2b9d0586-bd32-4bef-aeb9-2f03a5eaa75e&siteRevision=104&staticHTMLComponentUrl=https%3A%2F%2Fwww-ondentclinic-com.filesusr.com%2F&viewMode=desktop",
+    "https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%2C%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2214bcded7-0066-7c35-14d7-466cb3f09103%22%3A%221335%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNestedLoginSocialBarMenuItems%2C.UseNewLoginBarDropdownMenuAlignment%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.dynamicPageLinkTarget%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.fixFirefoxLinkBarIntrinsicSizing%2C.isClassNameToRootEnabled%2C.logVsmPlatformDiff%2C.migrateSdkDataMappers%2C.resolveManifestInTB%2C.splitSlotSelectors%2C.stopResolvingInnerSelectors_VAG%2C.svgResolver_2%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useWowImageInFastGallery%2C.vsmPlatform&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5593.0&editorName=Unknown&experiments=dm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.ondentclinic.com&fileId=13cc0853.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=false&language=en&metaSiteId=12b3c957-d9f3-4c7f-9d82-e6f3768187c0&module=thunderbolt-platform&originalLanguage=en&pageId=a2bfb3_d5946c637651a08cd2ff7001be7fb337_104.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false®istryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.15516.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=2b9d0586-bd32-4bef-aeb9-2f03a5eaa75e&siteRevision=104&staticHTMLComponentUrl=https%3A%2F%2Fwww-ondentclinic-com.filesusr.com%2F&viewMode=desktop",
+    "https://static.parastorage.com/client/pfavico.ico",
+    "https://static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js",
+    "https://static.parastorage.com/services/wix-thunderbolt/dist/browser-deprecation.bundle.es5.js",
+    "https://static.parastorage.com/services/wix-thunderbolt/dist/main.c8b9bed4.bundle.min.js",
+    "https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.99fa8096.bundle.min.js",
+    "https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.b94b98b1.bundle.min.js",
+    "https://static.parastorage.com/unpkg-semver/mobile-app-invite-banner/mobile-app-invite-banner.css",
+    "https://static.parastorage.com/unpkg-semver/mobile-app-invite-banner/mobile-app-invite-banner.umd.min.js",
+    "https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js",
+    "https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js",
+    "https://static.parastorage.com/unpkg/lodash@4.17.23/lodash.min.js",
+    "https://static.parastorage.com/unpkg/react-dom@18.3.1/umd/react-dom.production.min.js",
+    "https://static.parastorage.com/unpkg/react@18.3.1/umd/react.production.min.js",
+    "https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8d6893330740455c96d218258a458aa4.png",
+    "https://static.wixstatic.com/media/a2bfb3_220c27038884497da463fcd923408d8d~mv2.png/v1/fill/w_305,h_170,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/LogoONDENT.png",
+    "https://static.wixstatic.com/media/a2bfb3_2883d943c9554f409e64da4aa13d617c~mv2.jpg/v1/fit/w_306,h_306,q_75,enc_avif,quality_auto/a2bfb3_2883d943c9554f409e64da4aa13d617c~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_2d954a32523f44d6a251289bc40bd8f3~mv2_d_4641_2320_s_2.png/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_2d954a32523f44d6a251289bc40bd8f3~mv2_d_4641_2320_s_2.png",
+    "https://static.wixstatic.com/media/a2bfb3_33254946bcc04be28eded19480cc4b88f000.jpg/v1/fill/w_147,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/a2bfb3_33254946bcc04be28eded19480cc4b88f000.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_3ba92ca093c948aabe219d6a3d180b03~mv2.jpg/v1/fit/w_306,h_306,q_75,enc_avif,quality_auto/a2bfb3_3ba92ca093c948aabe219d6a3d180b03~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2~mv2_d_6956_4968_s_4_2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2~mv2_d_6956_4968_s_4_2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_41d6cf0992574bcbb4e363c40d35330d~mv2_d_4748_3391_s_4_2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_41d6cf0992574bcbb4e363c40d35330d~mv2_d_4748_3391_s_4_2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8~mv2.jpg/v1/fill/w_147,h_98,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_618a12d8603d462a8dab765b95e53a71~mv2_d_9652_9652_s_4_2.jpg/v1/fit/w_306,h_306,q_75,enc_avif,quality_auto/a2bfb3_618a12d8603d462a8dab765b95e53a71~mv2_d_9652_9652_s_4_2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_666705c3f8e5462aa43884ffb68d1991~mv2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_666705c3f8e5462aa43884ffb68d1991~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_79073abae92d447e8319a469f720d26f~mv2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_79073abae92d447e8319a469f720d26f~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce~mv2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_8de453e6438e4b68a11c22b5833bdf9b~mv2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_8de453e6438e4b68a11c22b5833bdf9b~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_9577d38579ce4df1865a2876003c1ee0~mv2.jpg/v1/fill/w_186,h_124,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/a2bfb3_9577d38579ce4df1865a2876003c1ee0~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_a0c02dd225074556a0f988d1f9d3c404~mv2.jpg/v1/crop/x_633,y_0,w_3574,h_3463/fill/w_429,h_416,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/ondent-35.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_c7198a9ea2b14f1aba81de12cee73349~mv2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_c7198a9ea2b14f1aba81de12cee73349~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8~mv2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_e8620cf311424463a51a2c5e10ac907f~mv2_d_4838_3456_s_4_2.jpg/v1/fit/w_307,h_306,q_75,enc_avif,quality_auto/a2bfb3_e8620cf311424463a51a2c5e10ac907f~mv2_d_4838_3456_s_4_2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_ee6d1a0322c2453991a4536b1c797486~mv2.jpg/v1/fit/w_306,h_306,q_75,enc_avif,quality_auto/a2bfb3_ee6d1a0322c2453991a4536b1c797486~mv2.jpg",
+    "https://static.wixstatic.com/media/a2bfb3_ee900eb7a2c54dd7b26f45a94476958e~mv2.jpg/v1/fit/w_306,h_306,q_75,enc_avif,quality_auto/a2bfb3_ee900eb7a2c54dd7b26f45a94476958e~mv2.jpg",
+    "https://static.wixstatic.com/media/bc3ec7bc825c4e6ca746c659189cea83.jpg/v1/fill/w_147,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/bc3ec7bc825c4e6ca746c659189cea83.jpg",
+    "https://static.wixstatic.com/media/bc3ec7bc825c4e6ca746c659189cea83.jpg/v1/fill/w_288,h_162,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/bc3ec7bc825c4e6ca746c659189cea83.jpg",
+    "https://static.wixstatic.com/media/bc3ec7bc825c4e6ca746c659189cea83.jpg/v1/fill/w_84,h_47,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/bc3ec7bc825c4e6ca746c659189cea83.jpg",
+    "https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e316f544f9094143b9eac01f1f19e697.png",
+    "https://www.facebook.com/ondentclinic",
+    "https://www.instagram.com/ondent_clinic",
+    "https://www.ondentclinic.com",
+    "https://www.ondentclinic.com/",
+    "https://www.ondentclinic.com/#comp-jz65pf9y",
+    "https://www.ondentclinic.com/#comp-kz5vxzyu",
+    "https://www.ondentclinic.com/#comp-kz5vyewq",
+    "https://www.ondentclinic.com/#comp-kz5w2eld",
+    "https://www.ondentclinic.com/es",
+    "mailto:ondent.dentalcare@gmail.com"
+  ],
+  "media": [
+    {
+      "url": "https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/media/ironpatern.bb7ea6a2.png)}.SOND7z",
+      "type": "image",
+      "file": "images/ironpatern.bb7ea6a2.png_.SOND7z",
+      "status": "error",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/8d6893330740455c96d218258a458aa4.png",
+      "type": "image",
+      "file": "images/8d6893330740455c96d218258a458aa4.png",
+      "status": "downloaded",
+      "bytes": 23259,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_220c27038884497da463fcd923408d8d~mv2.png",
+      "type": "image",
+      "file": "images/a2bfb3_220c27038884497da463fcd923408d8d_mv2.png",
+      "status": "downloaded",
+      "bytes": 155085,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_2883d943c9554f409e64da4aa13d617c~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_2883d943c9554f409e64da4aa13d617c_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 1278138,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_2d954a32523f44d6a251289bc40bd8f3~mv2_d_4641_2320_s_2.png",
+      "type": "image",
+      "file": "images/a2bfb3_2d954a32523f44d6a251289bc40bd8f3_mv2_d_4641_2320_s_2.png",
+      "status": "downloaded",
+      "bytes": 1985622,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_33254946bcc04be28eded19480cc4b88f000.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_33254946bcc04be28eded19480cc4b88f000.jpg",
+      "status": "downloaded",
+      "bytes": 649596,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_3ba92ca093c948aabe219d6a3d180b03~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_3ba92ca093c948aabe219d6a3d180b03_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 1557992,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2~mv2_d_6956_4968_s_4_2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg",
+      "status": "downloaded",
+      "bytes": 2396913,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_41d6cf0992574bcbb4e363c40d35330d~mv2_d_4748_3391_s_4_2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_41d6cf0992574bcbb4e363c40d35330d_mv2_d_4748_3391_s_4_2.jpg",
+      "status": "downloaded",
+      "bytes": 3731390,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 1068085,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_618a12d8603d462a8dab765b95e53a71~mv2_d_9652_9652_s_4_2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_618a12d8603d462a8dab765b95e53a71_mv2_d_9652_9652_s_4_2.jpg",
+      "status": "downloaded",
+      "bytes": 5840304,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_666705c3f8e5462aa43884ffb68d1991~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 963996,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_79073abae92d447e8319a469f720d26f~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_79073abae92d447e8319a469f720d26f_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 222213,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 268145,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_8de453e6438e4b68a11c22b5833bdf9b~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_8de453e6438e4b68a11c22b5833bdf9b_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 781774,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_9577d38579ce4df1865a2876003c1ee0~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_9577d38579ce4df1865a2876003c1ee0_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 9914284,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_a0c02dd225074556a0f988d1f9d3c404~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_a0c02dd225074556a0f988d1f9d3c404_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 1599106,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_c7198a9ea2b14f1aba81de12cee73349~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_c7198a9ea2b14f1aba81de12cee73349_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 557794,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 1840125,
+      "existing": true
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_e8620cf311424463a51a2c5e10ac907f~mv2_d_4838_3456_s_4_2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg",
+      "status": "downloaded",
+      "bytes": 7003683,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_ee6d1a0322c2453991a4536b1c797486~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_ee6d1a0322c2453991a4536b1c797486_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 1076480,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_ee900eb7a2c54dd7b26f45a94476958e~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_ee900eb7a2c54dd7b26f45a94476958e_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 487876,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_f65086e46c2f4810b27db5a6bd45cd4e~mv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_f65086e46c2f4810b27db5a6bd45cd4e_mv2.jpg",
+      "status": "downloaded",
+      "bytes": 42960,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/a2bfb3_f7fe23dbad9248b1930446052ca1f64d%7Emv2.jpg",
+      "type": "image",
+      "file": "images/a2bfb3_f7fe23dbad9248b1930446052ca1f64d_7Emv2.jpg",
+      "status": "downloaded",
+      "bytes": 1006407,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/bc3ec7bc825c4e6ca746c659189cea83.jpg",
+      "type": "image",
+      "file": "images/bc3ec7bc825c4e6ca746c659189cea83.jpg",
+      "status": "downloaded",
+      "bytes": 493067,
+      "content_type": "image/jpeg"
+    },
+    {
+      "url": "https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png",
+      "type": "image",
+      "file": "images/e316f544f9094143b9eac01f1f19e697.png",
+      "status": "downloaded",
+      "bytes": 1420,
+      "content_type": "image/png"
+    }
+  ]
+}

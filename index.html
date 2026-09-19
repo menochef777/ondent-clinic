@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OnDent Clinic — Exceptional Dental Care | San Luis Río Colorado</title>
+  <meta name="description" content="Modern dental clinic dedicated to high-quality dental care, porcelain veneers, dental implants, orthodontics, and facial harmony in San Luis Río Colorado, Sonora.">
+  <meta name="keywords" content="OnDent Clinic, Dental Implants, Porcelain Veneers, Dentists Sonora, Dental Tourism Mexico, Dr Ana Castro, Dr Roy Davila">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imgs/a2bfb3_220c27038884497da463fcd923408d8d_mv2.png">
+
+  <!-- Google Fonts: Inter, Playfair Display, Epilogue, DM Sans & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:wght@900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons for modern sleek UI (regular, bold, fill) -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Creative Studio Interactive Cursor -->
+  <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Top Announcement Bar / Micro Bar with OnDent Logo -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <a href="#hero" class="top-bar-brand-link" aria-label="OnDent Clinic Home">
+          <img src="imgs/ondent_logo_white.png" alt="OnDent Dental Care" class="top-bar-logo-img">
+        </a>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+526535158276" class="top-link"><i class="ph-bold ph-phone"></i> +52 (653) 515-8276</a>
+        <span class="divider">|</span>
+        <span class="lang-switch">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Navigation (Transparent over Hero) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="OnDent Clinic Inicio">
+        <img src="imgs/ondent_logo_white.png" alt="OnDent Clinic" class="logo-img logo-white">
+        <img src="imgs/ondent_logo_dark.png" alt="OnDent Clinic" class="logo-img logo-dark">
+      </a>
+
+      <!-- Center Pill Navigation Menu -->
+      <nav class="pill-nav" id="pillNav">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">About</a></li>
+          <li><a href="#cases" class="nav-link">Results</a></li>
+          <li><a href="#services" class="nav-link">Pricing</a></li>
+          <li><a href="#reviews" class="nav-link">Reviews</a></li>
+          <li><a href="#dentists" class="nav-link">Blog</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Actions (Contacts Pill Button with Yellow Arrow Circle) -->
+      <div class="header-actions">
+        <a href="#booking" class="btn btn-hero-contacts">
+          <span>Contacts</span>
+          <span class="btn-arrow-yellow"><i class="ph-bold ph-arrow-up-right"></i></span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir Menú de Navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="imgs/ondent_logo_dark.png" alt="OnDent Clinic" class="drawer-logo">
+      <button class="drawer-close" id="drawerClose" aria-label="Cerrar Menú">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#hero" class="drawer-link">Inicio</a></li>
+      <li><a href="#about" class="drawer-link">Nosotros</a></li>
+      <li><a href="#services" class="drawer-link">Nuestros Servicios</a></li>
+      <li><a href="#cases" class="drawer-link">Casos Clínicos</a></li>
+      <li><a href="#dentists" class="drawer-link">Especialistas</a></li>
+      <li><a href="#booking" class="drawer-link">Agendar & Ubicación</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="#booking" class="btn btn-primary btn-block">Agendar Cita Online</a>
+      <a href="https://wa.me/526535158276" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+        <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp Directo
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION (CLINICAL 3D DENTAL IMPLANT & RESTORE YOUR TRUE SMILE) -->
+    <section class="clinic-hero-reference" id="hero" aria-label="Hero">
+      <div class="container hero-reference-container">
+        
+        <!-- Left Hero Typography & Actions -->
+        <div class="hero-ref-left hero-anim hero-reveal">
+          
+          <h1 class="hero-ref-title">
+            Restore <br>
+            Your True <br>
+            Smile
+            <span class="hero-ref-avatar-pill">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80" alt="Paciente Satisfecho">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80" alt="Paciente Satisfecho">
+              <span class="pill-count">+2k</span>
+            </span>
+          </h1>
+
+          <p class="hero-ref-description">
+            Using <strong>advanced technology</strong>, we deliver comprehensive treatments for a healthy, <strong>confident smile</strong>.
+          </p>
+
+          <!-- Bottom Left Floating Celebrating Patient & 98% Loyal Patients Card -->
+          <div class="hero-patient-celebrate-wrap">
+            <img src="imgs/hero_patient_celebrating.png" alt="98% loyal dental patients" class="hero-celebrating-img">
+          </div>
+
+        </div>
+
+        <!-- Right Hero Interactive 3D Dental Implant Tooth Video -->
+        <div class="hero-ref-right">
+          <div class="hero-video-frame">
+            <video class="hero-implant-video desktop-hero-video" autoplay loop muted playsinline preload="auto" poster="herovideo/heronova169_blue/ezgif-frame-001.jpg">
+              <source src="herovideo/tooth_hero_169.mp4" type="video/mp4">
+              <img src="herovideo/heronova169_blue/ezgif-frame-001.jpg" alt="3D Dental Tooth OnDent" class="hero-implant-video">
+            </video>
+            <video class="hero-implant-video mobile-hero-video" autoplay loop muted playsinline preload="auto" poster="herovideo/heronova916_blue/ezgif-frame-001.jpg">
+              <source src="herovideo/tooth_hero_916.mp4" type="video/mp4">
+              <img src="herovideo/heronova916_blue/ezgif-frame-001.jpg" alt="3D Dental Tooth OnDent" class="hero-implant-video">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (BENTO GRID) -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="section-header-left">
+          <h2 class="section-title">Sobre Nosotros</h2>
+        </div>
+
+        <div class="about-bento-grid">
+          
+          <!-- Left Bento Card (Mission, Promise & Action Subcards) -->
+          <div class="bento-card bento-about-left">
+            <div class="promise-tag">
+              <span class="promise-dot"></span>
+              <span>Nuestra Promesa</span>
+            </div>
+
+            <h3 class="about-headline">
+              Te ayudamos a lograr una <span class="text-accent">sonrisa sana y segura</span> para toda la vida
+            </h3>
+
+            <p class="about-subtext">
+              OnDent es una clínica moderna fundada bajo una filosofía centrada en el paciente. Combinamos función precisa, biomateriales de última generación y estética de alto nivel para diseñar armonía facial personalizada a cada paciente.
+            </p>
+
+            <!-- Subcard Action Buttons -->
+            <div class="about-action-cards">
+              <a href="#dentists" class="subcard-link">
+                <div class="subcard-header">
+                  <span class="subcard-icon"><i class="ph-bold ph-arrow-up-right"></i></span>
+                </div>
+                <div class="subcard-body">
+                  <h4>Especialistas Certificados</h4>
+                  <p>Dra. Ana Castro, Dr. Roy Dávila y especialistas</p>
+                </div>
+              </a>
+
+              <a href="#services" class="subcard-link">
+                <div class="subcard-header">
+                  <span class="subcard-icon"><i class="ph-bold ph-arrow-up-right"></i></span>
+                </div>
+                <div class="subcard-body">
+                  <h4>Instalaciones Modernas</h4>
+                  <p>Equipos de última generación y atención sin dolor</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Bento Card (Both Doctors Together Photo) -->
+          <div class="bento-card bento-about-right">
+            <div class="about-photo-wrapper">
+              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg" alt="Dra. Ana Castro y Dr. Roy Dávila - OnDent Clinic" class="about-main-photo">
+              <div class="photo-gradient-overlay"></div>
+              
+              <!-- Floating Clinic Pill Badges on Photo -->
+              <div class="floating-photo-pill">
+                <div class="photo-pill-item">
+                  <div class="photo-pill-icon"><i class="ph-fill ph-check-circle"></i></div>
+                  <span>Quirófano de Alta Tecnología</span>
+                </div>
+                <div class="photo-pill-item">
+                  <div class="photo-pill-icon"><i class="ph-fill ph-crosshair"></i></div>
+                  <span>Diagnóstico Digital 3D</span>
+                </div>
+                <div class="photo-pill-item">
+                  <div class="photo-pill-icon"><i class="ph-fill ph-heart"></i></div>
+                  <span>Atención Sin Dolor</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICE SECTION (BENTO & SPECIALTIES PILLS) -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-header-left">
+          <h2 class="section-title">Nuestros Servicios</h2>
+          <p class="section-subtitle">Soluciones odontológicas integrales diseñadas con precisión, durabilidad y alta estética.</p>
+        </div>
+
+        <!-- Bento Featured Services (2 Main Cards) -->
+        <div class="services-featured-grid">
+          
+          <!-- Card 1: Basic Dental Care -->
+          <div class="service-bento-card basic-care-card">
+            <div class="service-card-info">
+              <span class="service-category">Preventivo y Restaurador</span>
+              <h3 class="service-card-title">Cuidado Dental Básico</h3>
+              <ul class="service-feature-list">
+                <li><i class="ph-bold ph-check"></i> Exámenes Diagnósticos Completos</li>
+                <li><i class="ph-bold ph-check"></i> Resinas Estéticas del Color Dental</li>
+                <li><i class="ph-bold ph-check"></i> Limpieza Ultrasónica Preventiva</li>
+                <li><i class="ph-bold ph-check"></i> Odontopediatría con Cuidado Gentil</li>
+              </ul>
+              <a href="#booking" class="service-explore-link">
+                <span>Agendar Cuidado Básico</span>
+                <i class="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+            <div class="service-visual-area">
+              <div class="visual-icon-glow">
+                <img src="imgs/a2bfb3_3ba92ca093c948aabe219d6a3d180b03_mv2.jpg" alt="Instrumental Dental Moderno" class="service-preview-img">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Aesthetic Care -->
+          <div class="service-bento-card aesthetic-care-card">
+            <div class="service-card-info">
+              <span class="service-category">Armonización de Sonrisa</span>
+              <h3 class="service-card-title">Estética Dental Avanzada</h3>
+              <ul class="service-feature-list">
+                <li><i class="ph-bold ph-check"></i> Carillas Cerámicas de Alta Gama</li>
+                <li><i class="ph-bold ph-check"></i> Blanqueamiento Clínico Láser / LED</li>
+                <li><i class="ph-bold ph-check"></i> Coronas de Zirconia y Diseño de Sonrisa</li>
+                <li><i class="ph-bold ph-check"></i> Armonía Facial y Naturalidad</li>
+              </ul>
+              <a href="#booking" class="service-explore-link">
+                <span>Agendar Estética Dental</span>
+                <i class="ph-bold ph-arrow-right"></i>
+              </a>
+            </div>
+            <div class="service-visual-area">
+              <div class="visual-icon-glow">
+                <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg" alt="Sonrisa Estética Cerámica" class="service-preview-img">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 12 Specialty Pills Grid -->
+        <div class="specialties-pill-grid">
+          
+          <div class="specialty-pill" data-service="implants">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Implantes Dentales</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="veneers">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Carillas de Porcelana</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="endodontics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Endodoncia</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="orthodontics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Ortodoncia y Alineadores</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="periodontics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Periodoncia y Encías</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="exams">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Exámenes y Consultas</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="general">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Odontología General</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="dentures">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Prótesis y Placas Dentales</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="surgery">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Cirugía Dental y Muelas</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="fillings">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Resinas Estéticas</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="whitening">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Blanqueamiento Dental</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+          <div class="specialty-pill" data-service="pediatrics">
+            <div class="pill-left">
+              <span class="pill-dot"></span>
+              <span class="pill-name">Odontopediatría</span>
+            </div>
+            <span class="pill-arrow"><i class="ph-bold ph-arrow-up-right"></i></span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CLINICAL CASES SHOWCASE SECTION -->
+    <section class="cases-showcase-section" id="cases">
+      <div class="container">
+        
+        <!-- Header with green dot badge, editorial title and slider arrow buttons -->
+        <div class="cases-header-flex">
+          <div class="cases-header-left">
+            <div class="cases-badge">
+              <span class="cases-badge-dot"></span>
+              <span>CASOS CLÍNICOS REALES</span>
+            </div>
+            <h2 class="cases-title">Todo lo que tu <span class="text-italic-serif">sonrisa necesita</span></h2>
+          </div>
+          
+          <div class="cases-header-right">
+            <p class="cases-description">
+              Documentamos nuestros casos clínicos con fotografía en alta resolución: desde coronas individuales hasta rediseños completos de sonrisa.
+            </p>
+            <div class="cases-nav-controls">
+              <button class="cases-nav-btn prev-btn" id="casesPrev" aria-label="Caso Anterior">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <button class="cases-nav-btn next-btn" id="casesNext" aria-label="Siguiente Caso">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full-Bleed Continuous Trailer / Marquee Track Container (Edge-to-Edge) -->
+      <div class="cases-marquee-wrapper" id="casesMarqueeWrapper">
+        <div class="cases-slider-track" id="casesTrack">
+          
+          <!-- Case Card 1: Ultra-HD Smile Makeover (Antes y Después) -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_618a12d8603d462a8dab765b95e53a71_mv2_d_9652_9652_s_4_2.jpg" alt="Transformación Estética Antes y Después" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Antes y Después</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-sparkle"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Transformación Estética de Sonrisa</h3>
+              <p class="case-card-desc">Rehabilitación estética integral multi-unidad devolviendo luminosidad, alineación y armonía facial natural.</p>
+              <button class="case-action-btn" data-case="makeover">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 2: Implantología & Cirugía Guiada 3D -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg" alt="Implantología y Cirugía Guiada 3D" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Implantes Dentales</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-shield-plus"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Integración de Implante Guiada 3D</h3>
+              <p class="case-card-desc">Colocación quirúrgica guiada por tomografía CBCT 3D para máxima seguridad anatómica y osteointegración de por vida.</p>
+              <button class="case-action-btn" data-case="implant3d">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 3: Carillas Cerámicas & Micro-Estratificación -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg" alt="Carillas Cerámicas Micro-Estratificadas" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Carillas de Porcelana</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-crown"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Carillas de Porcelana Ultra Delgadas</h3>
+              <p class="case-card-desc">Estratificación cerámica artesanal que reproduce fielmente el brillo, translucidez y textura del esmalte dental natural.</p>
+              <button class="case-action-btn" data-case="facets">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 4: Corona de Zirconia sobre Implante -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg" alt="Corona de Zirconia sobre Implante" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Rehabilitación Zirconia</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-check-circle"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Corona de Zirconia sobre Implante</h3>
+              <p class="case-card-desc">Restauración integral biocompatible de zirconia con tonalidad natural e integración de margen gingival impecable.</p>
+              <button class="case-action-btn" data-case="zirconia">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 5: Armonización de Sonrisa -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg" alt="Sonrisa Estética Cerámica" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Armonización Facial</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-star"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Armonización de Sonrisa & Esmalte</h3>
+              <p class="case-card-desc">Corrección de desgaste, espacios interdentales y decoloración para una sonrisa rejuvenecida y llena de seguridad.</p>
+              <button class="case-action-btn" data-case="ceramic">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 6: Rehabilitación Oclusal de Precisión -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_79073abae92d447e8319a469f720d26f_mv2.jpg" alt="Resultado de Rehabilitación Oral" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Rehabilitación Oral</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-shield-check"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Restauración Oclusal Funcional</h3>
+              <p class="case-card-desc">Restauración funcional compleja que devuelve el balance de la mordida, soporte masticatorio y estética duradera.</p>
+              <button class="case-action-btn" data-case="bite">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 7: Laminados Cerámicos y Armonía Facial -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_a0c02dd225074556a0f988d1f9d3c404_mv2.jpg" alt="Laminados Cerámicos y Armonía Facial" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Diseño Digital</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-magic-wand"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Laminados Cerámicos CAD/CAM</h3>
+              <p class="case-card-desc">Micro-laminados e.max fabricados con fresado robótico de precisión computarizada para un encaje milimétrico.</p>
+              <button class="case-action-btn" data-case="digital">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Card 8: Transformación de Sonrisa Integral -->
+          <div class="case-card-v3">
+            <img src="imgs/a2bfb3_ee6d1a0322c2453991a4536b1c797486_mv2.jpg" alt="Transformación de Sonrisa Integral" class="case-card-bg" loading="lazy">
+            <div class="case-card-overlay"></div>
+            
+            <div class="case-card-top">
+              <span class="case-pill-badge">Sonrisa Natural</span>
+              <span class="case-icon-badge"><i class="ph-fill ph-heart"></i></span>
+            </div>
+            
+            <div class="case-card-bottom">
+              <h3 class="case-card-title">Diseño de Sonrisa Radiante</h3>
+              <p class="case-card-desc">Tratamiento estético completo que realza la expresión facial con proporción áurea y acabados de lujo.</p>
+              <button class="case-action-btn" data-case="smile">
+                <span>Conocer Más</span>
+                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE DENTISTS & CLINICAL EXPERTS SECTION -->
+    <section class="dentists-section" id="dentists">
+      <div class="container">
+        
+        <div class="section-header-flex">
+          <div>
+            <h2 class="section-title">Nuestros Especialistas</h2>
+            <p class="section-subtitle">Doctores certificados comprometidos con la excelencia y la capacitación internacional continua.</p>
+          </div>
+        </div>
+
+        <!-- Dentists Cards 2-Column Grid -->
+        <div class="dentists-grid-two">
+          
+          <!-- Doctor 1: Dra. Ana Castro -->
+          <div class="dentist-card active">
+            <div class="dentist-photo-box">
+              <img src="imgs/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8_mv2.jpg" alt="Dra. Ana Castro - Especialista en Estética y Rehabilitación Oral" class="dentist-img">
+              <div class="dentist-tag-badge">Directora & Especialista</div>
+            </div>
+            <div class="dentist-info">
+              <h3 class="dentist-name">Dra. Ana Castro</h3>
+              <p class="dentist-role">Estética Dental y Rehabilitación Oral</p>
+              <p class="dentist-bio">Apasionada por la transformación de sonrisas y la armonía facial con capacitación internacional continua en carillas cerámicas, estética mínimamente invasiva y diseño de sonrisa.</p>
+              <div class="dentist-socials">
+                <a href="https://www.instagram.com/ondent_clinic" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="mailto:ondent.dentalcare@gmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doctor 2: Dr. Roy Davila -->
+          <div class="dentist-card">
+            <div class="dentist-photo-box">
+              <img src="imgs/dr_roy_davila.jpg" alt="Dr. Roy Dávila - Especialista en Implantología y Cirugía" class="dentist-img">
+              <div class="dentist-tag-badge">Implantología & Cirugía</div>
+            </div>
+            <div class="dentist-info">
+              <h3 class="dentist-name">Dr. Roy Dávila</h3>
+              <p class="dentist-role">Especialista en Implantología & Cirugía Oral</p>
+              <p class="dentist-bio">Experto en implantología de alta precisión, prótesis sobre implantes, regeneración ósea y procedimientos quirúrgicos avanzados mínimamente invasivos con recuperación rápida.</p>
+              <div class="dentist-socials">
+                <a href="https://www.instagram.com/ondent_clinic" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+                <a href="mailto:ondent.dentalcare@gmail.com" aria-label="Email"><i class="ph ph-envelope-simple"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TOP TOOTH TICKER -->
+    <div class="tooth-ticker-bar" aria-hidden="true">
+      <div class="tooth-ticker-track">
+        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Ortodoncia</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Endodoncia</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Periodoncia</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Cirugía Dental</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
+      </div>
+    </div>
+
+    <!-- FREEDOM & CONTROL SECTION (BENEFITS & OPPORTUNITIES WITH 3D MASCOT CIRCLE) -->
+    <section class="freedom-section" id="mascote" aria-label="Control y Libertad Odontológica">
+      
+      <!-- Block 1: Header -->
+      <div class="freedom-header">
+        <div class="freedom-badge-pill">
+          <svg width="19" height="18" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50037 3.66955C7.53221 2.82462 6.41758 2.275 5.333 2.07887C4.11096 1.85888 2.84987 2.0826 1.96658 2.95885C1.10056 3.81944 0.866218 5.04172 1.06751 6.23193C1.24778 7.29835 1.7803 8.39907 2.60501 9.35959C2.41536 10.1071 2.46371 10.8946 2.7434 11.6137C3.02308 12.3327 3.52035 12.9481 4.16678 13.375C4.81321 13.802 5.57702 14.0195 6.35308 13.9976C7.12915 13.9758 7.87933 13.7157 8.50037 13.2531C9.12146 13.7161 9.87183 13.9765 10.6482 13.9985C11.4245 14.0205 12.1886 13.8029 12.8352 13.3758C13.4819 12.9487 13.9792 12.3331 14.2588 11.6137C14.5384 10.8943 14.5865 10.1065 14.3965 9.35884C15.2204 8.39832 15.753 7.29835 15.9325 6.23119C16.1338 5.04098 15.8994 3.81944 15.0334 2.9596C14.1501 2.0826 12.889 1.85888 11.667 2.07962C10.5824 2.275 9.46854 2.82537 8.50037 3.66955Z" fill="#C86FFF"/>
+          </svg>
+          <span>Control</span>
+        </div>
+        <h2 class="freedom-title">
+          Deja de absorber el caos.<br>
+          <span class="freedom-gradient">Sonríe con total confianza.</span>
+        </h2>
+      </div>
+
+      <!-- Block 2: 3-Column Grid -->
+      <div class="freedom-grid">
+        
+        <!-- Left Column: Negatives (Lo que evitas) -->
+        <div class="freedom-col-negatives">
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Tratamientos reactivos cuando problemas de fondo surgen demasiado tarde</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Citas desgastantes y presupuestos inflados que drenan tu tiempo y energía</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Constante desconfianza porque no hay visualización digital de los resultados</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Materiales de baja calidad que pierden brillo, se manchan o se fracturan</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc0f520a992816d8b15dc_bullet-list-cross.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Atención despersonalizada y expedientes dispersos sin seguimiento real</div>
+          </div>
+        </div>
+
+        <!-- Center Column: 3D Mascot Circle Portal -->
+        <div class="freedom-col-center">
+          <div class="freedom-mascot-circle-wrapper">
+            <div class="freedom-circle-glow"></div>
+            <div class="freedom-mascot-circle">
+              <canvas id="miniMascotCanvas" class="mini-mascot-canvas"></canvas>
+            </div>
+            <span class="freedom-live-badge"><i class="ph-fill ph-eye"></i> Mirada Interactiva 360°</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Positives (Lo que obtienes con OnDent) -->
+        <div class="freedom-col-positives">
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Diagnóstico digital 3D estratificado que elimina sorpresas en cada fase</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Equipo multidisciplinario que entrega resultados estéticos de alta precisión</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Visualización previa y validación digital de tu sonrisa antes de iniciar</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Biomateriales de zirconia y porcelana con garantía clínica de por vida</div>
+          </div>
+
+          <div class="freedom-card">
+            <img src="https://cdn.prod.website-files.com/6720dd1ab6df0da205830ab1/686cc068490683bbb3377d04_bullet-list.svg" alt="" aria-hidden class="freedom-card-icon-img">
+            <div class="freedom-card-text">Concierge personalizado y expedientes claros que aceleran cada decisión</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOOK ONLINE NOW SECTION -->
+    <section class="booking-section" id="booking">
+      <div class="container">
+        
+        <!-- Section Header -->
+        <div class="booking-header-area">
+          <span class="booking-eyebrow">
+            <span class="eyebrow-dot"></span>
+            AGENDA TU CITA
+          </span>
+          <h2 class="booking-main-title">
+            Agenda Tu Cita en Línea <br>
+            <span class="text-italic-serif">Directo con Nuestra Clínica</span>
+          </h2>
+          <p class="booking-header-desc">
+            Reserva tu consulta con nuestros especialistas certificados en segundos. Elige tu tratamiento preferido, especialista, fecha y horario a continuación.
+          </p>
+        </div>
+
+        <!-- Booking Layout: Form on Left + Standalone Clean Map on Right -->
+        <div class="booking-layout-grid">
+          
+          <!-- Left: High-End Interactive Form -->
+          <div class="booking-form-card">
+            <form class="appointment-form-v2" id="appointmentForm">
+              
+              <!-- Row 1: Name & Phone -->
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="patientName" class="field-label">Nombre Completo <span class="req">*</span></label>
+                  <div class="field-input-box">
+                    <i class="ph ph-user field-icon"></i>
+                    <input type="text" id="patientName" name="name" placeholder="Ej. Juan Pérez" required>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="patientContact" class="field-label">Teléfono / WhatsApp <span class="req">*</span></label>
+                  <div class="field-input-box">
+                    <i class="ph ph-phone field-icon"></i>
+                    <input type="tel" id="patientContact" name="contact" placeholder="+52 (653) 515-8276" required>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 2: Treatment & Preferred Dentist -->
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="serviceSelect" class="field-label">Tratamiento Dental <span class="req">*</span></label>
+                  <div class="field-input-box select-field">
+                    <i class="ph ph-tooth field-icon"></i>
+                    <select id="serviceSelect" name="service" required>
+                      <option value="" disabled selected>Selecciona Tratamiento Dental</option>
+                      <option value="Implantes Dentales">Implantes Dentales</option>
+                      <option value="Carillas de Porcelana">Carillas de Porcelana</option>
+                      <option value="Endodoncia">Endodoncia (Tratamiento de Conducto)</option>
+                      <option value="Ortodoncia">Ortodoncia y Alineadores</option>
+                      <option value="Periodoncia">Periodoncia y Cuidado de Encías</option>
+                      <option value="Exámenes y Consultas">Examen y Consulta Diagnóstica</option>
+                      <option value="Odontología General">Odontología General y Limpieza</option>
+                      <option value="Resinas Estéticas">Resinas Estéticas (Empastes Blancos)</option>
+                      <option value="Blanqueamiento Dental">Blanqueamiento Dental</option>
+                      <option value="Cirugía Dental">Cirugía Dental y Muelas del Juicio</option>
+                    </select>
+                    <i class="ph-bold ph-caret-down select-arrow"></i>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="dentistSelect" class="field-label">Especialista Preferido <span class="req">*</span></label>
+                  <div class="field-input-box select-field">
+                    <i class="ph ph-stethoscope field-icon"></i>
+                    <select id="dentistSelect" name="dentist" required>
+                      <option value="Primer Especialista Disponible" selected>Primer Especialista Disponible</option>
+                      <option value="Dra. Ana Castro">Dra. Ana Castro (Estética y Rehabilitación)</option>
+                      <option value="Dr. Roy Davila">Dr. Roy Dávila (Implantología y Cirugía)</option>
+                    </select>
+                    <i class="ph-bold ph-caret-down select-arrow"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 3: Date & Time -->
+              <div class="form-grid-2">
+                <div class="form-field">
+                  <label for="bookDate" class="field-label">Fecha Preferida <span class="req">*</span></label>
+                  <div class="field-input-box">
+                    <i class="ph ph-calendar-blank field-icon"></i>
+                    <input type="date" id="bookDate" name="date" required>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label for="bookTime" class="field-label">Horario Preferido <span class="req">*</span></label>
+                  <div class="field-input-box select-field">
+                    <i class="ph ph-clock field-icon"></i>
+                    <select id="bookTime" name="time" required>
+                      <option value="" disabled selected>Selecciona Horario</option>
+                      <option value="09:00 AM">09:00 AM</option>
+                      <option value="10:30 AM">10:30 AM</option>
+                      <option value="12:00 PM">12:00 PM</option>
+                      <option value="02:00 PM">02:00 PM</option>
+                      <option value="03:30 PM">03:30 PM</option>
+                      <option value="05:00 PM">05:00 PM</option>
+                    </select>
+                    <i class="ph-bold ph-caret-down select-arrow"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Row 4: Notes -->
+              <div class="form-field">
+                <label for="patientNotes" class="field-label">Notas o Síntomas <span class="opt">(Opcional)</span></label>
+                <div class="field-input-box textarea-box">
+                  <i class="ph ph-chat-centered-text field-icon textarea-icon"></i>
+                  <textarea id="patientNotes" name="notes" rows="3" placeholder="Escribe aquí cualquier síntoma, preferencia o duda sobre tu consulta..."></textarea>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="form-action-group">
+                <button type="submit" class="btn btn-primary btn-submit-booking">
+                  <span>Confirmar Solicitud de Cita</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </button>
+                <button type="button" class="btn btn-outline btn-open-agenda" id="openAgendaFromForm">
+                  <i class="ph-bold ph-calendar-check"></i>
+                  <span>Abrir Agenda Oficial Dentalink</span>
+                </button>
+              </div>
+
+              <div class="form-status" id="formStatus"></div>
+            </form>
+          </div>
+
+          <!-- Right: Standalone Clean Google Map Card (No top cards clutter) -->
+          <div class="booking-map-standalone-column">
+            <div class="standalone-map-card">
+              
+              <div class="standalone-map-header">
+                <div class="map-header-left">
+                  <div class="map-icon-box">
+                    <i class="ph-fill ph-map-pin"></i>
+                  </div>
+                  <div>
+                    <h3 class="standalone-map-title">San Luis Río Colorado, Sonora</h3>
+                    <p class="standalone-map-address">Av. Guadalupe Victoria #710 • Minutos de Yuma & San Luis, AZ</p>
+                  </div>
+                </div>
+                <a href="https://maps.google.com/?q=Av.+Guadalupe+Victoria+710,+San+Luis+Rio+Colorado,+Sonora,+Mexico" target="_blank" rel="noopener" class="btn btn-map-directions">
+                  <i class="ph-bold ph-navigation-arrow"></i>
+                  <span>Como Chegar</span>
+                </a>
+              </div>
+
+              <!-- Clean Full-Height Interactive Google Map Embed -->
+              <div class="standalone-map-frame">
+                <iframe 
+                  title="OnDent Clinic Google Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3362.4839810148154!2d-114.7758368!3d32.4864506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d7a6e1598f1f41%3A0x63351f0f09a562ef!2sAv%20Guadalupe%20Victoria%20710%2C%20Comercial%2C%2083400%20San%20Luis%20R%C3%ADo%20Colorado%2C%20Son.%2C%20M%C3%A9xico!5e0!3m2!1sen!2smx!4v1710000000000!5m2!1sen!2smx" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                
+                <div class="standalone-map-badge">
+                  <img src="imgs/a2bfb3_ee6d1a0322c2453991a4536b1c797486_mv2.jpg" alt="OnDent Exterior" class="map-badge-thumb">
+                  <div>
+                    <strong>OnDent Clinic</strong>
+                    <span>Estacionamento Privativo & 24/7 Emergência</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GOOGLE MAPS VERIFIED REVIEWS SECTION (100+ REAL REVIEWS) -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        
+        <!-- Header with Google 5.0 Rating Badge -->
+        <div class="reviews-header-flex">
+          <div class="reviews-header-left">
+            <div class="google-badge-pill">
+              <svg class="google-icon-svg" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+              </svg>
+              <div class="google-score">
+                <strong>5.0</strong>
+                <div class="stars-gold">
+                  <i class="ph-fill ph-star"></i>
+                  <i class="ph-fill ph-star"></i>
+                  <i class="ph-fill ph-star"></i>
+                  <i class="ph-fill ph-star"></i>
+                  <i class="ph-fill ph-star"></i>
+                </div>
+              </div>
+              <span class="reviews-count-tag">100+ Avaliações Reais no Google Maps</span>
+            </div>
+            
+            <h2 class="reviews-main-title">
+              Loved by Patients <br>
+              <span class="text-italic-serif">Across Mexico & USA</span>
+            </h2>
+          </div>
+
+          <div class="reviews-header-right">
+            <p class="reviews-desc">
+              Authentic verified testimonials from patients who drive from Phoenix, Texas, Yuma, and all over Sonora for premier dental care.
+            </p>
+            <a href="https://share.google/kXmISTZLpVB2rzEec" target="_blank" rel="noopener" class="btn btn-google-reviews">
+              <span>Ver todas no Google Maps</span>
+              <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Marquee Loop of Real Google Reviews Cards -->
+      <div class="reviews-marquee-wrapper" id="reviewsMarquee">
+        <div class="reviews-cards-track" id="reviewsTrack">
+          
+          <!-- Review 1: Omar Barrera Leon -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">OB</div>
+                <div>
+                  <h4 class="reviewer-name">Omar Barrera León</h4>
+                  <span class="review-date">27 Jan 2022 • Google Local Guide</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "Excelente servicio, el Dr. Roy Dávila es un profesional y tiene un trato muy agradable, lo recomiendo ampliamente para cualquier tratamiento dental."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 2: Toños Dogos y Burgers -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">TD</div>
+                <div>
+                  <h4 class="reviewer-name">Toños Dogos y Burgers</h4>
+                  <span class="review-date">27 Jan 2022 • Google Review</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "Excelente servicio, siempre profesionales y con un gran conocimiento. La mejor opción en cuidado dental, implantes, limpieza, mi niño ni llora con la atención tan humana."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 3: Jessica Martinez (USA Patient) -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">JM</div>
+                <div>
+                  <h4 class="reviewer-name">Jessica Martinez</h4>
+                  <span class="review-date">09 Sep 2021 • USA Cross-Border Patient</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "On Dent provides the best customer service and great dental services. I got my wisdom teeth removed and the Dentists are very gentle and felt no pain throughout the entire procedure."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 4: Gabriela Castro (Texas Patient) -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">GC</div>
+                <div>
+                  <h4 class="reviewer-name">Gabriela Castro</h4>
+                  <span class="review-date">08 Sep 2021 • Texas, USA</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "Excellent service, clean and cordial. Every time I go, I leave happy and satisfied. I travel from Texas multiple times a year to complete my checkups and dental treatments."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 5: Ricardo Castro (Phoenix Patient) -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">RC</div>
+                <div>
+                  <h4 class="reviewer-name">Ricardo Castro</h4>
+                  <span class="review-date">03 Oct 2020 • Phoenix, Arizona</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "Best place to get dental work in San Luis or Yuma area, I drive down all the way from Phoenix anytime I need dental work. High quality and unbeatable professionalism."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 6: Anais Fletes -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">AF</div>
+                <div>
+                  <h4 class="reviewer-name">Anais Fletes</h4>
+                  <span class="review-date">23 Feb 2021 • Google Review</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "¡Muy recomendada esta clínica! Cuenta con un gran nivel de profesionalismo, el ambiente es muy seguro, las instalaciones muy limpias y cuenta con todas las medidas higiénicas."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 7: Oscar Zazueta Valenzuela -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">OZ</div>
+                <div>
+                  <h4 class="reviewer-name">Oscar Zazueta Valenzuela</h4>
+                  <span class="review-date">05 Oct 2020 • Google Local Guide</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "Excelente atención al cliente, te hacen sentir en suficiente confianza para realizar el trabajo dental. Mi experiencia con los doctores ha sido de máxima excelencia."
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+          <!-- Review 8: Ricardo Lugo -->
+          <div class="review-card-google">
+            <div class="review-card-top">
+              <div class="reviewer-meta">
+                <div class="reviewer-avatar">RL</div>
+                <div>
+                  <h4 class="reviewer-name">Ricardo Lugo</h4>
+                  <span class="review-date">05 Oct 2020 • Google Review</span>
+                </div>
+              </div>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+            </div>
+            <div class="review-stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <p class="review-text">
+              "Los doctores de OnDent son en los únicos que tengo la confianza para dejar tratar a mi mamá. La dejaron preciosa de sus dientes y con una sonrisa espectacular 💕"
+            </p>
+            <div class="review-verified-badge">
+              <i class="ph-fill ph-seal-check"></i>
+              <span>Avaliação Verificada no Google</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM TOOTH TICKER (MATCHING REFERENCE IMAGE CONCEPT) -->
+    <div class="tooth-ticker-bar bottom-ticker" aria-hidden="true">
+      <div class="tooth-ticker-track">
+        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Ortodoncia</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Endodoncia</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Periodoncia</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Cirugía Dental</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
+        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Top Footer Row -->
+      <div class="footer-top-grid">
+        
+        <!-- Brand Summary -->
+        <div class="footer-col brand-col">
+          <img src="imgs/ondent_logo_white.png" alt="OnDent Clinic" class="footer-logo">
+          <p class="footer-tagline">
+            Clínica dental moderna dedicada a brindar tratamientos odontológicos de excelencia, tecnología digital de vanguardia y un trato humano y personalizado en San Luis Río Colorado, Sonora.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/ondent_clinic" target="_blank" rel="noopener" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+            <a href="https://www.facebook.com/ondentclinic" target="_blank" rel="noopener" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+            <a href="https://wa.me/526535158276" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+          </div>
+        </div>
+
+        <!-- Working Hours -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Horarios de Atención</h4>
+          <ul class="footer-list">
+            <li><strong>Lunes a Viernes:</strong> 9:00 AM – 6:00 PM</li>
+            <li><strong>Sábado:</strong> 9:00 AM – 2:00 PM</li>
+            <li><strong>Domingo:</strong> Cerrado / Urgencias 24/7</li>
+          </ul>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Enlaces Rápidos</h4>
+          <ul class="footer-list">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#services">Nuestros Servicios</a></li>
+            <li><a href="#cases">Casos Clínicos</a></li>
+            <li><a href="#dentists">Especialistas</a></li>
+            <li><a href="#booking">Agendar Cita</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contacto Directo</h4>
+          <ul class="footer-list">
+            <li><i class="ph ph-phone"></i> +52 (653) 515-8276</li>
+            <li><i class="ph ph-envelope"></i> ondent.dentalcare@gmail.com</li>
+            <li><i class="ph ph-map-pin"></i> Av. Guadalupe Victoria #710, San Luis Río Colorado, Sonora, México</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright & Watermark -->
+      <div class="footer-bottom">
+        <p>© 2026 OnDent Clinic. Todos los derechos reservados.</p>
+        <div class="footer-legal-links">
+          <a href="#">Aviso de Privacidad</a>
+          <span>•</span>
+          <a href="#">Términos del Servicio</a>
+        </div>
+      </div>
+
+      <!-- Giant Editorial Background Watermark -->
+      <div class="footer-big-brand" aria-hidden="true">
+        ONDENT CLINIC
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Specialty Modal / Drawer for In-Depth Information -->
+  <div class="modal-overlay" id="serviceModal">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar Modal"><i class="ph ph-x"></i></button>
+      <div class="modal-header">
+        <span class="modal-badge">Especialidad OnDent</span>
+        <h3 class="modal-title" id="modalTitle">Tratamiento Dental</h3>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <p>Descripción detallada del tratamiento y aplicación clínica.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#booking" class="btn btn-primary btn-block" id="modalBookBtn">Agendar Cita para este Servicio</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- LUXURY VIP APPOINTMENT CONCIERGE MODAL -->
+  <div class="dentalink-modal-backdrop" id="dentalinkModal" aria-hidden="true">
+    <div class="dentalink-modal-dialog booking-concierge-dialog">
+      
+      <!-- Modal Header -->
+      <div class="dentalink-modal-header">
+        <div class="modal-title-group">
+          <img src="imgs/a2bfb3_220c27038884497da463fcd923408d8d_mv2.png" alt="OnDent Clinic" class="dentalink-modal-logo">
+          <div>
+            <h3 class="dentalink-modal-title">Centro Oficial de Citas OnDent</h3>
+            <p class="dentalink-modal-sub">Elige tu método preferido para confirmar tu consulta en OnDent Clinic</p>
+          </div>
+        </div>
+        <button class="dentalink-modal-close" id="closeHeroAgendaModal" aria-label="Cerrar Ventana">
+          <i class="ph-bold ph-x"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body: 3 VIP Channels -->
+      <div class="booking-concierge-body">
+        
+        <!-- Option 1: Official Dentalink Live System -->
+        <div class="concierge-card concierge-card-primary">
+          <div class="concierge-card-left">
+            <div class="concierge-icon-pill">
+              <i class="ph-fill ph-calendar-check"></i>
+            </div>
+            <div class="concierge-info">
+              <span class="concierge-tag">Agenda Oficial en Tiempo Real</span>
+              <h4 class="concierge-title">Sistema Dentalink en Línea</h4>
+              <p class="concierge-desc">
+                Selecciona especialista (Dra. Ana Castro o Dr. Roy Dávila), tipo de consulta y confirma tu horario disponible al instante.
+              </p>
+            </div>
+          </div>
+          <a href="https://092fd7ff41d23c51905c3ee60c05692901579bdc.agenda.softwaredentalink.com/agenda/profesional?modalidad=1&id_profesional=2" target="_blank" rel="noopener" class="btn btn-primary btn-concierge-cta">
+            <span>Abrir Agenda Dentalink</span>
+            <i class="ph-bold ph-arrow-up-right"></i>
+          </a>
+        </div>
+
+        <!-- Option 2: Direct WhatsApp with Doctors -->
+        <div class="concierge-card concierge-card-whatsapp">
+          <div class="concierge-card-left">
+            <div class="concierge-icon-pill wa-pill">
+              <i class="ph-fill ph-whatsapp-logo"></i>
+            </div>
+            <div class="concierge-info">
+              <span class="concierge-tag wa-tag">Atención Inmediata</span>
+              <h4 class="concierge-title">WhatsApp Directo de la Clínica</h4>
+              <p class="concierge-desc">
+                Habla directamente con nuestro equipo para resolver dudas sobre carillas de porcelana, implantes, presupuestos o urgencias 24/7.
+              </p>
+            </div>
+          </div>
+          <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20agendar%20una%20consulta%20en%20OnDent%20Clinic" target="_blank" rel="noopener" class="btn btn-whatsapp btn-concierge-cta">
+            <span>Hablar por WhatsApp</span>
+            <i class="ph-bold ph-chat-circle-dots"></i>
+          </a>
+        </div>
+
+        <!-- Option 3: Phone Direct Line -->
+        <div class="concierge-card concierge-card-phone">
+          <div class="concierge-card-left">
+            <div class="concierge-icon-pill phone-pill">
+              <i class="ph-fill ph-phone-call"></i>
+            </div>
+            <div class="concierge-info">
+              <span class="concierge-tag">Línea Telefónica Directa</span>
+              <h4 class="concierge-title">+52 (653) 515-8276</h4>
+              <p class="concierge-desc">
+                Av. Guadalupe Victoria #710, San Luis Río Colorado, Sonora (Atención Bilingüe Español / Inglés).
+              </p>
+            </div>
+          </div>
+          <a href="tel:+526535158276" class="btn btn-outline btn-concierge-cta">
+            <span>Llamar Ahora</span>
+            <i class="ph-bold ph-phone"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="booking-concierge-footer">
+        <span>🔒 Atención segura y confidencial • San Luis Río Colorado, Sonora & frontera con Yuma, AZ</span>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
