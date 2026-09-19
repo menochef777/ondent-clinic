@@ -38,20 +38,30 @@
     </div>
     <ul class="drawer-links">
       <li><a href="#home" class="drawer-link">Inicio</a></li>
-      <li><a href="#about" class="drawer-link">Nosotros</a></li>
-      <li><a href="#services" class="drawer-link">Servicios</a></li>
-      <li><a href="#cases" class="drawer-link">Casos Clínicos</a></li>
-      <li><a href="#dentists" class="drawer-link">Especialistas</a></li>
-      <li><a href="#booking" class="drawer-link">Ubicación & Contacto</a></li>
     </ul>
     <div class="drawer-footer">
       <div class="lang-switch" style="margin-bottom: 12px; justify-content: center;">
         <button class="lang-btn active" data-lang="es">ES</button>
         <button class="lang-btn" data-lang="en">EN</button>
       </div>
+      <a href="https://wa.me/526535158276" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+        <i class="ph-fill ph-whatsapp-logo"></i> WhatsApp Directo
+      </a>
+    </div>
+  </div>
+
+  <!-- Fixed Full-Viewport Scroll Motion Canvas Background (sectionmotion/motion1) -->
+  <div class="motion-canvas-wrapper" aria-hidden="true">
+    <canvas id="motionCanvas"></canvas>
+    <div class="motion-canvas-overlay"></div>
+  </div>
+
   <main>
-    <!-- SECTION 1 — LIQUID GLASS HERO WITH 3D LOOPING VIDEO BACKGROUND -->
-    <section class="liquid-hero-section" id="home" aria-label="Hero">
+    <!-- Master Storytelling Stage (Long Scroll Runway for Smooth Storytelling) -->
+    <div class="storytelling-stage">
+
+      <!-- SECTION 1 — LIQUID GLASS HERO WITH 3D LOOPING VIDEO BACKGROUND -->
+      <section class="liquid-hero-section" id="home" aria-label="Hero">
 
       <!-- Full-viewport Autoplaying Looping Muted PlaysInline Video Background -->
       <div class="liquid-hero-video-wrap">
@@ -99,12 +109,6 @@
         <!-- Center: Liquid-Glass Rounded-Full Nav Pill (Desktop Only) -->
         <div class="liquid-glass liquid-pill-menu">
           <a href="#home" class="liquid-nav-link active">Inicio</a>
-          <a href="#consultorio" class="liquid-nav-link">Consultorio</a>
-          <a href="#about" class="liquid-nav-link">Nosotros</a>
-          <a href="#services" class="liquid-nav-link">Servicios</a>
-          <a href="#cases" class="liquid-nav-link">Casos</a>
-          <a href="#dentists" class="liquid-nav-link">Especialistas</a>
-          <a href="#booking" class="liquid-nav-link">Contacto</a>
         </div>
 
         <!-- Right: Language Selector & User Actions -->
@@ -163,7 +167,7 @@
           </p>
 
           <!-- 4. CTA Button -->
-          <a href="#booking" class="liquid-glass liquid-hero-cta">
+          <a href="https://wa.me/526535158276" target="_blank" rel="noopener" class="liquid-glass liquid-hero-cta">
             <span class="liquid-hero-cta-label">Agendar Cita</span>
             <span>→</span>
           </a>
@@ -202,86 +206,84 @@
 
     <!-- SECTION 2 — "CONOCE NUESTRO CONSULTORIO" (LEARN TO SEE BRILLIANTLY GLASS AESTHETIC) -->
     <section class="glass-editorial-section" id="consultorio" aria-label="Instalaciones y Consultorio">
-      <div class="glass-editorial-container">
-        <!-- Top Row: Glass Badge + Top Right Paragraph -->
-        <div class="glass-top-row">
-          <div class="glass-badge reveal-on-scroll">
-            <span>INSTALACIONES & ACCESO</span>
-          </div>
-          <p class="glass-top-paragraph reveal-on-scroll delay-1">
-            Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.
+      
+      <!-- Top Row: Glass Badge + Top Right Paragraph -->
+      <div class="glass-top-row">
+        <div class="glass-badge reveal-on-scroll">
+          <span>INSTALACIONES & ACCESO</span>
+        </div>
+        <p class="glass-top-paragraph reveal-on-scroll delay-1">
+          Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.
+        </p>
+      </div>
+
+      <!-- Bottom Row: Headline & CTA Left + Capabilities Glass Panel Right -->
+      <div class="glass-bottom-row">
+        
+        <!-- Left Content -->
+        <div class="glass-content-left">
+          <h2 class="glass-main-title reveal-on-scroll">
+            Conoce nuestro<br/>
+            consultorio.
+          </h2>
+          <p class="glass-support-desc reveal-on-scroll delay-1">
+            Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.
           </p>
+          <div class="glass-btn-row reveal-on-scroll delay-2">
+            <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20conocer%20las%20instalaciones%20de%20OnDent%20Clinic" target="_blank" rel="noopener" class="glass-btn-solid">
+              <span>Agendar Cita</span>
+              <i class="ph-bold ph-caret-right"></i>
+            </a>
+            <a href="https://www.google.com/maps/place/OnDent+Clinic/@33.0900331,-114.7971751,5.79z/data=!4m10!1m2!2m1!1sondent+clinic!3m6!1s0x80d65b7dd4e1f7bd:0x41f80ec6ef4e054!8m2!3d32.464673!4d-114.774431!15sCg1vbmRlbnQgY2xpbmljIgOIAQGSAQ1kZW50YWxfY2xpbmlj4AEA!16s%2Fg%2F11r7f0x9_9?entry=ttu" target="_blank" rel="noopener" class="glass-btn-pill">
+              <span>Cómo Llegar</span>
+              <i class="ph-bold ph-map-pin"></i>
+            </a>
+          </div>
         </div>
 
-        <!-- Bottom Row: Headline & CTA Left + Capabilities Glass Panel Right -->
-        <div class="glass-bottom-row">
+        <!-- Right Capabilities Glass Panel -->
+        <div class="glass-capabilities-panel reveal-on-scroll delay-2">
           
-          <!-- Left Content -->
-          <div class="glass-content-left">
-            <h2 class="glass-main-title reveal-on-scroll">
-              Conoce nuestro<br/>
-              consultorio.
-            </h2>
-            <p class="glass-support-desc reveal-on-scroll delay-1">
-              Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.
-            </p>
-            <div class="glass-btn-row reveal-on-scroll delay-2">
-              <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20conocer%20las%20instalaciones%20de%20OnDent%20Clinic" target="_blank" rel="noopener" class="glass-btn-solid">
-                <span>Agendar Cita</span>
-                <i class="ph-bold ph-caret-right"></i>
-              </a>
-              <a href="https://www.google.com/maps/place/OnDent+Clinic/@33.0900331,-114.7971751,5.79z/data=!4m10!1m2!2m1!1sondent+clinic!3m6!1s0x80d65b7dd4e1f7bd:0x41f80ec6ef4e054!8m2!3d32.464673!4d-114.774431!15sCg1vbmRlbnQgY2xpbmljIgOIAQGSAQ1kZW50YWxfY2xpbmlj4AEA!16s%2Fg%2F11r7f0x9_9?entry=ttu" target="_blank" rel="noopener" class="glass-btn-pill">
-                <span>Cómo Llegar</span>
-                <i class="ph-bold ph-map-pin"></i>
-              </a>
+          <!-- Row 01 -->
+          <div class="glass-capability-row">
+            <span class="glass-cap-num">01</span>
+            <div class="glass-cap-content">
+              <div class="glass-cap-title-wrap">
+                <h3 class="glass-cap-title">Ubicación Privilegiada</h3>
+                <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
+              </div>
+              <p class="glass-cap-desc">
+                Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.
+              </p>
             </div>
           </div>
 
-          <!-- Right Capabilities Glass Panel -->
-          <div class="glass-capabilities-panel reveal-on-scroll delay-2">
-            
-            <!-- Row 01 -->
-            <div class="glass-capability-row">
-              <span class="glass-cap-num">01</span>
-              <div class="glass-cap-content">
-                <div class="glass-cap-title-wrap">
-                  <h3 class="glass-cap-title">Ubicación Privilegiada</h3>
-                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-                </div>
-                <p class="glass-cap-desc">
-                  Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.
-                </p>
+          <!-- Row 02 -->
+          <div class="glass-capability-row">
+            <span class="glass-cap-num">02</span>
+            <div class="glass-cap-content">
+              <div class="glass-cap-title-wrap">
+                <h3 class="glass-cap-title">Tecnología Digital 3D</h3>
+                <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
               </div>
+              <p class="glass-cap-desc">
+                Quirófano esterilizado de alta tecnología, escáneres intraorales y unidades odontológicas ergonómicas de última generación.
+              </p>
             </div>
+          </div>
 
-            <!-- Row 02 -->
-            <div class="glass-capability-row">
-              <span class="glass-cap-num">02</span>
-              <div class="glass-cap-content">
-                <div class="glass-cap-title-wrap">
-                  <h3 class="glass-cap-title">Tecnología Digital 3D</h3>
-                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-                </div>
-                <p class="glass-cap-desc">
-                  Quirófano esterilizado de alta tecnología, escáneres intraorales y unidades odontológicas ergonómicas de última generación.
-                </p>
+          <!-- Row 03 -->
+          <div class="glass-capability-row">
+            <span class="glass-cap-num">03</span>
+            <div class="glass-cap-content">
+              <div class="glass-cap-title-wrap">
+                <h3 class="glass-cap-title">Atención Bilingüe & Calidez</h3>
+                <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
               </div>
+              <p class="glass-cap-desc">
+                Equipo médico certificado y personal de atención fluida en inglés y español para guiarte en cada paso de tu sonrisa.
+              </p>
             </div>
-
-            <!-- Row 03 -->
-            <div class="glass-capability-row">
-              <span class="glass-cap-num">03</span>
-              <div class="glass-cap-content">
-                <div class="glass-cap-title-wrap">
-                  <h3 class="glass-cap-title">Atención Bilingüe & Calidez</h3>
-                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-                </div>
-                <p class="glass-cap-desc">
-                  Equipo médico certificado y personal de atención fluida en inglés y español para guiarte en cada paso de tu sonrisa.
-                </p>
-              </div>
-            </div>
-
           </div>
 
         </div>
@@ -290,8 +292,153 @@
 
     </section>
 
-  <!-- ABOUT SECTION (BENTO GRID) -->
-  <section class="about-section" id="about">
+    <!-- SECTION 3 — CASOS CLÍNICOS REALES (FULL DESIGN MATCHING IMAGE 2 + SYNCHRONIZED TO STUDIO FRAME) -->
+    <section class="cases-trailer-stage" id="casesTrailer" aria-label="Casos Clínicos Reais">
+      <div class="cases-stage-container">
+        
+        <!-- Header with green dot badge, editorial title and slider arrow buttons (Matching Image 2) -->
+        <div class="cases-stage-header-row">
+          <div class="cases-stage-header-left">
+            <div class="cases-stage-badge">
+              <span class="pulse-emerald"></span>
+              <span>CASOS CLÍNICOS REALES</span>
+            </div>
+            <h2 class="cases-stage-main-title">
+              Todo lo que tu <span class="text-italic-accent">sonrisa necesita</span>
+            </h2>
+          </div>
+          
+          <div class="cases-stage-header-right">
+            <p class="cases-stage-description">
+              Documentamos nuestros casos clínicos con fotografía en alta resolución: desde coronas individuales hasta rediseños completos de sonrisa.
+            </p>
+            <div class="cases-stage-controls">
+              <button class="stage-nav-btn" id="stagePrev" aria-label="Caso Anterior">
+                <i class="ph-bold ph-caret-left"></i>
+              </button>
+              <button class="stage-nav-btn" id="stageNext" aria-label="Siguiente Caso">
+                <i class="ph-bold ph-caret-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Marquee Carousel Track (Full bleed cards) -->
+        <div class="cases-stage-marquee" id="stageMarquee">
+          <div class="cases-stage-track" id="stageTrack">
+            
+            <!-- Card 1: Antes y Después / Makeover -->
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_618a12d8603d462a8dab765b95e53a71_mv2_d_9652_9652_s_4_2.jpg');">
+              <div class="case-card-overlay"></div>
+              <div class="case-card-top">
+                <span class="case-pill-badge">Antes y Después</span>
+                <span class="case-icon-badge"><i class="ph-fill ph-sparkle"></i></span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-card-title">Transformación Estética de Sonrisa</h3>
+                <p class="case-card-desc">Rehabilitación integral multi-unidad devolviendo luminosidad, alineación y armonía facial natural.</p>
+                <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesa%20un%20diseno%20de%20sonrisa" target="_blank" rel="noopener" class="case-action-btn">
+                  <span>Conocer Más</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 2: Implante Guiado 3D -->
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg');">
+              <div class="case-card-overlay"></div>
+              <div class="case-card-top">
+                <span class="case-pill-badge">Implantes Dentales</span>
+                <span class="case-icon-badge"><i class="ph-fill ph-shield-plus"></i></span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-card-title">Integración de Implantes 3D</h3>
+                <p class="case-card-desc">Colocación quirúrgica guiada por tomografía CBCT 3D para máxima seguridad anatómica.</p>
+                <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesan%20los%20implantes%20dentales" target="_blank" rel="noopener" class="case-action-btn">
+                  <span>Conocer Más</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 3: Facetas de Porcelana Ultrafinas -->
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg');">
+              <div class="case-card-overlay"></div>
+              <div class="case-card-top">
+                <span class="case-pill-badge">Carillas de Porcelana</span>
+                <span class="case-icon-badge"><i class="ph-fill ph-crown"></i></span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-card-title">Carillas de Porcelana Ultrafinas</h3>
+                <p class="case-card-desc">Estratificación cerámica artesanal que reproduce fielmente el brillo y textura del esmalte natural.</p>
+                <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesan%20las%20carillas%20de%20porcelana" target="_blank" rel="noopener" class="case-action-btn">
+                  <span>Conocer Más</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 4: Corona de Zirconia -->
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg');">
+              <div class="case-card-overlay"></div>
+              <div class="case-card-top">
+                <span class="case-pill-badge">Rehabilitación Zirconia</span>
+                <span class="case-icon-badge"><i class="ph-fill ph-check-circle"></i></span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-card-title">Corona de Zirconia sobre Implante</h3>
+                <p class="case-card-desc">Restauración en zirconia biocompatible con tonalidad natural e integración de margen gingival impecable.</p>
+                <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesa%20una%20corona%20de%20zirconia" target="_blank" rel="noopener" class="case-action-btn">
+                  <span>Conocer Más</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 5: Armonização do Sorriso -->
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg');">
+              <div class="case-card-overlay"></div>
+              <div class="case-card-top">
+                <span class="case-pill-badge">Armonización Facial</span>
+                <span class="case-icon-badge"><i class="ph-fill ph-star"></i></span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-card-title">Harmonização do Sorriso & Esmalte</h3>
+                <p class="case-card-desc">Corrección de desgaste, espacios interdentales y decoloración para una sonrisa llena de seguridad.</p>
+                <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesa%20la%20armonizacion%20facial" target="_blank" rel="noopener" class="case-action-btn">
+                  <span>Conocer Más</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 6: Restauração Oclusal -->
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_79073abae92d447e8319a469f720d26f_mv2.jpg');">
+              <div class="case-card-overlay"></div>
+              <div class="case-card-top">
+                <span class="case-pill-badge">Rehabilitación Oral</span>
+                <span class="case-icon-badge"><i class="ph-fill ph-shield-check"></i></span>
+              </div>
+              <div class="case-card-bottom">
+                <h3 class="case-card-title">Restauración Oclusal Funcional</h3>
+                <p class="case-card-desc">Restauración funcional que restablece el balance oclusal, soporte masticatorio y estética duradera.</p>
+                <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesa%20una%20rehabilitacion%20oral" target="_blank" rel="noopener" class="case-action-btn">
+                  <span>Conocer Más</span>
+                  <i class="ph-bold ph-arrow-up-right"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    </div><!-- /.storytelling-stage -->
+
+    <!-- ABOUT SECTION (BENTO GRID) -->
+    <section class="about-section" id="about">
       <div class="container">
         <div class="section-header-left">
           <h2 class="section-title">Sobre Nosotros</h2>
@@ -529,204 +676,6 @@
       </div>
     </section>
 
-    <!-- CLINICAL CASES SHOWCASE SECTION -->
-    <section class="cases-showcase-section" id="cases">
-      <div class="container">
-        
-        <!-- Header with green dot badge, editorial title and slider arrow buttons -->
-        <div class="cases-header-flex">
-          <div class="cases-header-left">
-            <div class="cases-badge">
-              <span class="cases-badge-dot"></span>
-              <span>CASOS CLÍNICOS REALES</span>
-            </div>
-            <h2 class="cases-title">Todo lo que tu <span class="text-italic-serif">sonrisa necesita</span></h2>
-          </div>
-          
-          <div class="cases-header-right">
-            <p class="cases-description">
-              Documentamos nuestros casos clínicos con fotografía en alta resolución: desde coronas individuales hasta rediseños completos de sonrisa.
-            </p>
-            <div class="cases-nav-controls">
-              <button class="cases-nav-btn prev-btn" id="casesPrev" aria-label="Caso Anterior">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-              </button>
-              <button class="cases-nav-btn next-btn" id="casesNext" aria-label="Siguiente Caso">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Full-Bleed Continuous Trailer / Marquee Track Container (Edge-to-Edge) -->
-      <div class="cases-marquee-wrapper" id="casesMarqueeWrapper">
-        <div class="cases-slider-track" id="casesTrack">
-          
-          <!-- Case Card 1: Ultra-HD Smile Makeover (Antes y Después) -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_618a12d8603d462a8dab765b95e53a71_mv2_d_9652_9652_s_4_2.jpg" alt="Transformación Estética Antes y Después" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Antes y Después</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-sparkle"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Transformación Estética de Sonrisa</h3>
-              <p class="case-card-desc">Rehabilitación estética integral multi-unidad devolviendo luminosidad, alineación y armonía facial natural.</p>
-              <button class="case-action-btn" data-case="makeover">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 2: Implantología & Cirugía Guiada 3D -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg" alt="Implantología y Cirugía Guiada 3D" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Implantes Dentales</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-shield-plus"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Integración de Implante Guiada 3D</h3>
-              <p class="case-card-desc">Colocación quirúrgica guiada por tomografía CBCT 3D para máxima seguridad anatómica y osteointegración de por vida.</p>
-              <button class="case-action-btn" data-case="implant3d">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 3: Carillas Cerámicas & Micro-Estratificación -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg" alt="Carillas Cerámicas Micro-Estratificadas" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Carillas de Porcelana</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-crown"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Carillas de Porcelana Ultra Delgadas</h3>
-              <p class="case-card-desc">Estratificación cerámica artesanal que reproduce fielmente el brillo, translucidez y textura del esmalte dental natural.</p>
-              <button class="case-action-btn" data-case="facets">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 4: Corona de Zirconia sobre Implante -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg" alt="Corona de Zirconia sobre Implante" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Rehabilitación Zirconia</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-check-circle"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Corona de Zirconia sobre Implante</h3>
-              <p class="case-card-desc">Restauración integral biocompatible de zirconia con tonalidad natural e integración de margen gingival impecable.</p>
-              <button class="case-action-btn" data-case="zirconia">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 5: Armonización de Sonrisa -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg" alt="Sonrisa Estética Cerámica" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Armonización Facial</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-star"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Armonización de Sonrisa & Esmalte</h3>
-              <p class="case-card-desc">Corrección de desgaste, espacios interdentales y decoloración para una sonrisa rejuvenecida y llena de seguridad.</p>
-              <button class="case-action-btn" data-case="ceramic">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 6: Rehabilitación Oclusal de Precisión -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_79073abae92d447e8319a469f720d26f_mv2.jpg" alt="Resultado de Rehabilitación Oral" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Rehabilitación Oral</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-shield-check"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Restauración Oclusal Funcional</h3>
-              <p class="case-card-desc">Restauración funcional compleja que devuelve el balance de la mordida, soporte masticatorio y estética duradera.</p>
-              <button class="case-action-btn" data-case="bite">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 7: Laminados Cerámicos y Armonía Facial -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_a0c02dd225074556a0f988d1f9d3c404_mv2.jpg" alt="Laminados Cerámicos y Armonía Facial" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Diseño Digital</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-magic-wand"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Laminados Cerámicos CAD/CAM</h3>
-              <p class="case-card-desc">Micro-laminados e.max fabricados con fresado robótico de precisión computarizada para un encaje milimétrico.</p>
-              <button class="case-action-btn" data-case="digital">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Case Card 8: Transformación de Sonrisa Integral -->
-          <div class="case-card-v3">
-            <img src="imgs/a2bfb3_ee6d1a0322c2453991a4536b1c797486_mv2.jpg" alt="Transformación de Sonrisa Integral" class="case-card-bg" loading="lazy">
-            <div class="case-card-overlay"></div>
-            
-            <div class="case-card-top">
-              <span class="case-pill-badge">Sonrisa Natural</span>
-              <span class="case-icon-badge"><i class="ph-fill ph-heart"></i></span>
-            </div>
-            
-            <div class="case-card-bottom">
-              <h3 class="case-card-title">Diseño de Sonrisa Radiante</h3>
-              <p class="case-card-desc">Tratamiento estético completo que realza la expresión facial con proporción áurea y acabados de lujo.</p>
-              <button class="case-action-btn" data-case="smile">
-                <span>Conocer Más</span>
-                <span class="btn-arrow-circle"><i class="ph-bold ph-arrow-up-right"></i></span>
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
     <!-- MEET THE DENTISTS & CLINICAL EXPERTS SECTION -->
     <section class="dentists-section" id="dentists">
       <div class="container">
@@ -779,24 +728,6 @@
 
       </div>
     </section>
-
-    <!-- TOP TOOTH TICKER -->
-    <div class="tooth-ticker-bar" aria-hidden="true">
-      <div class="tooth-ticker-track">
-        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Ortodoncia</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Endodoncia</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Periodoncia</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Cirugía Dental</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
-      </div>
-    </div>
 
     <!-- FREEDOM & CONTROL SECTION (BENEFITS & OPPORTUNITIES WITH 3D MASCOT CIRCLE) -->
     <section class="freedom-section" id="mascote" aria-label="Control y Libertad Odontológica">
@@ -1243,103 +1174,14 @@
             </div>
           </div>
 
-          <!-- Review 6: Anais Fletes -->
-          <div class="review-card-google">
-            <div class="review-card-top">
-              <div class="reviewer-meta">
-                <div class="reviewer-avatar">AF</div>
-                <div>
-                  <h4 class="reviewer-name">Anais Fletes</h4>
-                  <span class="review-date">23 Feb 2021 • Google Review</span>
-                </div>
-              </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
-            </div>
-            <div class="review-stars">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <p class="review-text">
-              "¡Muy recomendada esta clínica! Cuenta con un gran nivel de profesionalismo, el ambiente es muy seguro, las instalaciones muy limpias y cuenta con todas las medidas higiénicas."
-            </p>
-            <div class="review-verified-badge">
-              <i class="ph-fill ph-seal-check"></i>
-              <span>Avaliação Verificada no Google</span>
-            </div>
-          </div>
-
-          <!-- Review 7: Oscar Zazueta Valenzuela -->
-          <div class="review-card-google">
-            <div class="review-card-top">
-              <div class="reviewer-meta">
-                <div class="reviewer-avatar">OZ</div>
-                <div>
-                  <h4 class="reviewer-name">Oscar Zazueta Valenzuela</h4>
-                  <span class="review-date">05 Oct 2020 • Google Local Guide</span>
-                </div>
-              </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
-            </div>
-            <div class="review-stars">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <p class="review-text">
-              "Excelente atención al cliente, te hacen sentir en suficiente confianza para realizar el trabajo dental. Mi experiencia con los doctores ha sido de máxima excelencia."
-            </p>
-            <div class="review-verified-badge">
-              <i class="ph-fill ph-seal-check"></i>
-              <span>Avaliação Verificada no Google</span>
-            </div>
-          </div>
-
-          <!-- Review 8: Ricardo Lugo -->
-          <div class="review-card-google">
-            <div class="review-card-top">
-              <div class="reviewer-meta">
-                <div class="reviewer-avatar">RL</div>
-                <div>
-                  <h4 class="reviewer-name">Ricardo Lugo</h4>
-                  <span class="review-date">05 Oct 2020 • Google Review</span>
-                </div>
-              </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
-            </div>
-            <div class="review-stars">
-              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-            </div>
-            <p class="review-text">
-              "Los doctores de OnDent son en los únicos que tengo la confianza para dejar tratar a mi mamá. La dejaron preciosa de sus dientes y con una sonrisa espectacular 💕"
-            </p>
-            <div class="review-verified-badge">
-              <i class="ph-fill ph-seal-check"></i>
-              <span>Avaliação Verificada no Google</span>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- BOTTOM TOOTH TICKER (MATCHING REFERENCE IMAGE CONCEPT) -->
-    <div class="tooth-ticker-bar bottom-ticker" aria-hidden="true">
-      <div class="tooth-ticker-track">
-        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Ortodoncia</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Endodoncia</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Periodoncia</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Cirugía Dental</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Odontología General</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Blanqueamiento Dental</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Implantes Dentales</span> <i class="ph-bold ph-tooth"></i></div>
-        <div class="tooth-ticker-item"><span>Carillas de Porcelana</span> <i class="ph-bold ph-tooth"></i></div>
-      </div>
-    </div>
   </main>
 
   <!-- FOOTER SECTION -->
-  <footer class="site-footer">
+  <footer class="site-footer" id="footer">
     <div class="container footer-container">
       
       <!-- Top Footer Row -->
@@ -1372,10 +1214,10 @@
         <div class="footer-col">
           <h4 class="footer-heading">Enlaces Rápidos</h4>
           <ul class="footer-list">
-            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#home">Inicio</a></li>
             <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#services">Nuestros Servicios</a></li>
-            <li><a href="#cases">Casos Clínicos</a></li>
+            <li><a href="#casesTrailer">Casos Clínicos</a></li>
             <li><a href="#dentists">Especialistas</a></li>
             <li><a href="#booking">Agendar Cita</a></li>
           </ul>
@@ -1526,6 +1368,8 @@
     <span>+52 (653) 515-8276</span>
   </a>
 
+  <!-- Lenis Smooth Scroll Library -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>

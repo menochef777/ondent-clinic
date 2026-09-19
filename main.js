@@ -59,11 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       consultorio: {
         badge: "INSTALACIONES & ACCESO",
-        topParagraph: "Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.",
+        topPara: "Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.",
         title: "Conoce nuestro<br/>consultorio.",
         desc: "Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.",
-        bookBtn: "Agendar Cita",
-        mapBtn: "Cómo Llegar",
+        cta1: "Agendar Cita",
+        cta2: "Cómo Llegar",
         cap1Title: "Ubicación Privilegiada",
         cap1Desc: "Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.",
         cap2Title: "Tecnología Digital 3D",
@@ -195,18 +195,18 @@ document.addEventListener('DOMContentLoaded', () => {
         stat2Lbl: "Consultation & Treatment"
       },
       consultorio: {
-        badge: "FACILITIES & ACCESS",
-        topParagraph: "A modern dental clinic designed for your utmost comfort and medical precision from the very first moment.",
-        title: "Discover our<br/>dental office.",
-        desc: "Strategically located in San Luis Río Colorado, minutes from the border with Yuma and San Luis, AZ. Combining 3D technology, specialized surgical suites, and personalized care.",
-        bookBtn: "Book Appointment",
-        mapBtn: "Get Directions",
+        badge: "FACILITIES & LOCATION",
+        topPara: "A modern dental clinic engineered for exceptional patient comfort and clinical precision from day one.",
+        title: "Explore our<br/>dental office.",
+        desc: "Strategically located in San Luis Río Colorado, minutes away from the Yuma & San Luis, AZ border. State-of-the-art 3D imaging, certified surgical operatory, and individualized VIP care.",
+        cta1: "Book Appointment",
+        cta2: "Get Directions",
         cap1Title: "Prime Border Location",
-        cap1Desc: "Direct, secure access in the city's medical district, with convenient parking for local and U.S. patients.",
-        cap2Title: "Digital 3D Technology",
-        cap2Desc: "Sterilized high-tech operatory, intraoral 3D scanners, and latest-generation ergonomic dental chairs.",
-        cap3Title: "Bilingual Care & Warmth",
-        cap3Desc: "Certified medical staff and team fluent in English and Spanish to guide you every step of your smile journey."
+        cap1Desc: "Fast and easy access in the medical district with convenient on-site parking for local and US cross-border patients.",
+        cap2Title: "3D Digital Technology",
+        cap2Desc: "Sterile high-tech operatory, digital intraoral scanning, and ergonomic comfort dental chairs.",
+        cap3Title: "Bilingual Attentive Care",
+        cap3Desc: "Certified dental specialists and fluent English/Spanish patient concierge guiding every step of your journey."
       },
       about: {
         eyebrow: "Our Promise",
@@ -362,20 +362,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const stat2Lbl = document.querySelector('.stat2-lbl');
     if (stat2Lbl) stat2Lbl.textContent = t.hero.stat2Lbl;
 
-    // 3. Section 2 — Consultorio
-    const consultorioBadge = document.querySelector('#consultorio .glass-badge span');
-    if (consultorioBadge && t.consultorio) consultorioBadge.textContent = t.consultorio.badge;
-    const consultorioTopP = document.querySelector('#consultorio .glass-top-paragraph');
-    if (consultorioTopP && t.consultorio) consultorioTopP.textContent = t.consultorio.topParagraph;
-    const consultorioTitle = document.querySelector('#consultorio .glass-main-title');
-    if (consultorioTitle && t.consultorio) consultorioTitle.innerHTML = t.consultorio.title;
-    const consultorioDesc = document.querySelector('#consultorio .glass-support-desc');
-    if (consultorioDesc && t.consultorio) consultorioDesc.textContent = t.consultorio.desc;
-    const consultorioSolidBtn = document.querySelector('#consultorio .glass-btn-solid span');
-    if (consultorioSolidBtn && t.consultorio) consultorioSolidBtn.textContent = t.consultorio.bookBtn;
-    const consultorioPillBtn = document.querySelector('#consultorio .glass-btn-pill span');
-    if (consultorioPillBtn && t.consultorio) consultorioPillBtn.textContent = t.consultorio.mapBtn;
-    const capRows = document.querySelectorAll('#consultorio .glass-capability-row');
+    // 3. Section 2 — Consultorio (Editorial Glass)
+    const glassBadge = document.querySelector('.glass-badge span');
+    if (glassBadge && t.consultorio) glassBadge.textContent = t.consultorio.badge;
+    const glassTopPara = document.querySelector('.glass-top-paragraph');
+    if (glassTopPara && t.consultorio) glassTopPara.textContent = t.consultorio.topPara;
+    const glassMainTitle = document.querySelector('.glass-main-title');
+    if (glassMainTitle && t.consultorio) glassMainTitle.innerHTML = t.consultorio.title;
+    const glassSupportDesc = document.querySelector('.glass-support-desc');
+    if (glassSupportDesc && t.consultorio) glassSupportDesc.textContent = t.consultorio.desc;
+    const glassBtnSolid = document.querySelector('.glass-btn-solid span');
+    if (glassBtnSolid && t.consultorio) glassBtnSolid.textContent = t.consultorio.cta1;
+    const glassBtnPill = document.querySelector('.glass-btn-pill span');
+    if (glassBtnPill && t.consultorio) glassBtnPill.textContent = t.consultorio.cta2;
+    const capRows = document.querySelectorAll('.glass-capability-row');
     if (capRows.length >= 3 && t.consultorio) {
       capRows[0].querySelector('.glass-cap-title').textContent = t.consultorio.cap1Title;
       capRows[0].querySelector('.glass-cap-desc').textContent = t.consultorio.cap1Desc;
@@ -443,14 +443,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 6. Clinical Cases
-    const casesBadge = document.querySelector('.cases-badge span:last-child');
-    if (casesBadge) casesBadge.textContent = t.cases.badge;
-    const casesTitle = document.querySelector('.cases-title');
-    if (casesTitle) casesTitle.innerHTML = t.cases.title;
-    const casesDesc = document.querySelector('.cases-description');
-    if (casesDesc) casesDesc.textContent = t.cases.desc;
+    const casesBadge = document.querySelector('.cases-badge span:last-child, .cases-stage-badge span:last-child');
+    if (casesBadge && t.cases) casesBadge.textContent = t.cases.badge;
+    const casesTitle = document.querySelector('.cases-title, .cases-stage-main-title');
+    if (casesTitle && t.cases) casesTitle.innerHTML = t.cases.title;
+    const casesDesc = document.querySelector('.cases-description, .cases-stage-description');
+    if (casesDesc && t.cases) casesDesc.textContent = t.cases.desc;
     document.querySelectorAll('.case-action-btn span:first-child').forEach(btn => {
-      btn.textContent = t.cases.learnMore;
+      if (t.cases) btn.textContent = t.cases.learnMore;
     });
 
     // 7. Dentists
@@ -656,23 +656,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 4. MOBILE DRAWER NAVIGATION
+  // 4. MOBILE DRAWER NAVIGATION & BODY LOCK
   // ==========================================================================
   const mobileToggle = document.getElementById('mobileMenuToggle');
   const drawer = document.getElementById('mobileDrawer');
   const drawerClose = document.getElementById('drawerClose');
   const drawerLinks = document.querySelectorAll('.drawer-link');
 
-  if (mobileToggle && drawer) {
-    mobileToggle.addEventListener('click', () => drawer.classList.add('open'));
-  }
-  if (drawerClose && drawer) {
-    drawerClose.addEventListener('click', () => drawer.classList.remove('open'));
-  }
+  const openDrawer = () => {
+    if (drawer) {
+      drawer.classList.add('open');
+      document.body.classList.add('no-scroll');
+    }
+  };
+
+  const closeDrawer = () => {
+    if (drawer) {
+      drawer.classList.remove('open');
+      document.body.classList.remove('no-scroll');
+    }
+  };
+
+  if (mobileToggle) mobileToggle.addEventListener('click', openDrawer);
+  if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
   drawerLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (drawer) drawer.classList.remove('open');
-    });
+    link.addEventListener('click', closeDrawer);
   });
 
   // ==========================================================================
@@ -1207,8 +1215,78 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ==========================================================================
-  // 11. REVEAL ON SCROLL OBSERVER
+  // 11. LENIS SMOOTH MOMENTUM SCROLL (60FPS FLUID PHYSICS)
   // ==========================================================================
+  let lenis = null;
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      duration: 1.25,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.1,
+      touchMultiplier: 1.5,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Smooth Anchor Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href && href !== '#' && href.length > 1) {
+          const target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            lenis.scrollTo(target, {
+              offset: -40,
+              duration: 1.25,
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            });
+            const drawer = document.getElementById('mobileDrawer');
+            if (drawer && drawer.classList.contains('active')) {
+              drawer.classList.remove('active');
+            }
+          }
+        }
+      });
+    });
+  }
+
+  // ==========================================================================
+  // 12. SMOOTH SCROLL REVEAL (HERO IS INTACT, SECTIONS 2+ ANIMATE FLUIDLY)
+  // ==========================================================================
+  const nonHeroSections = document.querySelectorAll(
+    'section:not(.liquid-hero-section):not(#home)'
+  );
+
+  nonHeroSections.forEach(sec => {
+    // Reveal section headers
+    const headers = sec.querySelectorAll('.section-header-left, .section-header-center, .cases-header-row, .reviews-header, .freedom-header-block');
+    headers.forEach(h => h.classList.add('reveal-on-scroll'));
+
+    // Reveal bento cards and main blocks
+    const cards = sec.querySelectorAll('.bento-card, .service-bento-card, .bento-case-card, .dentist-card, .freedom-side-card, .freedom-mascot-center, .booking-form-card, .booking-info-sidebar, .reviews-carousel-wrapper');
+    cards.forEach((c, idx) => {
+      c.classList.add('reveal-on-scroll');
+      if (idx % 3 === 1) c.classList.add('delay-1');
+      if (idx % 3 === 2) c.classList.add('delay-2');
+    });
+
+    // Reveal pills
+    const pills = sec.querySelectorAll('.specialty-pill');
+    pills.forEach((p, idx) => {
+      p.classList.add('reveal-on-scroll');
+      p.style.transitionDelay = `${(idx % 6) * 60}ms`;
+    });
+  });
+
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach(entry => {
@@ -1228,6 +1306,283 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(el);
   });
 
+  // ==========================================================================
+  // 13. SECTION MOTION — 300-FRAME HIGH-PERFORMANCE SCROLL SCRUBBING (60–120 FPS)
+  // ==========================================================================
+  const motionCanvas = document.getElementById('motionCanvas');
+  const heroVideoDesktop = document.getElementById('heroVideoDesktop');
+  const heroVideoMobile = document.getElementById('heroVideoMobile');
+  const isMobile = window.innerWidth <= 768;
+
+  if (motionCanvas && !isMobile) {
+    const ctx = motionCanvas.getContext('2d', { alpha: false, desynchronized: true });
+    const totalFrames = 300;
+    const frames = new Array(totalFrames);
+    let targetFrame = 0;
+    let currentFrame = 0;
+    let lastRenderedIndex = -1;
+    let isLoopRunning = false;
+
+    let cachedCanvasW = window.innerWidth;
+    let cachedCanvasH = window.innerHeight;
+    let cachedDrawW = 0;
+    let cachedDrawH = 0;
+    let cachedOffsetX = 0;
+    let cachedOffsetY = 0;
+
+    const pad = (n) => String(n).padStart(3, '0');
+
+    const updateCachedDimensions = () => {
+      cachedCanvasW = window.innerWidth;
+      cachedCanvasH = window.innerHeight;
+      motionCanvas.width = cachedCanvasW;
+      motionCanvas.height = cachedCanvasH;
+
+      const imgAspect = 1920 / 1080;
+      const canvasAspect = cachedCanvasW / cachedCanvasH;
+
+      if (canvasAspect > imgAspect) {
+        cachedDrawW = cachedCanvasW;
+        cachedDrawH = cachedCanvasW / imgAspect;
+        cachedOffsetX = 0;
+        cachedOffsetY = (cachedCanvasH - cachedDrawH) / 2;
+      } else {
+        cachedDrawH = cachedCanvasH;
+        cachedDrawW = cachedCanvasH * imgAspect;
+        cachedOffsetX = (cachedCanvasW - cachedDrawW) / 2;
+        cachedOffsetY = 0;
+      }
+
+      lastRenderedIndex = -1;
+      const idx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
+      if (frames[idx] && frames[idx].complete) {
+        drawMotionFrame(frames[idx]);
+        lastRenderedIndex = idx;
+      }
+    };
+
+    window.addEventListener('resize', updateCachedDimensions, { passive: true });
+    updateCachedDimensions();
+
+    const drawMotionFrame = (img) => {
+      if (!ctx || !img || !img.complete || img.naturalWidth === 0) return;
+      ctx.drawImage(img, cachedOffsetX, cachedOffsetY, cachedDrawW, cachedDrawH);
+    };
+
+    const loadFrame = (i) => {
+      if (frames[i - 1]) return;
+      const img = new Image();
+      img.src = `sectionmotion/motion1/ezgif-frame-${pad(i)}.jpg`;
+      img.onload = () => {
+        if (i === 1 && lastRenderedIndex === -1) {
+          drawMotionFrame(img);
+          lastRenderedIndex = 0;
+        }
+      };
+      frames[i - 1] = img;
+    };
+
+    // 1. Initial keyframes for instantaneous response
+    for (let i = 1; i <= 20; i++) loadFrame(i);
+    for (let i = 25; i <= totalFrames; i += 5) loadFrame(i);
+
+    // 2. Background preloading in idle chunks
+    let currentFill = 1;
+    const fillRemaining = () => {
+      let count = 0;
+      while (currentFill <= totalFrames && count < 20) {
+        loadFrame(currentFill);
+        currentFill++;
+        count++;
+      }
+      if (currentFill <= totalFrames) {
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(fillRemaining, { timeout: 150 });
+        } else {
+          setTimeout(fillRemaining, 30);
+        }
+      }
+    };
+    setTimeout(fillRemaining, 80);
+
+    // High-performance RAF loop (stops completely when idle)
+    const renderMotionLoop = () => {
+      const diff = Math.abs(targetFrame - currentFrame);
+
+      if (diff > 0.002) {
+        currentFrame += (targetFrame - currentFrame) * 0.22;
+        const frameIdx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
+
+        if (frameIdx !== lastRenderedIndex) {
+          let imgToDraw = frames[frameIdx];
+          if (!imgToDraw || !imgToDraw.complete) {
+            for (let offset = 1; offset < 15; offset++) {
+              if (frames[frameIdx - offset] && frames[frameIdx - offset].complete) {
+                imgToDraw = frames[frameIdx - offset];
+                break;
+              }
+              if (frames[frameIdx + offset] && frames[frameIdx + offset].complete) {
+                imgToDraw = frames[frameIdx + offset];
+                break;
+              }
+            }
+          }
+
+          if (imgToDraw && imgToDraw.complete) {
+            drawMotionFrame(imgToDraw);
+            lastRenderedIndex = frameIdx;
+          }
+        }
+
+        requestAnimationFrame(renderMotionLoop);
+      } else {
+        currentFrame = targetFrame;
+        const frameIdx = Math.min(Math.max(Math.round(currentFrame), 0), totalFrames - 1);
+        if (frameIdx !== lastRenderedIndex && frames[frameIdx] && frames[frameIdx].complete) {
+          drawMotionFrame(frames[frameIdx]);
+          lastRenderedIndex = frameIdx;
+        }
+        isLoopRunning = false;
+      }
+    };
+
+    const requestRender = () => {
+      if (!isLoopRunning) {
+        isLoopRunning = true;
+        requestAnimationFrame(renderMotionLoop);
+      }
+    };
+
+    const storytellingStage = document.querySelector('.storytelling-stage');
+    const heroSection = document.querySelector('.liquid-hero-section');
+    const section2 = document.querySelector('.glass-editorial-section');
+    const casesTrailer = document.querySelector('.cases-trailer-stage');
+
+    const updateStorytellingFromScroll = () => {
+      const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+      const stageHeight = storytellingStage ? (storytellingStage.offsetHeight - window.innerHeight) : (window.innerHeight * 1.8);
+
+      if (scrollY <= stageHeight) {
+        const progress = Math.min(Math.max(scrollY / stageHeight, 0), 1);
+        targetFrame = progress * (totalFrames - 1);
+        requestRender();
+
+        if (motionCanvas) {
+          motionCanvas.style.opacity = '1';
+          motionCanvas.style.visibility = 'visible';
+        }
+
+        // Pause hero background video during scroll to free 100% GPU video decoding pipeline
+        if (progress > 0.02) {
+          if (heroVideoDesktop && !heroVideoDesktop.paused) heroVideoDesktop.pause();
+          if (heroVideoMobile && !heroVideoMobile.paused) heroVideoMobile.pause();
+        } else {
+          if (heroVideoDesktop && heroVideoDesktop.paused) heroVideoDesktop.play().catch(() => {});
+          if (heroVideoMobile && heroVideoMobile.paused) heroVideoMobile.play().catch(() => {});
+        }
+
+        // 3-Stage Storytelling Transitions
+        if (progress < 0.15) {
+          // Stage 1: Hero view
+          if (heroSection) heroSection.classList.remove('is-hidden');
+          if (section2) section2.classList.remove('is-active', 'is-fading-out');
+          if (casesTrailer) casesTrailer.classList.remove('is-active', 'is-fading-out');
+        } else if (progress >= 0.15 && progress < 0.50) {
+          // Stage 2: Consultorio (Drone exterior & operatory arrival)
+          if (heroSection) heroSection.classList.add('is-hidden');
+          if (section2) {
+            section2.classList.add('is-active');
+            section2.classList.remove('is-fading-out');
+          }
+          if (casesTrailer) casesTrailer.classList.remove('is-active', 'is-fading-out');
+        } else {
+          // Stage 3: Casos Clínicos Reais (Photo Studio & Smiling Patient Celebrating)
+          if (heroSection) heroSection.classList.add('is-hidden');
+          if (section2) {
+            section2.classList.remove('is-active');
+            section2.classList.add('is-fading-out');
+          }
+          if (casesTrailer) {
+            casesTrailer.classList.add('is-active');
+            casesTrailer.classList.remove('is-fading-out');
+          }
+        }
+      } else {
+        // Scrolled past the storytelling stage -> completely hide canvas and fixed storytelling overlays
+        if (heroSection) heroSection.classList.add('is-hidden');
+        if (section2) section2.classList.remove('is-active', 'is-fading-out');
+        if (casesTrailer) casesTrailer.classList.remove('is-active', 'is-fading-out');
+        if (motionCanvas) {
+          motionCanvas.style.opacity = '0';
+          motionCanvas.style.visibility = 'hidden';
+        }
+        if (heroVideoDesktop && !heroVideoDesktop.paused) heroVideoDesktop.pause();
+        if (heroVideoMobile && !heroVideoMobile.paused) heroVideoMobile.pause();
+      }
+    };
+
+    if (lenis) {
+      lenis.on('scroll', updateStorytellingFromScroll);
+    } else {
+      window.addEventListener('scroll', updateStorytellingFromScroll, { passive: true });
+    }
+
+    updateStorytellingFromScroll();
+  }
+
+  // ==========================================================================
+  // 14. STAGE 3 — CASES TRAILER HORIZONTAL MARQUEE & DRAG CONTROLS
+  // ==========================================================================
+  const stageMarquee = document.getElementById('stageMarquee');
+  const stageTrack = document.getElementById('stageTrack');
+  const stagePrev = document.getElementById('stagePrev');
+  const stageNext = document.getElementById('stageNext');
+
+  if (stageMarquee && stageTrack) {
+    let currentStageX = 0;
+    let isDragging = false;
+    let startPointerX = 0;
+    let initialTrackX = 0;
+
+    const scrollStageBy = (amount) => {
+      const maxScroll = Math.max(0, stageTrack.scrollWidth - window.innerWidth + 96);
+      currentStageX = Math.min(Math.max(currentStageX + amount, 0), maxScroll);
+      stageTrack.style.transform = `translate3d(${-currentStageX}px, 0, 0)`;
+      stageTrack.style.transition = 'transform 0.45s cubic-bezier(0.16, 1, 0.3, 1)';
+    };
+
+    if (stagePrev) stagePrev.addEventListener('click', () => scrollStageBy(-330));
+    if (stageNext) stageNext.addEventListener('click', () => scrollStageBy(330));
+
+    stageTrack.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      isDragging = true;
+      startPointerX = e.clientX;
+      initialTrackX = currentStageX;
+      stageTrack.style.transition = 'none';
+      try { stageTrack.setPointerCapture(e.pointerId); } catch (err) {}
+    });
+
+    stageTrack.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const delta = e.clientX - startPointerX;
+      const maxScroll = Math.max(0, stageTrack.scrollWidth - window.innerWidth + 96);
+      currentStageX = Math.min(Math.max(initialTrackX - delta, 0), maxScroll);
+      stageTrack.style.transform = `translate3d(${-currentStageX}px, 0, 0)`;
+    }, { passive: true });
+
+    const endStageDrag = (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      try { stageTrack.releasePointerCapture(e.pointerId); } catch (err) {}
+    };
+
+    stageTrack.addEventListener('pointerup', endStageDrag);
+    stageTrack.addEventListener('pointercancel', endStageDrag);
+  }
+
 });
+
+
 
 
