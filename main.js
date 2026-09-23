@@ -16,7 +16,6 @@ window.addEventListener('beforeunload', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.scrollTo(0, 0);
 
   // Ensure Video Background plays automatically, loop and unmute seamlessly
   const playAllVideos = () => {
@@ -369,15 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (glassBtnSolid && t.consultorio) glassBtnSolid.textContent = t.consultorio.cta1;
     const glassBtnPill = document.querySelector('.glass-btn-pill span');
     if (glassBtnPill && t.consultorio) glassBtnPill.textContent = t.consultorio.cta2;
-    const capRows = document.querySelectorAll('.glass-capability-row');
-    if (capRows.length >= 3 && t.consultorio) {
-      capRows[0].querySelector('.glass-cap-title').textContent = t.consultorio.cap1Title;
-      capRows[0].querySelector('.glass-cap-desc').textContent = t.consultorio.cap1Desc;
-      capRows[1].querySelector('.glass-cap-title').textContent = t.consultorio.cap2Title;
-      capRows[1].querySelector('.glass-cap-desc').textContent = t.consultorio.cap2Desc;
-      capRows[2].querySelector('.glass-cap-title').textContent = t.consultorio.cap3Title;
-      capRows[2].querySelector('.glass-cap-desc').textContent = t.consultorio.cap3Desc;
-    }
+
 
     // 4. About
     const aboutEyebrow = document.querySelector('.promise-tag span:last-child');
@@ -809,12 +800,14 @@ document.addEventListener('DOMContentLoaded', () => {
   if (dentalinkModal) {
     const openAgenda = (e) => {
       if (e) e.preventDefault();
+      dentalinkModal.removeAttribute('inert');
       dentalinkModal.classList.add('active');
       dentalinkModal.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
     };
 
     const closeAgenda = () => {
+      dentalinkModal.setAttribute('inert', '');
       dentalinkModal.classList.remove('active');
       dentalinkModal.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
@@ -1002,18 +995,64 @@ document.addEventListener('DOMContentLoaded', () => {
       ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
     };
 
-    // Preload all 102 frames
-    for (let i = 1; i <= totalFrames; i++) {
+    // Progressive WebP Frame Loader: Load frame 1 immediately, lazy load remainder on scroll/idle
+    let allFramesRequested = false;
+
+    const loadFrame = (index, callback) => {
+      if (frames[index]) {
+        if (callback && frames[index].complete) callback(frames[index]);
+        return;
+      }
       const img = new Image();
-      img.src = `sectionmotion/motion1/ezgif-frame-${pad(i)}.jpg`;
+      img.decoding = 'async';
+      img.src = `sectionmotion/motion1/ezgif-frame-${pad(index + 1)}.webp`;
       img.onload = () => {
         framesLoaded++;
-        if (i === 1) {
-          lastRenderedFrame = 0;
-          drawFrame(img);
+        if (callback) callback(img);
+      };
+      frames[index] = img;
+    };
+
+    // Load and render first frame immediately with fallbacks
+    loadFrame(0, (img) => {
+      lastRenderedFrame = 0;
+      resizeCanvas();
+      drawFrame(img);
+    });
+
+    const loadAllFramesProgressive = () => {
+      if (allFramesRequested) return;
+      allFramesRequested = true;
+      let cur = 1;
+      const batchSize = 10;
+      const loadNextBatch = () => {
+        const end = Math.min(cur + batchSize, totalFrames);
+        for (let i = cur; i < end; i++) {
+          loadFrame(i);
+        }
+        cur = end;
+        if (cur < totalFrames) {
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadNextBatch, { timeout: 1000 });
+          } else {
+            setTimeout(loadNextBatch, 50);
+          }
         }
       };
-      frames[i - 1] = img;
+      loadNextBatch();
+    };
+
+    // Trigger full frame preloading when user scrolls or section is within 400px
+    if ('IntersectionObserver' in window) {
+      const motionObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          loadAllFramesProgressive();
+          motionObserver.disconnect();
+        }
+      }, { rootMargin: '400px 0px' });
+      motionObserver.observe(consultorioSection);
+    } else {
+      setTimeout(loadAllFramesProgressive, 2000);
     }
 
     const renderLoop = () => {
@@ -1026,9 +1065,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const frameIdx = Math.min(Math.max(Math.floor(currentProgress * (totalFrames - 1)), 0), totalFrames - 1);
       
-      if (frameIdx !== lastRenderedFrame && frames[frameIdx] && frames[frameIdx].complete) {
-        drawFrame(frames[frameIdx]);
-        lastRenderedFrame = frameIdx;
+      if (frameIdx !== lastRenderedFrame) {
+        if (frames[frameIdx] && frames[frameIdx].complete) {
+          drawFrame(frames[frameIdx]);
+          lastRenderedFrame = frameIdx;
+        } else {
+          loadFrame(frameIdx, (img) => {
+            drawFrame(img);
+            lastRenderedFrame = frameIdx;
+          });
+        }
       }
 
       // Smooth zoom scale
@@ -1075,22 +1121,172 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // 12. CASOS CLÍNICOS REALES — CAROUSEL CONTROLLER
+  // 12. CASOS CLÍNICOS REALES — INFINITE CINEMA TRAILER LOOP ENGINE
   // ==========================================================================
   const stageTrack = document.getElementById('stageTrack');
+  const stageMarquee = document.getElementById('stageMarquee');
   const stagePrev = document.getElementById('stagePrev');
   const stageNext = document.getElementById('stageNext');
+  const casesSection = document.getElementById('cases');
 
-  if (stageTrack) {
-    const cardStep = 340;
+  if (stageTrack && stageMarquee) {
+    // Clone original cards to enable seamless infinite wrap
+    const initialCards = Array.from(stageTrack.children);
+    initialCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      stageTrack.appendChild(clone);
+    });
+
+    let currentX = 0;
+    let targetX = 0;
+    let baseSpeed = 0.85;
+    let currentSpeed = baseSpeed;
+    let isHovered = false;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartPos = 0;
+    let dragMoved = false;
+    let rafId = null;
+    let isVisible = false;
+
+    function getHalfWidth() {
+      let totalWidth = 0;
+      for (let i = 0; i < initialCards.length; i++) {
+        totalWidth += (stageTrack.children[i].offsetWidth || 340) + 28;
+      }
+      return totalWidth || (initialCards.length * 368);
+    }
+
+    let halfWidth = getHalfWidth();
+    window.addEventListener('resize', () => {
+      halfWidth = getHalfWidth();
+    });
+
+    function updateTrack() {
+      if (halfWidth > 0) {
+        while (currentX >= halfWidth) {
+          currentX -= halfWidth;
+          targetX -= halfWidth;
+        }
+        while (currentX < 0) {
+          currentX += halfWidth;
+          targetX += halfWidth;
+        }
+      }
+      stageTrack.style.transform = `translate3d(${-currentX}px, 0, 0)`;
+    }
+
+    function animate() {
+      if (!isVisible) {
+        rafId = null;
+        return;
+      }
+
+      if (!isDragging) {
+        const targetSpeed = isHovered ? 0.15 : baseSpeed;
+        currentSpeed += (targetSpeed - currentSpeed) * 0.08;
+        targetX += currentSpeed;
+        currentX += (targetX - currentX) * 0.12;
+      }
+
+      updateTrack();
+      rafId = requestAnimationFrame(animate);
+    }
+
+    function startAnimation() {
+      if (!rafId && isVisible) {
+        rafId = requestAnimationFrame(animate);
+      }
+    }
+
+    function stopAnimation() {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    }
+
+    // IntersectionObserver to preserve 60fps & 0% idle CPU when out of view
+    if ('IntersectionObserver' in window && casesSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          isVisible = entry.isIntersecting;
+          if (isVisible) {
+            startAnimation();
+          } else {
+            stopAnimation();
+          }
+        });
+      }, { rootMargin: '100px 0px' });
+      observer.observe(casesSection);
+    } else {
+      isVisible = true;
+      startAnimation();
+    }
+
+    // Hover slowdown
+    stageMarquee.addEventListener('mouseenter', () => { isHovered = true; });
+    stageMarquee.addEventListener('mouseleave', () => { isHovered = false; });
+
+    // Pointer Drag & Scrub Interaction
+    stageMarquee.addEventListener('pointerdown', (e) => {
+      isDragging = true;
+      dragMoved = false;
+      dragStartX = e.clientX;
+      dragStartPos = currentX;
+      stageTrack.classList.add('is-dragging');
+      stageMarquee.setPointerCapture(e.pointerId);
+    });
+
+    stageMarquee.addEventListener('pointermove', (e) => {
+      if (!isDragging) return;
+      const delta = e.clientX - dragStartX;
+      if (Math.abs(delta) > 4) dragMoved = true;
+      targetX = dragStartPos - delta;
+      currentX = targetX;
+      updateTrack();
+    });
+
+    function endDrag(e) {
+      if (!isDragging) return;
+      isDragging = false;
+      stageTrack.classList.remove('is-dragging');
+      try {
+        if (stageMarquee.hasPointerCapture(e.pointerId)) {
+          stageMarquee.releasePointerCapture(e.pointerId);
+        }
+      } catch (err) {}
+    }
+
+    stageMarquee.addEventListener('pointerup', endDrag);
+    stageMarquee.addEventListener('pointercancel', endDrag);
+
+    // Prevent accidental link clicks during drag
+    stageMarquee.addEventListener('click', (e) => {
+      if (dragMoved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+
+    // Arrow controls (Dynamic Mobile-First Card Step)
+    const getCardStep = () => {
+      if (stageTrack.children && stageTrack.children[0]) {
+        return (stageTrack.children[0].offsetWidth || 320) + 16;
+      }
+      return 320;
+    };
     if (stagePrev) {
-      stagePrev.addEventListener('click', () => {
-        stageTrack.scrollBy({ left: -cardStep, behavior: 'smooth' });
+      stagePrev.addEventListener('click', (e) => {
+        e.preventDefault();
+        targetX -= getCardStep();
       });
     }
     if (stageNext) {
-      stageNext.addEventListener('click', () => {
-        stageTrack.scrollBy({ left: cardStep, behavior: 'smooth' });
+      stageNext.addEventListener('click', (e) => {
+        e.preventDefault();
+        targetX += getCardStep();
       });
     }
   }

@@ -8,19 +8,28 @@
   <meta name="keywords" content="OnDent Clinic, Dental Implants, Porcelain Veneers, Dentists Sonora, Dental Tourism Mexico, Dr Ana Castro, Dr Roy Davila">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="imgs/a2bfb3_220c27038884497da463fcd923408d8d_mv2.png">
+  <link rel="icon" type="image/png" href="imgs/a2bfb3_220c27038884497da463fcd923408d8d_mv2.webp">
 
   <!-- Google Fonts: Inter, Playfair Display, Epilogue, DM Sans & Plus Jakarta Sans -->
+    <!-- Google Fonts Preconnect & Async Non-Blocking Load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:wght@900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Epilogue:wght@800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Epilogue:wght@800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap">
+  </noscript>
   
-  <!-- Phosphor Icons for modern sleek UI (regular, bold, fill) -->
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <!-- Phosphor Icons (Non-Blocking) -->
+  <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  </noscript>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
 
@@ -31,7 +40,7 @@
   <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" id="mobileDrawer">
     <div class="drawer-header">
-      <img src="imgs/ondent_logo_dark.png" alt="OnDent Clinic" class="drawer-logo">
+      <img src="imgs/ondent_logo_dark.webp" alt="OnDent Clinic" class="drawer-logo" width="600" height="261" loading="lazy" decoding="async">
       <button class="drawer-close" id="drawerClose" aria-label="Cerrar Menú">
         <i class="ph ph-x"></i>
       </button>
@@ -70,21 +79,15 @@
           loop
           muted
           playsinline
-          preload="auto"
+          preload="none"
           class="liquid-hero-video desktop-video"
-        ></video>
+        >
+          <track kind="captions" srclang="es" label="Español" src="data:text/vtt;charset=utf-8,WEBVTT%0A">
+        </video>
         <!-- Mobile Video (9:16) -->
-        <video
-          id="heroVideoMobile"
-          src="imgs/vid916.mp4"
-          poster="imgs/poster916.webp"
-          autoplay
-          loop
-          muted
-          playsinline
-          preload="auto"
-          class="liquid-hero-video mobile-video"
-        ></video>
+        <video id="heroVideoMobile" src="imgs/vid916.mp4" poster="imgs/poster916.webp" autoplay loop muted playsinline preload="auto" class="liquid-hero-video mobile-video" webkit-playsinline="true">
+          <track kind="captions" srclang="es" label="Español" src="data:text/vtt;charset=utf-8,WEBVTT%0A">
+        </video>
         <!-- Liquid dark subtle film overlay -->
         <div class="liquid-video-overlay"></div>
       </div>
@@ -148,10 +151,10 @@
           <!-- 1. Badge — Liquid-Glass Pill with Overlapping Patient Avatars -->
           <div class="liquid-glass liquid-hero-badge">
             <div class="liquid-badge-avatars">
-              <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente">
-              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente">
-              <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente">
-              <img src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente">
+              <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente de OnDent Clinic" width="32" height="32" loading="lazy" decoding="async">
+              <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente de OnDent Clinic" width="32" height="32" loading="lazy" decoding="async">
+              <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente de OnDent Clinic" width="32" height="32" loading="lazy" decoding="async">
+              <img src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=80" alt="Paciente de OnDent Clinic" width="32" height="32" loading="lazy" decoding="async">
             </div>
             <span class="liquid-badge-text">enfoque individual y ambiente confortable</span>
           </div>
@@ -168,7 +171,7 @@
           </p>
 
           <!-- 4. CTA Button -->
-          <a href="https://wa.me/526535158276" target="_blank" rel="noopener" class="liquid-glass liquid-hero-cta">
+          <a href="https://wa.me/526535158276" target="_blank" rel="noopener" class="liquid-glass liquid-hero-cta" aria-label="Agendar Cita en OnDent Clinic por WhatsApp">
             <span class="liquid-hero-cta-label">Agendar Cita</span>
             <span>→</span>
           </a>
@@ -215,19 +218,16 @@
 
       <!-- Glass Editorial Content -->
       <div class="glass-editorial-container">
-        <!-- Top Row: Glass Badge + Top Right Paragraph -->
+        <!-- Top Row: Glass Badge Only -->
         <div class="glass-top-row">
           <div class="glass-badge">
+            <span class="pulse-emerald"></span>
             <span>INSTALACIONES & ACCESO</span>
           </div>
-          <p class="glass-top-paragraph">
-            Una clínica dental diseñada para tu máxima comodidad y precisión médica desde el primer instante.
-          </p>
         </div>
 
-        <!-- Bottom Row: Headline & CTA Left + Capabilities Glass Panel Right -->
+        <!-- Bottom Row: Main Headline, Desc & CTA Buttons Aligned Bottom -->
         <div class="glass-bottom-row">
-          <!-- Left Content -->
           <div class="glass-content-left">
             <h2 class="glass-main-title">
               Conoce nuestro<br/>
@@ -237,59 +237,14 @@
               Ubicados estratégicamente en San Luis Río Colorado, a minutos de la frontera con Yuma y San Luis, AZ. Combinamos tecnología 3D, quirófano especializado y atención personalizada.
             </p>
             <div class="glass-btn-row">
-              <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20conocer%20las%20instalaciones%20de%20OnDent%20Clinic" target="_blank" rel="noopener" class="glass-btn-solid">
+              <a href="https://wa.me/526535158276?text=Hola!%20Me%20gustaria%20conocer%20las%20instalaciones%20de%20OnDent%20Clinic" target="_blank" rel="noopener" class="glass-btn-solid" aria-label="Agendar Cita para conocer las instalaciones de OnDent">
                 <span>Agendar Cita</span>
                 <i class="ph-bold ph-caret-right"></i>
               </a>
-              <a href="https://www.google.com/maps/place/OnDent+Clinic/@33.0900331,-114.7971751,5.79z/data=!4m10!1m2!2m1!1sondent+clinic!3m6!1s0x80d65b7dd4e1f7bd:0x41f80ec6ef4e054!8m2!3d32.464673!4d-114.774431!15sCg1vbmRlbnQgY2xpbmljIgOIAQGSAQ1kZW50YWxfY2xpbmlj4AEA!16s%2Fg%2F11r7f0x9_9?entry=ttu" target="_blank" rel="noopener" class="glass-btn-pill">
+              <a href="https://www.google.com/maps/place/OnDent+Clinic/@33.0900331,-114.7971751,5.79z/data=!4m10!1m2!2m1!1sondent+clinic!3m6!1s0x80d65b7dd4e1f7bd:0x41f80ec6ef4e054!8m2!3d32.464673!4d-114.774431!15sCg1vbmRlbnQgY2xpbmljIgOIAQGSAQ1kZW50YWxfY2xpbmlj4AEA!16s%2Fg%2F11r7f0x9_9?entry=ttu" target="_blank" rel="noopener" class="glass-btn-pill" aria-label="Cómo llegar a OnDent Clinic">
                 <span>Cómo Llegar</span>
                 <i class="ph-bold ph-map-pin"></i>
               </a>
-            </div>
-          </div>
-
-          <!-- Right Capabilities Glass Panel -->
-          <div class="glass-capabilities-panel">
-            <!-- Row 01 -->
-            <div class="glass-capability-row">
-              <span class="glass-cap-num">01</span>
-              <div class="glass-cap-content">
-                <div class="glass-cap-title-wrap">
-                  <h3 class="glass-cap-title">Ubicación Privilegiada</h3>
-                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-                </div>
-                <p class="glass-cap-desc">
-                  Acceso directo y seguro en el corazón médico de la ciudad, con estacionamiento cómodo para pacientes locales y de EE. UU.
-                </p>
-              </div>
-            </div>
-
-            <!-- Row 02 -->
-            <div class="glass-capability-row">
-              <span class="glass-cap-num">02</span>
-              <div class="glass-cap-content">
-                <div class="glass-cap-title-wrap">
-                  <h3 class="glass-cap-title">Tecnología Digital 3D</h3>
-                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-                </div>
-                <p class="glass-cap-desc">
-                  Quirófano esterilizado de alta tecnología, escáneres intraorales y unidades odontológicas ergonómicas de última generación.
-                </p>
-              </div>
-            </div>
-
-            <!-- Row 03 -->
-            <div class="glass-capability-row">
-              <span class="glass-cap-num">03</span>
-              <div class="glass-cap-content">
-                <div class="glass-cap-title-wrap">
-                  <h3 class="glass-cap-title">Atención Bilingüe & Calidez</h3>
-                  <i class="ph-bold ph-caret-right glass-cap-chevron"></i>
-                </div>
-                <p class="glass-cap-desc">
-                  Equipo médico certificado y personal de atención fluida en inglés y español para guiarte en cada paso de tu sonrisa.
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -347,7 +302,7 @@
           <!-- Right Bento Card (Both Doctors Together Photo) -->
           <div class="bento-card bento-about-right">
             <div class="about-photo-wrapper">
-              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg" alt="Dra. Ana Castro y Dr. Roy Dávila - OnDent Clinic" class="about-main-photo">
+              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.webp" alt="Dra. Ana Castro y Dr. Roy Dávila - OnDent Clinic" width="1600" height="800" loading="lazy" decoding="async" class="about-main-photo">
               <div class="photo-gradient-overlay"></div>
               
               <!-- Floating Clinic Pill Badges on Photo -->
@@ -387,7 +342,7 @@
           <!-- Card 1: Dental Implants -->
           <div class="procedure-service-card" data-service="implants">
             <div class="procedure-card-media">
-              <img src="imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg" alt="Implantes Dentales" class="procedure-img">
+              <img src="imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.webp" alt="Implantes Dentales" width="1600" height="1142" loading="lazy" decoding="async" class="procedure-img">
             </div>
             <div class="procedure-card-body">
               <div class="procedure-info">
@@ -403,7 +358,7 @@
           <!-- Card 2: Porcelain Veneers -->
           <div class="procedure-service-card" data-service="veneers">
             <div class="procedure-card-media">
-              <img src="imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg" alt="Carillas de Porcelana" class="procedure-img">
+              <img src="imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.webp" alt="Carillas de Porcelana" width="1600" height="1142" loading="lazy" decoding="async" class="procedure-img">
             </div>
             <div class="procedure-card-body">
               <div class="procedure-info">
@@ -419,7 +374,7 @@
           <!-- Card 3: Clinical Whitening -->
           <div class="procedure-service-card" data-service="whitening">
             <div class="procedure-card-media">
-              <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg" alt="Blanqueamiento Dental" class="procedure-img">
+              <img src="imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.webp" alt="Blanqueamiento Dental" width="1600" height="1280" loading="lazy" decoding="async" class="procedure-img">
             </div>
             <div class="procedure-card-body">
               <div class="procedure-info">
@@ -435,7 +390,7 @@
           <!-- Card 4: Orthodontics & Aligners -->
           <div class="procedure-service-card" data-service="orthodontics">
             <div class="procedure-card-media">
-              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.jpg" alt="Ortodoncia y Alineadores" class="procedure-img">
+              <img src="imgs/a2bfb3_e59bfe3c2ef5412392b366cdd04b9de8_mv2.webp" alt="Ortodoncia y Alineadores" width="1600" height="800" loading="lazy" decoding="async" class="procedure-img">
             </div>
             <div class="procedure-card-body">
               <div class="procedure-info">
@@ -451,7 +406,7 @@
           <!-- Card 5: Zirconia Crowns & Reconstruction -->
           <div class="procedure-service-card" data-service="dentures">
             <div class="procedure-card-media">
-              <img src="imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg" alt="Coronas de Zirconia" class="procedure-img">
+              <img src="imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.webp" alt="Coronas de Zirconia" width="1600" height="1600" loading="lazy" decoding="async" class="procedure-img">
             </div>
             <div class="procedure-card-body">
               <div class="procedure-info">
@@ -606,7 +561,7 @@
           <div class="cases-stage-track" id="stageTrack">
             
             <!-- Card 1: Antes y Después / Makeover -->
-            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_618a12d8603d462a8dab765b95e53a71_mv2_d_9652_9652_s_4_2.jpg');">
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_618a12d8603d462a8dab765b95e53a71_mv2_d_9652_9652_s_4_2.webp');">
               <div class="case-card-overlay"></div>
               <div class="case-card-top">
                 <span class="case-pill-badge">Antes y Después</span>
@@ -623,7 +578,7 @@
             </article>
 
             <!-- Card 2: Implante Guiado 3D -->
-            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.jpg');">
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_3ded9f82230b4c99b1f77cb907f3baa2_mv2_d_6956_4968_s_4_2.webp');">
               <div class="case-card-overlay"></div>
               <div class="case-card-top">
                 <span class="case-pill-badge">Implantes Dentales</span>
@@ -640,7 +595,7 @@
             </article>
 
             <!-- Card 3: Facetas de Porcelana Ultrafinas -->
-            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.jpg');">
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_e8620cf311424463a51a2c5e10ac907f_mv2_d_4838_3456_s_4_2.webp');">
               <div class="case-card-overlay"></div>
               <div class="case-card-top">
                 <span class="case-pill-badge">Carillas de Porcelana</span>
@@ -657,7 +612,7 @@
             </article>
 
             <!-- Card 4: Corona de Zirconia -->
-            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.jpg');">
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_7a86a7d629f44e0eb8960f0bf152ddce_mv2.webp');">
               <div class="case-card-overlay"></div>
               <div class="case-card-top">
                 <span class="case-pill-badge">Rehabilitación Zirconia</span>
@@ -674,14 +629,14 @@
             </article>
 
             <!-- Card 5: Armonização do Sorriso -->
-            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.jpg');">
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_666705c3f8e5462aa43884ffb68d1991_mv2.webp');">
               <div class="case-card-overlay"></div>
               <div class="case-card-top">
                 <span class="case-pill-badge">Armonización Facial</span>
                 <span class="case-icon-badge"><i class="ph-fill ph-star"></i></span>
               </div>
               <div class="case-card-bottom">
-                <h3 class="case-card-title">Harmonização do Sorriso & Esmalte</h3>
+                <h3 class="case-card-title">Armonización de Sonrisa & Esmalte</h3>
                 <p class="case-card-desc">Corrección de desgaste, espacios interdentales y decoloración para una sonrisa llena de seguridad.</p>
                 <a href="https://wa.me/526535158276?text=Hola!%20Me%20interesa%20la%20armonizacion%20facial" target="_blank" rel="noopener" class="case-action-btn">
                   <span>Conocer Más</span>
@@ -691,7 +646,7 @@
             </article>
 
             <!-- Card 6: Restauração Oclusal -->
-            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_79073abae92d447e8319a469f720d26f_mv2.jpg');">
+            <article class="case-card-v3" style="background-image: url('imgs/a2bfb3_79073abae92d447e8319a469f720d26f_mv2.webp');">
               <div class="case-card-overlay"></div>
               <div class="case-card-top">
                 <span class="case-pill-badge">Rehabilitación Oral</span>
@@ -730,7 +685,7 @@
           <!-- Doctor 1: Dra. Ana Castro -->
           <div class="dentist-card active">
             <div class="dentist-photo-box">
-              <img src="imgs/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8_mv2.jpg" alt="Dra. Ana Castro - Especialista en Estética y Rehabilitación Oral" class="dentist-img">
+              <img src="imgs/a2bfb3_52717fbcf2b6461ca36b3ff88215e2b8_mv2.webp" alt="Dra. Ana Castro - Especialista en Estética y Rehabilitación Oral" width="900" height="600" loading="lazy" decoding="async" class="dentist-img">
               <div class="dentist-tag-badge">Directora & Especialista</div>
             </div>
             <div class="dentist-info">
@@ -747,7 +702,7 @@
           <!-- Doctor 2: Dr. Roy Davila -->
           <div class="dentist-card">
             <div class="dentist-photo-box">
-              <img src="imgs/dr_roy_davila.jpg" alt="Dr. Roy Dávila - Especialista en Implantología y Cirugía" class="dentist-img">
+              <img src="imgs/dr_roy_davila.webp" alt="Dr. Roy Dávila - Especialista en Implantología y Cirugía" width="663" height="899" loading="lazy" decoding="async" class="dentist-img">
               <div class="dentist-tag-badge">Implantología & Cirugía</div>
             </div>
             <div class="dentist-info">
@@ -935,7 +890,7 @@
                 </iframe>
                 
                 <div class="standalone-map-badge">
-                  <img src="imgs/a2bfb3_ee6d1a0322c2453991a4536b1c797486_mv2.jpg" alt="OnDent Exterior" class="map-badge-thumb">
+                  <img src="imgs/a2bfb3_ee6d1a0322c2453991a4536b1c797486_mv2.webp" alt="OnDent Exterior" width="1600" height="1066" loading="lazy" decoding="async" class="map-badge-thumb">
                   <div>
                     <strong>OnDent Clinic</strong>
                     <span>Estacionamento Privativo & 24/7 Emergência</span>
@@ -1007,11 +962,16 @@
               <div class="reviewer-meta">
                 <div class="reviewer-avatar">OB</div>
                 <div>
-                  <h4 class="reviewer-name">Omar Barrera León</h4>
+                  <h3 class="reviewer-name">Omar Barrera León</h4>
                   <span class="review-date">27 Jan 2022 • Google Local Guide</span>
                 </div>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+              <svg class="google-svg-logo" viewBox="0 0 24 24" width="20" height="20" aria-label="Google Review" style="display:inline-block; vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
             </div>
             <div class="review-stars">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -1031,11 +991,16 @@
               <div class="reviewer-meta">
                 <div class="reviewer-avatar">TD</div>
                 <div>
-                  <h4 class="reviewer-name">Toños Dogos y Burgers</h4>
+                  <h3 class="reviewer-name">Toños Dogos y Burgers</h4>
                   <span class="review-date">27 Jan 2022 • Google Review</span>
                 </div>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+              <svg class="google-svg-logo" viewBox="0 0 24 24" width="20" height="20" aria-label="Google Review" style="display:inline-block; vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
             </div>
             <div class="review-stars">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -1055,11 +1020,16 @@
               <div class="reviewer-meta">
                 <div class="reviewer-avatar">JM</div>
                 <div>
-                  <h4 class="reviewer-name">Jessica Martinez</h4>
+                  <h3 class="reviewer-name">Jessica Martinez</h4>
                   <span class="review-date">09 Sep 2021 • USA Cross-Border Patient</span>
                 </div>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+              <svg class="google-svg-logo" viewBox="0 0 24 24" width="20" height="20" aria-label="Google Review" style="display:inline-block; vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
             </div>
             <div class="review-stars">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -1079,11 +1049,16 @@
               <div class="reviewer-meta">
                 <div class="reviewer-avatar">GC</div>
                 <div>
-                  <h4 class="reviewer-name">Gabriela Castro</h4>
+                  <h3 class="reviewer-name">Gabriela Castro</h4>
                   <span class="review-date">08 Sep 2021 • Texas, USA</span>
                 </div>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+              <svg class="google-svg-logo" viewBox="0 0 24 24" width="20" height="20" aria-label="Google Review" style="display:inline-block; vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
             </div>
             <div class="review-stars">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -1103,11 +1078,16 @@
               <div class="reviewer-meta">
                 <div class="reviewer-avatar">RC</div>
                 <div>
-                  <h4 class="reviewer-name">Ricardo Castro</h4>
+                  <h3 class="reviewer-name">Ricardo Castro</h4>
                   <span class="review-date">03 Oct 2020 • Phoenix, Arizona</span>
                 </div>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-watermark">
+              <svg class="google-svg-logo" viewBox="0 0 24 24" width="20" height="20" aria-label="Google Review" style="display:inline-block; vertical-align:middle;">
+      <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+      <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+      <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+      <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+    </svg>
             </div>
             <div class="review-stars">
               <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
@@ -1136,7 +1116,7 @@
         
         <!-- Brand Summary -->
         <div class="footer-col brand-col">
-          <img src="imgs/ondent_logo_white.png" alt="OnDent Clinic" class="footer-logo">
+          <img src="imgs/ondent_logo_white.webp" alt="OnDent Clinic" class="footer-logo" width="600" height="261" loading="lazy" decoding="async">
           <p class="footer-tagline">
             Clínica dental moderna dedicada a brindar tratamientos odontológicos de excelencia, tecnología digital de vanguardia y un trato humano y personalizado en San Luis Río Colorado, Sonora.
           </p>
@@ -1219,13 +1199,13 @@
   </div>
 
   <!-- LUXURY VIP APPOINTMENT CONCIERGE MODAL -->
-  <div class="dentalink-modal-backdrop" id="dentalinkModal" aria-hidden="true">
+  <div class="dentalink-modal-backdrop" id="dentalinkModal" aria-hidden="true" inert>
     <div class="dentalink-modal-dialog booking-concierge-dialog">
       
       <!-- Modal Header -->
       <div class="dentalink-modal-header">
         <div class="modal-title-group">
-          <img src="imgs/a2bfb3_220c27038884497da463fcd923408d8d_mv2.png" alt="OnDent Clinic" class="dentalink-modal-logo">
+          <img src="imgs/a2bfb3_220c27038884497da463fcd923408d8d_mv2.webp" alt="OnDent Clinic" class="dentalink-modal-logo" width="600" height="333" loading="lazy" decoding="async">
           <div>
             <h3 class="dentalink-modal-title">Centro Oficial de Citas OnDent</h3>
             <p class="dentalink-modal-sub">Elige tu método preferido para confirmar tu consulta en OnDent Clinic</p>
@@ -1316,6 +1296,6 @@
     <span>+52 (653) 515-8276</span>
   </a>
 
-  <script src="main.js"></script>
+  <script src="main.min.js" defer></script>
 </body>
 </html>
