@@ -1109,17 +1109,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const onScroll = () => {
       const rect = consultorioSection.getBoundingClientRect();
       const winH = window.innerHeight;
-      const scrollableDist = rect.height - winH;
 
-      if (scrollableDist <= 0) return;
+      if (rect.bottom < -50 || rect.top > winH + 50) return;
 
-      if (rect.top > 0) {
-        targetProgress = 0;
-      } else if (-rect.top >= scrollableDist) {
-        targetProgress = 1;
-      } else {
-        targetProgress = -rect.top / scrollableDist;
-      }
+      const totalTravel = winH + rect.height;
+      const scrollPos = winH - rect.top;
+      targetProgress = Math.min(Math.max(scrollPos / totalTravel, 0), 1);
 
       if (!isLoopRunning) {
         isLoopRunning = true;
