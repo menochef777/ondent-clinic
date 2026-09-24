@@ -17,23 +17,44 @@ window.addEventListener('beforeunload', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Ensure Video Background plays automatically, loop and unmute seamlessly
-  const playAllVideos = () => {
-    const vids = document.querySelectorAll('video');
-    vids.forEach(v => {
-      v.defaultMuted = true;
-      v.muted = true;
-      v.playsInline = true;
-      v.setAttribute('playsinline', 'true');
-      v.setAttribute('webkit-playsinline', 'true');
-      v.play().catch(() => {});
-    });
+  // Smart Video Loading: Play ONLY the video corresponding to the viewport width to prevent Safari/WebKit memory exhaustion
+  const setupHeroVideo = () => {
+    const isMobile = window.innerWidth < 768;
+    const activeVideo = isMobile ? document.getElementById('heroVideoMobile') : document.getElementById('heroVideoDesktop');
+    const inactiveVideo = isMobile ? document.getElementById('heroVideoDesktop') : document.getElementById('heroVideoMobile');
+
+    if (inactiveVideo) {
+      try {
+        inactiveVideo.pause();
+      } catch (e) {}
+    }
+
+    if (activeVideo) {
+      activeVideo.defaultMuted = true;
+      activeVideo.muted = true;
+      activeVideo.playsInline = true;
+      activeVideo.setAttribute('playsinline', 'true');
+      activeVideo.setAttribute('webkit-playsinline', 'true');
+      
+      const playPromise = activeVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          const unlock = () => {
+            activeVideo.play().catch(() => {});
+            ['touchstart', 'click', 'scroll'].forEach(evt => window.removeEventListener(evt, unlock));
+          };
+          ['touchstart', 'click', 'scroll'].forEach(evt => window.addEventListener(evt, unlock, { passive: true, once: true }));
+        });
+      }
+    }
   };
 
-  playAllVideos();
-  ['touchstart', 'click', 'scroll'].forEach(evt => {
-    window.addEventListener(evt, playAllVideos, { passive: true, once: true });
-  });
+  setupHeroVideo();
+  let resizeVideoTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeVideoTimeout);
+    resizeVideoTimeout = setTimeout(setupHeroVideo, 300);
+  }, { passive: true });
 
   const translations = {
     es: {
@@ -931,11 +952,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 11. SECTION 2 — CONSULTORIO 102-FRAME HIGH RESOLUTION DRONE SCROLL SCRUBBING
+  // 11. SECTION 2 — CONSULTORIO 102-FRAME PINNED SCROLL TOUR (SAFARI OPTIMIZED)
   // ==========================================================================
   const consultorioSection = document.getElementById('consultorio');
   const consultorioCanvas = document.getElementById('consultorioCanvas');
-  const glassEditorial = document.querySelector('.glass-editorial-container');
 
   if (consultorioSection && consultorioCanvas) {
     const ctx = consultorioCanvas.getContext('2d', { alpha: false });
@@ -957,12 +977,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let offsetY = 0;
 
     const resizeCanvas = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       canvasW = consultorioCanvas.clientWidth || window.innerWidth;
       canvasH = consultorioCanvas.clientHeight || window.innerHeight;
       
-      consultorioCanvas.width = canvasW * dpr;
-      consultorioCanvas.height = canvasH * dpr;
+      consultorioCanvas.width = Math.round(canvasW * dpr);
+      consultorioCanvas.height = Math.round(canvasH * dpr);
 
       if (ctx) {
         ctx.scale(dpr, dpr);
@@ -992,15 +1012,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const drawFrame = (img) => {
       if (!ctx || !img || !img.complete || img.naturalWidth === 0) return;
-      ctx.drawImage(img, offsetX, offsetY, drawW, drawH);
+      ctx.drawImage(img, Math.round(offsetX), Math.round(offsetY), Math.round(drawW), Math.round(drawH));
     };
 
-    // Progressive WebP Frame Loader: Load frame 1 immediately, lazy load remainder on scroll/idle
+    // Safari-optimized progressive WebP loader
     let allFramesRequested = false;
 
     const loadFrame = (index, callback) => {
       if (frames[index]) {
-        if (callback && frames[index].complete) callback(frames[index]);
+        if (callback && frames[index].complete && frames[index].naturalWidth > 0) {
+          callback(frames[index]);
+        }
         return;
       }
       const img = new Image();
@@ -1013,60 +1035,60 @@ document.addEventListener('DOMContentLoaded', () => {
       frames[index] = img;
     };
 
-    // Load and render first frame immediately with fallbacks
+    // Load Frame 0 and Frame 101 immediately for fast visual response
     loadFrame(0, (img) => {
       lastRenderedFrame = 0;
       resizeCanvas();
       drawFrame(img);
     });
+    loadFrame(totalFrames - 1);
 
     const loadAllFramesProgressive = () => {
       if (allFramesRequested) return;
       allFramesRequested = true;
       let cur = 1;
-      const batchSize = 10;
+      const batchSize = 4;
       const loadNextBatch = () => {
-        const end = Math.min(cur + batchSize, totalFrames);
+        const end = Math.min(cur + batchSize, totalFrames - 1);
         for (let i = cur; i < end; i++) {
           loadFrame(i);
         }
         cur = end;
-        if (cur < totalFrames) {
+        if (cur < totalFrames - 1) {
           if ('requestIdleCallback' in window) {
-            requestIdleCallback(loadNextBatch, { timeout: 1000 });
+            requestIdleCallback(loadNextBatch, { timeout: 800 });
           } else {
-            setTimeout(loadNextBatch, 50);
+            setTimeout(loadNextBatch, 40);
           }
         }
       };
       loadNextBatch();
     };
 
-    // Trigger full frame preloading when user scrolls or section is within 400px
     if ('IntersectionObserver' in window) {
       const motionObserver = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting) {
           loadAllFramesProgressive();
           motionObserver.disconnect();
         }
-      }, { rootMargin: '400px 0px' });
+      }, { rootMargin: '500px 0px' });
       motionObserver.observe(consultorioSection);
     } else {
-      setTimeout(loadAllFramesProgressive, 2000);
+      setTimeout(loadAllFramesProgressive, 1500);
     }
 
     const renderLoop = () => {
       const diff = targetProgress - currentProgress;
-      if (Math.abs(diff) > 0.0005) {
-        currentProgress += diff * 0.4;
+      if (Math.abs(diff) > 0.0003) {
+        currentProgress += diff * 0.28;
       } else {
         currentProgress = targetProgress;
       }
 
-      const frameIdx = Math.min(Math.max(Math.floor(currentProgress * (totalFrames - 1)), 0), totalFrames - 1);
+      const frameIdx = Math.min(Math.max(Math.round(currentProgress * (totalFrames - 1)), 0), totalFrames - 1);
       
       if (frameIdx !== lastRenderedFrame) {
-        if (frames[frameIdx] && frames[frameIdx].complete) {
+        if (frames[frameIdx] && frames[frameIdx].complete && frames[frameIdx].naturalWidth > 0) {
           drawFrame(frames[frameIdx]);
           lastRenderedFrame = frameIdx;
         } else {
@@ -1077,11 +1099,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      // Smooth zoom scale
-      const zoomScale = 1 + (currentProgress * 0.1);
-      consultorioCanvas.style.transform = `scale(${zoomScale.toFixed(4)})`;
-
-      if (Math.abs(targetProgress - currentProgress) > 0.0005) {
+      if (Math.abs(targetProgress - currentProgress) > 0.0003) {
         requestAnimationFrame(renderLoop);
       } else {
         isLoopRunning = false;
@@ -1091,16 +1109,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const onScroll = () => {
       const rect = consultorioSection.getBoundingClientRect();
       const winH = window.innerHeight;
-      
-      // If Section 2 is outside viewport, skip processing entirely
-      if (rect.bottom < -50 || rect.top > winH + 50) {
-        return;
-      }
+      const scrollableDist = rect.height - winH;
 
-      const totalDist = winH + (rect.height || winH);
-      const scrollPos = winH - rect.top;
-      const progress = Math.min(Math.max(scrollPos / totalDist, 0), 1);
-      targetProgress = progress;
+      if (scrollableDist <= 0) return;
+
+      if (rect.top > 0) {
+        targetProgress = 0;
+      } else if (-rect.top >= scrollableDist) {
+        targetProgress = 1;
+      } else {
+        targetProgress = -rect.top / scrollableDist;
+      }
 
       if (!isLoopRunning) {
         isLoopRunning = true;

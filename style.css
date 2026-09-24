@@ -646,56 +646,45 @@ button:active, .btn:active, .glass-btn-solid:active, .glass-btn-pill:active {
 .consultorio-motion-section {
   position: relative;
   width: 100%;
+  height: 250vh;
   background-color: #080D0B;
   color: #ffffff;
-  padding: clamp(48px, 6vw, 80px) 0;
+  padding: 0;
+  margin: 0;
   z-index: 15;
 }
 
-.glass-editorial-container {
+.consultorio-sticky-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 0 var(--space-container-px);
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 28px;
-}
-
-.glass-content-left {
-  width: 100%;
-  margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.glass-top-row {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.glass-top-paragraph {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.55;
-  max-width: 600px;
+  justify-content: space-between;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .consultorio-canvas-wrap {
-  position: relative;
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: var(--radius-lg);
+  height: 100%;
   overflow: hidden;
   background-color: #080D0B;
   background-image: url('sectionmotion/motion1/ezgif-frame-001.webp');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1;
 }
 
 #consultorioCanvas {
@@ -704,23 +693,56 @@ button:active, .btn:active, .glass-btn-solid:active, .glass-btn-pill:active {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  pointer-events: none;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .consultorio-canvas-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(8, 13, 11, 0.5) 0%, rgba(0, 0, 0, 0.25) 45%, rgba(8, 13, 11, 0.85) 100%);
   pointer-events: none;
+  z-index: 2;
+}
+
+.glass-editorial-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: clamp(20px, 3.5vw, 36px) var(--space-container-px) clamp(24px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: auto;
+  box-sizing: border-box;
+}
+
+.glass-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .glass-bottom-row {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 14px;
+  width: 100%;
 }
 
 .glass-content-left {
   width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .glass-main-title {
@@ -728,14 +750,16 @@ button:active, .btn:active, .glass-btn-solid:active, .glass-btn-pill:active {
   font-weight: 800;
   line-height: 1.15;
   color: #ffffff;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75);
 }
 
 .glass-support-desc {
-  font-size: 0.92rem;
+  font-size: clamp(0.88rem, 1.8vw, 1rem);
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 14px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.75);
 }
 
 .glass-btn-row {
@@ -1946,28 +1970,11 @@ button:active, .btn:active, .glass-btn-solid:active, .glass-btn-pill:active {
   }
   
   .consultorio-motion-section {
-    min-height: 100vh;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .consultorio-canvas-wrap {
-    position: absolute;
-    inset: 0;
-    aspect-ratio: auto;
-    border-radius: 0;
-    border: none;
+    height: 270vh;
   }
   
   .glass-editorial-container {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 80vh;
-    padding: 40px var(--space-container-px);
+    padding: 36px var(--space-container-px) 44px;
   }
   
   .glass-top-row {
